@@ -1,11 +1,9 @@
-// TODO replace uint, bytes32, bytes
-
 // Each type exported here contains both a compile-time type (a typescript interface) and a run-time type (a javascript variable)
 // For more information, see ./index.ts
 
 import {
   bytes32,
-  uint64,
+  number64,
 } from "./primitive";
 
 export interface Eth1Data {
@@ -26,12 +24,12 @@ export interface Eth1DataVote {
   // Data being voted for
   eth1Data: Eth1Data;
   // Vote count
-  voteCount: uint64;
+  voteCount: number64;
 }
 export const Eth1DataVote = {
   name: "Eth1DataVote",
   fields: [
     ["eth1Data", Eth1Data],
-    ["voteCount", uint64],
+    ["voteCount", number64],
   ],
 };

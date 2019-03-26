@@ -60,7 +60,7 @@ describe("DB", () => {
   it("should correctly set the chain head", async () => {
     const testState = generateState();
     const testBlock = generateEmptyBlock();
-    const slot = new BN(5);
+    const slot = 5;
     testBlock.slot = slot;
     const testBlockRoot = treeHash(testBlock, BeaconBlock);
     await db.setBlock(testBlock);

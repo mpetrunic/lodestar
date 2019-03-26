@@ -9,9 +9,16 @@ import {
   uint64,
 } from "./primitive";
 
+import {
+  Epoch,
+  Shard,
+  Slot,
+  ValidatorIndex,
+} from "./custom";
+
 export interface Crosslink {
   // Slot number
-  epoch: uint64;
+  epoch: Epoch;
   // Shard chain block hash
   shardBlockRoot: bytes32;
 }
@@ -19,16 +26,16 @@ export interface Crosslink {
 export const Crosslink = {
   name: "Crosslink",
   fields: [
-    ["epoch", uint64],
+    ["epoch", Epoch],
     ["shardBlockRoot", bytes32],
   ],
 };
 
 export interface AttestationData {
   // Slot number
-  slot: uint64;
+  slot: Slot;
   // Shard number
-  shard: uint64;
+  shard: Shard;
   // Hash of the signed beacon block
   beaconBlockRoot: bytes32;
   // Hash of the ancestor at the epoch boundary
@@ -38,20 +45,20 @@ export interface AttestationData {
   // Last crosslink hash
   latestCrosslink: Crosslink;
   // Slot of the last justified beacon block
-  justifiedEpoch: uint64;
+  justifiedEpoch: Epoch;
   // Hash of the last justified beacon block
   justifiedBlockRoot: bytes32;
 }
 export const AttestationData = {
   name: "AttestationData",
   fields: [
-    ["slot", uint64],
-    ["shard", uint64],
+    ["slot", Slot],
+    ["shard", Shard],
     ["beaconBlockRoot", bytes32],
     ["epochBoundaryRoot", bytes32],
     ["shardBlockRoot", bytes32],
     ["latestCrosslink", Crosslink],
-    ["justifiedEpoch", uint64],
+    ["justifiedEpoch", Epoch],
     ["justifiedBlockRoot", bytes32],
   ],
 };
@@ -98,7 +105,7 @@ export interface PendingAttestation {
   // Attester participation bitfield
   custodyBitfield: bytes;
   // Slot in which it was included
-  inclusionSlot: uint64;
+  inclusionSlot: Slot;
 }
 export const PendingAttestation = {
   name: "PendingAttestation",
@@ -106,13 +113,13 @@ export const PendingAttestation = {
     ["aggregationBitfield", bytes],
     ["data", AttestationData],
     ["custodyBitfield", bytes],
-    ["inclusionSlot", uint64],
+    ["inclusionSlot", Slot],
   ],
 };
 
 export interface SlashableAttestation {
   // Validator Indices
-  validatorIndices: uint64[];
+  validatorIndices: ValidatorIndex[];
   // Attestation Data
   data: AttestationData;
   // Custody Bitfield
@@ -123,7 +130,7 @@ export interface SlashableAttestation {
 export const SlashableAttestation = {
   name: "SlashableAttestation",
   fields: [
-    ["validatorIndices", [uint64]],
+    ["validatorIndices", [ValidatorIndex]],
     ["data", AttestationData],
     ["custodyBitfield", bytes],
     ["aggregateSignature", bytes96],

@@ -113,7 +113,7 @@ export class DB extends EventEmitter {
    * @returns {Promise<BeaconBlock>}
    */
   public async getBlockBySlot(slot: Slot): Promise<BeaconBlock> {
-    const blockRoot = await this.db.get(encodeKey(Bucket.mainChain, slot.toNumber()));
+    const blockRoot = await this.db.get(encodeKey(Bucket.mainChain, slot));
     return await this.getBlock(blockRoot);
   }
 
