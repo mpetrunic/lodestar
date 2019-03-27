@@ -47,7 +47,10 @@ class BeaconNode {
       db: this.db,
       eth1: this.eth1,
     });
-    this.rpc = new BeaconRPC(this.conf.rpc);
+    this.rpc = new BeaconRPC(this.conf.rpc, {
+      chain: this.chain,
+      db: this.db,
+    });
   }
 
   public async start() {
