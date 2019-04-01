@@ -1,4 +1,5 @@
-import BN = require("bn.js");
+import BN from "bn.js";
+
 import { Deposit, DepositData, DepositInput, Eth1Data, number64 } from "../types";
 
 interface DummyChainStart {
