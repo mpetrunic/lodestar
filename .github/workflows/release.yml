@@ -79,7 +79,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ needs.tag.outputs.tag }}
-          body: ${{ steps.changelog.outputs.changelog }}
+          body: |
+            ${{ steps.changelog.outputs.changelog }}
           release_name: Release ${{ needs.tag.outputs.tag }}
 
       #in case of failure
