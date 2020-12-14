@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: 'Get Previous tag'
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@master"
+      
       - name: Create tag
         id: tag
         uses: butlerlogic/action-autotag@1.1.1
@@ -21,6 +26,7 @@ jobs:
           tag_prefix: "v"
     outputs:
       tag: ${{ steps.tag.outputs.tagname }}
+      previous_tag: ${{ steps.previoustag.outputs.tag }}
       version: ${{ steps.tag.outputs.version }}
 
   release:
@@ -70,6 +76,7 @@ jobs:
           pullRequests: true
           prWoLabels: true
           author: true
+          sinceTag: ${{ needs.tag.outputs.previous_tag }}
           usernamesAsGithubLogins: true
           compareLink: true
           onlyLastTag: true
