@@ -600,7 +600,7 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="peerfilterconditioncallback">PeerFilterConditionCallback<a class="headerlink" href="#peerfilterconditioncallback" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>PeerFilterConditionCallback</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/peers.ts#L4">packages/lodestar/src/sync/utils/peers.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/peers.ts#L4">packages/lodestar/src/sync/utils/peers.ts:4</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>peer</code>: PeerId): <em>boolean</em></p>
 <p><strong>Parameters:</strong></p>
@@ -621,7 +621,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="assertsequentialblocksinrange_1">assertSequentialBlocksInRange<a class="headerlink" href="#assertsequentialblocksinrange_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>assertSequentialBlocksInRange</strong>(<code>blocks</code>: SignedBeaconBlock[], <code>request</code>: BeaconBlocksByRangeRequest): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/blocks.ts#L101">packages/lodestar/src/sync/utils/blocks.ts:101</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/blocks.ts#L101">packages/lodestar/src/sync/utils/blocks.ts:101</a></em></p>
 <p>Asserts a response from BeaconBlocksByRange respects the request and is sequential
 Note: MUST allow missing block for skipped slots.</p>
 <p><strong>Parameters:</strong></p>
@@ -647,7 +647,7 @@ Note: MUST allow missing block for skipped slots.</p>
 <hr/>
 <h3 id="checkbestpeer_1">checkBestPeer<a class="headerlink" href="#checkbestpeer_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>checkBestPeer</strong>(<code>peer</code>: PeerId, <code>forkChoice</code>: IForkChoice, <code>network</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network.inetwork/">INetwork</a>): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/sync.ts#L69">packages/lodestar/src/sync/utils/sync.ts:69</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/sync.ts#L69">packages/lodestar/src/sync/utils/sync.ts:69</a></em></p>
 <p>Check if a peer is good to be a best peer.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -676,7 +676,7 @@ Note: MUST allow missing block for skipped slots.</p>
 <hr/>
 <h3 id="checklinearchainsegment_1">checkLinearChainSegment<a class="headerlink" href="#checklinearchainsegment_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>checkLinearChainSegment</strong>(<code>config</code>: IBeaconConfig, <code>blocks</code>: SignedBeaconBlock[] | null, <code>ancestorRoot</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#root">Root</a> | null): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/sync.ts#L92">packages/lodestar/src/sync/utils/sync.ts:92</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/sync.ts#L92">packages/lodestar/src/sync/utils/sync.ts:92</a></em></p>
 <p>Some clients may send orphaned/non-canonical blocks.
 Check each block should link to a previous parent block and be a parent of next block.
 Throw errors if they're not so that it'll fetch again</p>
@@ -711,7 +711,7 @@ Throw errors if they're not so that it'll fetch again</p>
 <hr/>
 <h3 id="chunkify_1">chunkify<a class="headerlink" href="#chunkify_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>chunkify</strong>(<code>blocksPerChunk</code>: number, <code>currentSlot</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#slot">Slot</a>, <code>targetSlot</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#slot">Slot</a>): <em><a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync.islotrange/">ISlotRange</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/blocks.ts#L16">packages/lodestar/src/sync/utils/blocks.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/blocks.ts#L16">packages/lodestar/src/sync/utils/blocks.ts:16</a></em></p>
 <p>Creates slot chunks returned chunks represents (inclusive) start and (inclusive) end slot
 which should be fetched along all slotS(blocks) in between</p>
 <p><strong>Parameters:</strong></p>
@@ -745,7 +745,7 @@ which should be fetched along all slotS(blocks) in between</p>
 <hr/>
 <h3 id="createstatus_1">createStatus<a class="headerlink" href="#createstatus_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createStatus</strong>(<code>chain</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_chain.ibeaconchain/">IBeaconChain</a>): <em>Promise‹Status›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/sync.ts#L16">packages/lodestar/src/sync/utils/sync.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/sync.ts#L16">packages/lodestar/src/sync/utils/sync.ts:16</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -765,7 +765,7 @@ which should be fetched along all slotS(blocks) in between</p>
 <hr/>
 <h3 id="getbesthead_1">getBestHead<a class="headerlink" href="#getbesthead_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBestHead</strong>(<code>peers</code>: PeerId[], <code>peerMetaStore</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network_peers.ipeermetadatastore/">IPeerMetadataStore</a>): <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/sync.ts#L42">packages/lodestar/src/sync/utils/sync.ts:42</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/sync.ts#L42">packages/lodestar/src/sync/utils/sync.ts:42</a></em></p>
 <p>Get best head from peers that support beacon_blocks_by_range.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -798,7 +798,7 @@ which should be fetched along all slotS(blocks) in between</p>
 <hr/>
 <h3 id="getbestpeer_1">getBestPeer<a class="headerlink" href="#getbestpeer_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBestPeer</strong>(<code>config</code>: IBeaconConfig, <code>peers</code>: PeerId[], <code>peerMetaStore</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network_peers.ipeermetadatastore/">IPeerMetadataStore</a>): <em>PeerId</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/sync.ts#L59">packages/lodestar/src/sync/utils/sync.ts:59</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/sync.ts#L59">packages/lodestar/src/sync/utils/sync.ts:59</a></em></p>
 <p>Get best peer that support beacon_blocks_by_range.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -827,7 +827,7 @@ which should be fetched along all slotS(blocks) in between</p>
 <hr/>
 <h3 id="getbestpeercandidates_1">getBestPeerCandidates<a class="headerlink" href="#getbestpeercandidates_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBestPeerCandidates</strong>(<code>forkChoice</code>: IForkChoice, <code>network</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network.inetwork/">INetwork</a>): <em>PeerId[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/sync.ts#L76">packages/lodestar/src/sync/utils/sync.ts:76</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/sync.ts#L76">packages/lodestar/src/sync/utils/sync.ts:76</a></em></p>
 <p>Return candidate for best peer.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -852,7 +852,7 @@ which should be fetched along all slotS(blocks) in between</p>
 <hr/>
 <h3 id="getblockrange_1">getBlockRange<a class="headerlink" href="#getblockrange_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlockRange</strong>(<code>logger</code>: ILogger, <code>rpc</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network.ireqresp/">IReqResp</a>, <code>peers</code>: PeerId[], <code>range</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync.islotrange/">ISlotRange</a>, <code>blocksPerChunk?</code>: undefined | number, <code>maxRetry</code>: number): <em>Promise‹SignedBeaconBlock[] | null›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/blocks.ts#L43">packages/lodestar/src/sync/utils/blocks.ts:43</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/blocks.ts#L43">packages/lodestar/src/sync/utils/blocks.ts:43</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -899,7 +899,7 @@ which should be fetched along all slotS(blocks) in between</p>
 <hr/>
 <h3 id="getblockrangefrompeer_1">getBlockRangeFromPeer<a class="headerlink" href="#getblockrangefrompeer_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlockRangeFromPeer</strong>(<code>rpc</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network.ireqresp/">IReqResp</a>, <code>peer</code>: PeerId, <code>chunk</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync.islotrange/">ISlotRange</a>): <em>Promise‹SignedBeaconBlock[] | null›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/blocks.ts#L31">packages/lodestar/src/sync/utils/blocks.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/blocks.ts#L31">packages/lodestar/src/sync/utils/blocks.ts:31</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -927,7 +927,7 @@ which should be fetched along all slotS(blocks) in between</p>
 <hr/>
 <h3 id="getpeersbymostcommonfinalizedcheckpoint">getPeersByMostCommonFinalizedCheckpoint<a class="headerlink" href="#getpeersbymostcommonfinalizedcheckpoint" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getPeersByMostCommonFinalizedCheckpoint</strong>(<code>peers</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync_utils.ipeerwithmetadata/">IPeerWithMetadata</a>[]): <em><a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync_utils.ipeersbycheckpoint/">IPeersByCheckpoint</a>‹Checkpoint› | null</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/bestPeers.ts#L46">packages/lodestar/src/sync/utils/bestPeers.ts:46</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/bestPeers.ts#L46">packages/lodestar/src/sync/utils/bestPeers.ts:46</a></em></p>
 <p>For initial sync, return the most common finalized checkpoint and consider it as the truth
 If is important to have minimum amount of peers connected so the chance of connecting
 only to malicious peers is low.</p>
@@ -951,7 +951,7 @@ only to malicious peers is low.</p>
 <hr/>
 <h3 id="getpeersinitialsync">getPeersInitialSync<a class="headerlink" href="#getpeersinitialsync" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getPeersInitialSync</strong>(<code>network</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network.inetwork/">INetwork</a>, <code>minScore</code>: number): <em><a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync_utils.ipeersbycheckpoint/">IPeersByCheckpoint</a>‹Checkpoint› | null</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/bestPeers.ts#L18">packages/lodestar/src/sync/utils/bestPeers.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/bestPeers.ts#L18">packages/lodestar/src/sync/utils/bestPeers.ts:18</a></em></p>
 <p>Get peers that:
 - support sync protocols
 - their score &gt; minScore
@@ -982,7 +982,7 @@ only to malicious peers is low.</p>
 <hr/>
 <h3 id="getpeersthatsupportsync">getPeersThatSupportSync<a class="headerlink" href="#getpeersthatsupportsync" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getPeersThatSupportSync</strong>(<code>network</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network.inetwork/">INetwork</a>): <em><a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync_utils.ipeerwithmetadata/">IPeerWithMetadata</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/bestPeers.ts#L24">packages/lodestar/src/sync/utils/bestPeers.ts:24</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/bestPeers.ts#L24">packages/lodestar/src/sync/utils/bestPeers.ts:24</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1002,7 +1002,7 @@ only to malicious peers is low.</p>
 <hr/>
 <h3 id="getstatusfinalizedcheckpoint_1">getStatusFinalizedCheckpoint<a class="headerlink" href="#getstatusfinalizedcheckpoint_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getStatusFinalizedCheckpoint</strong>(<code>status</code>: Status): <em>Checkpoint</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/sync.ts#L12">packages/lodestar/src/sync/utils/sync.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/sync.ts#L12">packages/lodestar/src/sync/utils/sync.ts:12</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1022,7 +1022,7 @@ only to malicious peers is low.</p>
 <hr/>
 <h3 id="getsyncpeers">getSyncPeers<a class="headerlink" href="#getsyncpeers" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSyncPeers</strong>(<code>network</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network.inetwork/">INetwork</a>, <code>condition</code>: <a href="./#peerfilterconditioncallback">PeerFilterConditionCallback</a>, <code>maxPeers</code>: number, <code>minScore</code>: number): <em>PeerId[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/peers.ts#L6">packages/lodestar/src/sync/utils/peers.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/peers.ts#L6">packages/lodestar/src/sync/utils/peers.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1059,7 +1059,7 @@ only to malicious peers is low.</p>
 <hr/>
 <h3 id="grouppeersbycheckpoint">groupPeersByCheckpoint<a class="headerlink" href="#grouppeersbycheckpoint" title="Permanent link">¶</a></h3>
 <p>▸ <strong>groupPeersByCheckpoint</strong>‹<strong>T</strong>›(<code>peers</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync_utils.ipeerwithmetadata/">IPeerWithMetadata</a>[], <code>getCheckpointFromPeer</code>: function, <code>getCheckpointId</code>: function): <em><a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_sync_utils.ipeersbycheckpoint/">IPeersByCheckpoint</a>‹T›[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/bestPeers.ts#L80">packages/lodestar/src/sync/utils/bestPeers.ts:80</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/bestPeers.ts#L80">packages/lodestar/src/sync/utils/bestPeers.ts:80</a></em></p>
 <p>Groups peers by checkpoint as defined by <code>getCheckpointFromPeer</code> and <code>getCheckpointId</code></p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>T</strong></p>
@@ -1103,7 +1103,7 @@ only to malicious peers is low.</p>
 <hr/>
 <h3 id="sortblocks_1">sortBlocks<a class="headerlink" href="#sortblocks_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>sortBlocks</strong>(<code>blocks</code>: SignedBeaconBlock[]): <em>SignedBeaconBlock[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/blocks.ts#L93">packages/lodestar/src/sync/utils/blocks.ts:93</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/blocks.ts#L93">packages/lodestar/src/sync/utils/blocks.ts:93</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1123,7 +1123,7 @@ only to malicious peers is low.</p>
 <hr/>
 <h3 id="syncpeersstatus_1">syncPeersStatus<a class="headerlink" href="#syncpeersstatus_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>syncPeersStatus</strong>(<code>network</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network.inetwork/">INetwork</a>, <code>status</code>: Status): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/utils/sync.ts#L28">packages/lodestar/src/sync/utils/sync.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/utils/sync.ts#L28">packages/lodestar/src/sync/utils/sync.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

@@ -296,7 +296,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="assembleblock">assembleBlock<a class="headerlink" href="#assembleblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>assembleBlock</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>eth1</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_eth1.ieth1forblockproduction/">IEth1ForBlockProduction</a>, <code>slot</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#slot">Slot</a>, <code>randaoReveal</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#bytes96">Bytes96</a>, <code>graffiti</code>: Buffer‹›): <em>Promise‹BeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/factory/block/index.ts#L15">packages/lodestar/src/chain/factory/block/index.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/factory/block/index.ts#L15">packages/lodestar/src/chain/factory/block/index.ts:15</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -348,7 +348,7 @@
 <hr/>
 <h3 id="assemblebody">assembleBody<a class="headerlink" href="#assemblebody" title="Permanent link">¶</a></h3>
 <p>▸ <strong>assembleBody</strong>(<code>config</code>: IBeaconConfig, <code>db</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>eth1</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_eth1.ieth1forblockproduction/">IEth1ForBlockProduction</a>, <code>currentState</code>: TreeBacked‹BeaconState›, <code>randaoReveal</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#bytes96">Bytes96</a>, <code>graffiti</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#bytes32">Bytes32</a>): <em>Promise‹BeaconBlockBody›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/factory/block/body.ts#L22">packages/lodestar/src/chain/factory/block/body.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/factory/block/body.ts#L22">packages/lodestar/src/chain/factory/block/body.ts:22</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -388,7 +388,7 @@
 <hr/>
 <h3 id="computenewstateroot">computeNewStateRoot<a class="headerlink" href="#computenewstateroot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>computeNewStateRoot</strong>(<code>config</code>: IBeaconConfig, <code>stateContext</code>: <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_chain.itreestatecontext/">ITreeStateContext</a>, <code>block</code>: BeaconBlock): <em><a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#root">Root</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/factory/block/index.ts#L51">packages/lodestar/src/chain/factory/block/index.ts:51</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/factory/block/index.ts#L51">packages/lodestar/src/chain/factory/block/index.ts:51</a></em></p>
 <p>Instead of running fastStateTransition(), only need to process block since
 stateContext is processed until block.slot already (this is to avoid double
 epoch transition which happen at slot % 32 === 0)</p>

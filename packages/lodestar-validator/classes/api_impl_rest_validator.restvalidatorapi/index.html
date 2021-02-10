@@ -391,7 +391,7 @@
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new RestValidatorApi</strong>(<code>config</code>: IBeaconConfig, <code>restUrl</code>: string, <code>logger</code>: ILogger): <em><a href="./">RestValidatorApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L27">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:27</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L27">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:27</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -419,16 +419,16 @@
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-readonly-clientv2"><code>Private</code> <code>Readonly</code> clientV2<a class="headerlink" href="#private-readonly-clientv2" title="Permanent link">¶</a></h3>
 <p>• <strong>clientV2</strong>: <em><a href="../util.httpclient/">HttpClient</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L25">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L25">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:25</a></em></p>
 <hr/>
 <h3 id="private-readonly-config"><code>Private</code> <code>Readonly</code> config<a class="headerlink" href="#private-readonly-config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L27">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:27</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L27">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:27</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="getaggregatedattestation">getAggregatedAttestation<a class="headerlink" href="#getaggregatedattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAggregatedAttestation</strong>(<code>attestationDataRoot</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#root">Root</a>, <code>slot</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹Attestation›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_interface.ivalidatorapi/">IValidatorApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L63">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:63</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L63">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:63</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -453,7 +453,7 @@
 <h3 id="getattesterduties">getAttesterDuties<a class="headerlink" href="#getattesterduties" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttesterDuties</strong>(<code>epoch</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#epoch">Epoch</a>, <code>indices</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>[]): <em>Promise‹AttesterDuty[]›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_interface.ivalidatorapi/">IValidatorApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L40">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:40</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L40">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:40</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -477,7 +477,7 @@
 <hr/>
 <h3 id="getproposerduties">getProposerDuties<a class="headerlink" href="#getproposerduties" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerDuties</strong>(<code>epoch</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#epoch">Epoch</a>): <em>Promise‹ProposerDuty[]›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L34">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:34</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L34">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:34</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -498,7 +498,7 @@
 <h3 id="preparebeaconcommitteesubnet">prepareBeaconCommitteeSubnet<a class="headerlink" href="#preparebeaconcommitteesubnet" title="Permanent link">¶</a></h3>
 <p>▸ <strong>prepareBeaconCommitteeSubnet</strong>(<code>validatorIndex</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>, <code>committeeIndex</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#committeeindex">CommitteeIndex</a>, <code>committeesAtSlot</code>: number, <code>slot</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#slot">Slot</a>, <code>isAggregator</code>: boolean): <em>Promise‹void›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_interface.ivalidatorapi/">IValidatorApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L78">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:78</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L78">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:78</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -535,7 +535,7 @@
 <h3 id="produceattestationdata">produceAttestationData<a class="headerlink" href="#produceattestationdata" title="Permanent link">¶</a></h3>
 <p>▸ <strong>produceAttestationData</strong>(<code>index</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#committeeindex">CommitteeIndex</a>, <code>slot</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹AttestationData›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_interface.ivalidatorapi/">IValidatorApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L58">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:58</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L58">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:58</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -560,7 +560,7 @@
 <h3 id="produceblock">produceBlock<a class="headerlink" href="#produceblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>produceBlock</strong>(<code>slot</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#slot">Slot</a>, <code>randaoReveal</code>: Uint8Array, <code>graffiti</code>: string): <em>Promise‹BeaconBlock›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_interface.ivalidatorapi/">IValidatorApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L49">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:49</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L49">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:49</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -589,7 +589,7 @@
 <h3 id="publishaggregateandproofs">publishAggregateAndProofs<a class="headerlink" href="#publishaggregateandproofs" title="Permanent link">¶</a></h3>
 <p>▸ <strong>publishAggregateAndProofs</strong>(<code>signedAggregateAndProofs</code>: SignedAggregateAndProof[]): <em>Promise‹void›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_interface.ivalidatorapi/">IValidatorApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L71">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:71</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-validator/src/api/impl/rest/validator/validator.ts#L71">packages/lodestar-validator/src/api/impl/rest/validator/validator.ts:71</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

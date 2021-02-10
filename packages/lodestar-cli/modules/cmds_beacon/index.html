@@ -438,16 +438,16 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="ibeaconargs">IBeaconArgs<a class="headerlink" href="#ibeaconargs" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>IBeaconArgs</strong>: <em><a href="../options_beaconnodeoptions/#ibeaconnodeargs">IBeaconNodeArgs</a> &amp; <a href="../../interfaces/cmds_beacon.ibeaconpaths/">IBeaconPaths</a> &amp; <a href="../../interfaces/options.ienrargs/">IENRArgs</a> &amp; <a href="../../interfaces/cmds_beacon.ibeaconextraargs/">IBeaconExtraArgs</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L86">packages/lodestar-cli/src/cmds/beacon/options.ts:86</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L86">packages/lodestar-cli/src/cmds/beacon/options.ts:86</a></em></p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-defaultbeaconpaths"><code>Const</code> defaultBeaconPaths<a class="headerlink" href="#const-defaultbeaconpaths" title="Permanent link">¶</a></h3>
 <p>• <strong>defaultBeaconPaths</strong>: <em><a href="../../interfaces/cmds_beacon.ibeaconpaths/">IBeaconPaths</a> &amp; <a href="../../interfaces/paths.iglobalpaths/">IGlobalPaths</a></em> = getBeaconPaths({rootDir: "$rootDir"})</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/paths.ts#L58">packages/lodestar-cli/src/cmds/beacon/paths.ts:58</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/paths.ts#L58">packages/lodestar-cli/src/cmds/beacon/paths.ts:58</a></em></p>
 <p>Constructs representations of the path structure to show in command's description</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="beaconhandler">beaconHandler<a class="headerlink" href="#beaconhandler" title="Permanent link">¶</a></h3>
 <p>▸ <strong>beaconHandler</strong>(<code>args</code>: <a href="./#ibeaconargs">IBeaconArgs</a> &amp; <a href="../options/#iglobalargs">IGlobalArgs</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/handler.ts#L22">packages/lodestar-cli/src/cmds/beacon/handler.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/handler.ts#L22">packages/lodestar-cli/src/cmds/beacon/handler.ts:22</a></em></p>
 <p>Run a beacon node</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -468,7 +468,7 @@
 <hr/>
 <h3 id="getbeaconpaths">getBeaconPaths<a class="headerlink" href="#getbeaconpaths" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBeaconPaths</strong>(<code>args</code>: Partial‹<a href="../../interfaces/cmds_beacon.ibeaconpaths/">IBeaconPaths</a>› &amp; Pick‹<a href="../options/#iglobalargs">IGlobalArgs</a>, "rootDir"›): <em><a href="../../interfaces/cmds_beacon.ibeaconpaths/">IBeaconPaths</a> &amp; <a href="../../interfaces/paths.iglobalpaths/">IGlobalPaths</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/paths.ts#L28">packages/lodestar-cli/src/cmds/beacon/paths.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/paths.ts#L28">packages/lodestar-cli/src/cmds/beacon/paths.ts:28</a></em></p>
 <p>Defines the path structure of the files relevant to the beacon node</p>
 <div class="highlight"><pre><span></span><code><span class="nv">$rootDir</span>
 └── <span class="nv">$beaconDir</span>
@@ -496,7 +496,7 @@
 <hr/>
 <h3 id="initbeaconstate">initBeaconState<a class="headerlink" href="#initbeaconstate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>initBeaconState</strong>(<code>options</code>: IBeaconNodeOptions, <code>args</code>: <a href="./#ibeaconargs">IBeaconArgs</a> &amp; <a href="../options/#iglobalargs">IGlobalArgs</a>, <code>config</code>: IBeaconConfig, <code>db</code>: IBeaconDb, <code>logger</code>: ILogger, <code>signal</code>: AbortSignal): <em>Promise‹TreeBacked‹BeaconState››</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/initBeaconState.ts#L25">packages/lodestar-cli/src/cmds/beacon/initBeaconState.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/initBeaconState.ts#L25">packages/lodestar-cli/src/cmds/beacon/initBeaconState.ts:25</a></em></p>
 <p>Initialize a beacon state, picking the strategy based on the <code>IBeaconArgs</code></p>
 <p>State is initialized in one of three ways:
 1. restore from a file (possibly downloaded via URL)
@@ -541,13 +541,13 @@
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="const-beacon"><code>Const</code> beacon<a class="headerlink" href="#const-beacon" title="Permanent link">¶</a></h3>
 <h3 id="beacon-object">▪ <strong>beacon</strong>: <em>object</em><a class="headerlink" href="#beacon-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/index.ts#L6">packages/lodestar-cli/src/cmds/beacon/index.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/index.ts#L6">packages/lodestar-cli/src/cmds/beacon/index.ts:6</a></em></p>
 <h3 id="command">command<a class="headerlink" href="#command" title="Permanent link">¶</a></h3>
 <p>• <strong>command</strong>: <em>string</em> = "beacon"</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/index.ts#L7">packages/lodestar-cli/src/cmds/beacon/index.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/index.ts#L7">packages/lodestar-cli/src/cmds/beacon/index.ts:7</a></em></p>
 <h3 id="describe">describe<a class="headerlink" href="#describe" title="Permanent link">¶</a></h3>
 <p>• <strong>describe</strong>: <em>string</em> = "Run a beacon chain node"</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/index.ts#L8">packages/lodestar-cli/src/cmds/beacon/index.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/index.ts#L8">packages/lodestar-cli/src/cmds/beacon/index.ts:8</a></em></p>
 <h3 id="examples">examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h3>
 <p>• <strong>examples</strong>: <em>object[]</em> = [
     {
@@ -555,19 +555,19 @@
       description: "Run a beacon chain node and connect to the pyrmont testnet",
     },
   ]</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/index.ts#L9">packages/lodestar-cli/src/cmds/beacon/index.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/index.ts#L9">packages/lodestar-cli/src/cmds/beacon/index.ts:9</a></em></p>
 <h3 id="handler">handler<a class="headerlink" href="#handler" title="Permanent link">¶</a></h3>
 <p>• <strong>handler</strong>: <em><a href="./#beaconhandler">beaconHandler</a></em> = beaconHandler</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/index.ts#L16">packages/lodestar-cli/src/cmds/beacon/index.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/index.ts#L16">packages/lodestar-cli/src/cmds/beacon/index.ts:16</a></em></p>
 <h3 id="options">options<a class="headerlink" href="#options" title="Permanent link">¶</a></h3>
 <p>• <strong>options</strong>: <em>Required‹object›</em> = beaconOptions as ICliCommandOptions<ibeaconargs></ibeaconargs></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/index.ts#L15">packages/lodestar-cli/src/cmds/beacon/index.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/index.ts#L15">packages/lodestar-cli/src/cmds/beacon/index.ts:15</a></em></p>
 <hr/>
 <h3 id="const-beaconextraoptions"><code>Const</code> beaconExtraOptions<a class="headerlink" href="#const-beaconextraoptions" title="Permanent link">¶</a></h3>
 <h3 id="beaconextraoptions-object">▪ <strong>beaconExtraOptions</strong>: <em>object</em><a class="headerlink" href="#beaconextraoptions-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L12">packages/lodestar-cli/src/cmds/beacon/options.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L12">packages/lodestar-cli/src/cmds/beacon/options.ts:12</a></em></p>
 <p>▪ <strong>forceGenesis</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L13">packages/lodestar-cli/src/cmds/beacon/options.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L13">packages/lodestar-cli/src/cmds/beacon/options.ts:13</a></em></p>
 <ul>
 <li>
 <p><strong>description</strong>: <em>string</em> = "Force beacon to create genesis without file"</p>
@@ -577,7 +577,7 @@
 </li>
 </ul>
 <p>▪ <strong>genesisStateFile</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L18">packages/lodestar-cli/src/cmds/beacon/options.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L18">packages/lodestar-cli/src/cmds/beacon/options.ts:18</a></em></p>
 <ul>
 <li>
 <p><strong>description</strong>: <em>string</em> = "Path or URL to download a genesis state file in ssz-encoded format"</p>
@@ -587,7 +587,7 @@
 </li>
 </ul>
 <p>▪ <strong>weakSubjectivityStateFile</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L23">packages/lodestar-cli/src/cmds/beacon/options.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L23">packages/lodestar-cli/src/cmds/beacon/options.ts:23</a></em></p>
 <ul>
 <li>
 <p><strong>description</strong>: <em>string</em> = "Path or URL to download a weak subjectivity state file in ssz-encoded format"</p>
@@ -599,13 +599,13 @@
 <hr/>
 <h3 id="const-beaconoptions"><code>Const</code> beaconOptions<a class="headerlink" href="#const-beaconoptions" title="Permanent link">¶</a></h3>
 <h3 id="beaconoptions-object">▪ <strong>beaconOptions</strong>: <em>object</em><a class="headerlink" href="#beaconoptions-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L88">packages/lodestar-cli/src/cmds/beacon/options.ts:88</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L88">packages/lodestar-cli/src/cmds/beacon/options.ts:88</a></em></p>
 <hr/>
 <h3 id="const-beaconpathsoptions"><code>Const</code> beaconPathsOptions<a class="headerlink" href="#const-beaconpathsoptions" title="Permanent link">¶</a></h3>
 <h3 id="beaconpathsoptions-object">▪ <strong>beaconPathsOptions</strong>: <em>object</em><a class="headerlink" href="#beaconpathsoptions-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L29">packages/lodestar-cli/src/cmds/beacon/options.ts:29</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L29">packages/lodestar-cli/src/cmds/beacon/options.ts:29</a></em></p>
 <p>▪ <strong>beaconDir</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L30">packages/lodestar-cli/src/cmds/beacon/options.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L30">packages/lodestar-cli/src/cmds/beacon/options.ts:30</a></em></p>
 <ul>
 <li>
 <p><strong>defaultDescription</strong>: <em>string</em> = defaultBeaconPaths.beaconDir</p>
@@ -621,7 +621,7 @@
 </li>
 </ul>
 <p>▪ <strong>configFile</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L46">packages/lodestar-cli/src/cmds/beacon/options.ts:46</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L46">packages/lodestar-cli/src/cmds/beacon/options.ts:46</a></em></p>
 <ul>
 <li>
 <p><strong>alias</strong>: <em>string[]</em> = ["config"]</p>
@@ -640,7 +640,7 @@
 </li>
 </ul>
 <p>▪ <strong>dbDir</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L37">packages/lodestar-cli/src/cmds/beacon/options.ts:37</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L37">packages/lodestar-cli/src/cmds/beacon/options.ts:37</a></em></p>
 <ul>
 <li>
 <p><strong>alias</strong>: <em>string[]</em> = ["db.dir", "db.name"]</p>
@@ -662,7 +662,7 @@
 </li>
 </ul>
 <p>▪ <strong>enrFile</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L70">packages/lodestar-cli/src/cmds/beacon/options.ts:70</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L70">packages/lodestar-cli/src/cmds/beacon/options.ts:70</a></em></p>
 <ul>
 <li>
 <p><strong>defaultDescription</strong>: <em>string</em> = defaultBeaconPaths.enrFile</p>
@@ -681,7 +681,7 @@
 </li>
 </ul>
 <p>▪ <strong>logFile</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L78">packages/lodestar-cli/src/cmds/beacon/options.ts:78</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L78">packages/lodestar-cli/src/cmds/beacon/options.ts:78</a></em></p>
 <ul>
 <li>
 <p><strong>alias</strong>: <em>string[]</em> = ["log.file"]</p>
@@ -697,7 +697,7 @@
 </li>
 </ul>
 <p>▪ <strong>peerIdFile</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L62">packages/lodestar-cli/src/cmds/beacon/options.ts:62</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L62">packages/lodestar-cli/src/cmds/beacon/options.ts:62</a></em></p>
 <ul>
 <li>
 <p><strong>defaultDescription</strong>: <em>string</em> = defaultBeaconPaths.peerIdFile</p>
@@ -716,7 +716,7 @@
 </li>
 </ul>
 <p>▪ <strong>peerStoreDir</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-cli/src/cmds/beacon/options.ts#L54">packages/lodestar-cli/src/cmds/beacon/options.ts:54</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-cli/src/cmds/beacon/options.ts#L54">packages/lodestar-cli/src/cmds/beacon/options.ts:54</a></em></p>
 <ul>
 <li>
 <p><strong>defaultDescription</strong>: <em>string</em> = defaultBeaconPaths.peerStoreDir</p>

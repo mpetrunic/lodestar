@@ -482,7 +482,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="findmissingsubnets_1">findMissingSubnets<a class="headerlink" href="#findmissingsubnets_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>findMissingSubnets</strong>(<code>connectedPeers</code>: PeerId[], <code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>): <em>number[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/peers/utils.ts#L64">packages/lodestar/src/network/peers/utils.ts:64</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/peers/utils.ts#L64">packages/lodestar/src/network/peers/utils.ts:64</a></em></p>
 <p>Find subnets that we don't have at least 1 connected peer.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -507,7 +507,7 @@
 <hr/>
 <h3 id="getimportantpeers_1">getImportantPeers<a class="headerlink" href="#getimportantpeers_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getImportantPeers</strong>(<code>peers</code>: PeerId[], <code>peerMetadata</code>: <a href="../../interfaces/network_peers.ipeermetadatastore/">IPeerMetadataStore</a>): <em>Set‹PeerId›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/peers/utils.ts#L177">packages/lodestar/src/network/peers/utils.ts:177</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/peers/utils.ts#L177">packages/lodestar/src/network/peers/utils.ts:177</a></em></p>
 <p>Peers that should not be disconnected because they are the only connected to a certain subnet.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -535,7 +535,7 @@
 <hr/>
 <h3 id="getpeercountbysubnet_1">getPeerCountBySubnet<a class="headerlink" href="#getpeercountbysubnet_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getPeerCountBySubnet</strong>(<code>connectedPeers</code>: PeerId[], <code>peerMetadata</code>: <a href="../../interfaces/network_peers.ipeermetadatastore/">IPeerMetadataStore</a>, <code>subnetStrs</code>: string[]): <em><a href="../../interfaces/chain.ieventmap/#map">Map</a>‹string, number›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/peers/utils.ts#L13">packages/lodestar/src/network/peers/utils.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/peers/utils.ts#L13">packages/lodestar/src/network/peers/utils.ts:13</a></em></p>
 <p>Return number of peers by subnet.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -564,7 +564,7 @@
 <hr/>
 <h3 id="getsyncprotocolspeers_1">getSyncProtocolsPeers<a class="headerlink" href="#getsyncprotocolspeers_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSyncProtocolsPeers</strong>(<code>connectedPeers</code>: LibP2p.Peer[]): <em>LibP2p.Peer[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/peers/utils.ts#L83">packages/lodestar/src/network/peers/utils.ts:83</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/peers/utils.ts#L83">packages/lodestar/src/network/peers/utils.ts:83</a></em></p>
 <p>Get sync peers from connected peers.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -585,7 +585,7 @@
 <hr/>
 <h3 id="gossippeerstodisconnect_1">gossipPeersToDisconnect<a class="headerlink" href="#gossippeerstodisconnect_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>gossipPeersToDisconnect</strong>(<code>connectedPeers</code>: LibP2p.Peer[], <code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>, <code>newPeer</code>: number, <code>maxPeer</code>: number, <code>retainRatio</code>: number): <em>PeerId[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/peers/utils.ts#L130">packages/lodestar/src/network/peers/utils.ts:130</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/peers/utils.ts#L130">packages/lodestar/src/network/peers/utils.ts:130</a></em></p>
 <p>This is supposed to be called when the node is synced.
 If we're too close to maxPeer, we may want to disconnect some peers
 before connecting to new peers with missing subnets.</p>
@@ -636,7 +636,7 @@ before connecting to new peers with missing subnets.</p>
 <hr/>
 <h3 id="handlepeermetadatasequence_1">handlePeerMetadataSequence<a class="headerlink" href="#handlepeermetadatasequence_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>handlePeerMetadataSequence</strong>(<code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>, <code>logger</code>: ILogger, <code>peer</code>: PeerId, <code>metadataSeq</code>: BigInt | null): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/peers/utils.ts#L38">packages/lodestar/src/network/peers/utils.ts:38</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/peers/utils.ts#L38">packages/lodestar/src/network/peers/utils.ts:38</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -668,7 +668,7 @@ before connecting to new peers with missing subnets.</p>
 <hr/>
 <h3 id="syncpeerstodisconnect_1">syncPeersToDisconnect<a class="headerlink" href="#syncpeerstodisconnect_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>syncPeersToDisconnect</strong>(<code>connectedPeers</code>: LibP2p.Peer[], <code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>): <em>PeerId[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/peers/utils.ts#L101">packages/lodestar/src/network/peers/utils.ts:101</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/peers/utils.ts#L101">packages/lodestar/src/network/peers/utils.ts:101</a></em></p>
 <p>Disconnect useless peers when node is syncing:
 + Disconnect all peers that do not support sync protocols
 + Disconnect half of bad score sync peers, gradually we'll only have good score sync peers.</p>

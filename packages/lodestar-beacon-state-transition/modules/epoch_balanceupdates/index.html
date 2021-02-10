@@ -427,7 +427,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getattestationcomponentdeltas">getAttestationComponentDeltas<a class="headerlink" href="#getattestationcomponentdeltas" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationComponentDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attestations</code>: PendingAttestation[]): <em>[bigint[], bigint[]]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L43">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:43</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L43">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:43</a></em></p>
 <p>Helper with shared logic for use by get source, target, and head deltas functions</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -456,7 +456,7 @@
 <hr/>
 <h3 id="getattestationdeltas_1">getAttestationDeltas<a class="headerlink" href="#getattestationdeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[Gwei[], Gwei[]]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L148">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:148</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L148">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:148</a></em></p>
 <p>Return attestation reward/penalty deltas for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -481,7 +481,7 @@
 <hr/>
 <h3 id="getbasereward">getBaseReward<a class="headerlink" href="#getbasereward" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBaseReward</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>index</code>: ValidatorIndex): <em>Gwei</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts#L18">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts#L18">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts:18</a></em></p>
 <p>This is the reward that almost all other rewards in Ethereum are computed as a multiple of.
 Particularly, note that it's a desired goal of the spec that effective_balance * BASE_REWARD_FACTOR
 // integer_squareroot(total_balance) is the average per-epoch reward received by a validator under
@@ -514,7 +514,7 @@ BASE_REWARDS_PER_EPOCH, which is the number of times that a reward of this size 
 <hr/>
 <h3 id="geteligiblevalidatorindices">getEligibleValidatorIndices<a class="headerlink" href="#geteligiblevalidatorindices" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getEligibleValidatorIndices</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>ValidatorIndex[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L30">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L30">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:30</a></em></p>
 <p>Both active validators and slashed-but-not-yet-withdrawn validators are eligible to receive
 penalties. This is done to prevent self-slashing from being a way to escape inactivity leaks.</p>
 <p><strong>Parameters:</strong></p>
@@ -540,7 +540,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getfinalitydelay">getFinalityDelay<a class="headerlink" href="#getfinalitydelay" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFinalityDelay</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts#L32">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts:32</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts#L32">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts:32</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -564,7 +564,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getheaddeltas_1">getHeadDeltas<a class="headerlink" href="#getheaddeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getHeadDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[bigint[], bigint[]]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L93">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:93</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L93">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:93</a></em></p>
 <p>Return attester micro-rewards/penalties for head-vote for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -589,7 +589,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getinactivitypenaltydeltas_1">getInactivityPenaltyDeltas<a class="headerlink" href="#getinactivitypenaltydeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getInactivityPenaltyDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>bigint[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L125">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:125</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L125">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:125</a></em></p>
 <p>Return inactivity reward/penalty deltas for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -614,7 +614,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getinclusiondelaydeltas_1">getInclusionDelayDeltas<a class="headerlink" href="#getinclusiondelaydeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getInclusionDelayDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>bigint[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L102">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:102</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L102">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:102</a></em></p>
 <p>Return proposer and inclusion delay micro-rewards/penalties for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -639,7 +639,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getproposerreward">getProposerReward<a class="headerlink" href="#getproposerreward" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerReward</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>index</code>: ValidatorIndex): <em>Gwei</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts#L28">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts#L28">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -667,7 +667,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getsourcedeltas_1">getSourceDeltas<a class="headerlink" href="#getsourcedeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSourceDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[bigint[], bigint[]]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L75">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:75</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L75">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:75</a></em></p>
 <p>Return attester micro-rewards/penalties for source-vote for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -692,7 +692,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="gettargetdeltas_1">getTargetDeltas<a class="headerlink" href="#gettargetdeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getTargetDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[bigint[], bigint[]]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L84">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:84</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts#L84">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/attestation.ts:84</a></em></p>
 <p>Return attester micro-rewards/penalties for target-vote for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -717,7 +717,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="isininactivityleak">isInInactivityLeak<a class="headerlink" href="#isininactivityleak" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isInInactivityLeak</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts#L42">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts:42</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts#L42">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/util.ts:42</a></em></p>
 <p>If the chain has not been finalized for &gt;4 epochs, the chain enters an "inactivity leak" mode,
 where inactive validators get progressively penalized more and more, to reduce their influence
 until blocks get finalized again. See here (https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#inactivity-quotient) for what the inactivity leak is, what it's for and how
@@ -745,7 +745,7 @@ it works.</p>
 <hr/>
 <h3 id="processrewardsandpenalties">processRewardsAndPenalties<a class="headerlink" href="#processrewardsandpenalties" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processRewardsAndPenalties</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/index.ts#L14">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/index.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/index.ts#L14">packages/lodestar-beacon-state-transition/src/epoch/balanceUpdates/index.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

@@ -462,7 +462,7 @@ downloaded.</p>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new Batch</strong>(<code>startEpoch</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#epoch">Epoch</a>, <code>config</code>: IBeaconConfig, <code>logger</code>: ILogger, <code>opts</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_sync_range/#batchopts">BatchOpts</a>): <em><a href="./">Batch</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L75">packages/lodestar/src/sync/range/batch.ts:75</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L75">packages/lodestar/src/sync/range/batch.ts:75</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -494,34 +494,34 @@ downloaded.</p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-faileddownloadattempts"><code>Private</code> failedDownloadAttempts<a class="headerlink" href="#private-faileddownloadattempts" title="Permanent link">¶</a></h3>
 <p>• <strong>failedDownloadAttempts</strong>: <em>PeerId[]</em> = []</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L73">packages/lodestar/src/sync/range/batch.ts:73</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L73">packages/lodestar/src/sync/range/batch.ts:73</a></em></p>
 <p>The number of download retries this batch has undergone due to a failed request.</p>
 <hr/>
 <h3 id="private-failedprocessingattempts"><code>Private</code> failedProcessingAttempts<a class="headerlink" href="#private-failedprocessingattempts" title="Permanent link">¶</a></h3>
 <p>• <strong>failedProcessingAttempts</strong>: <em><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_sync_range/#attempt">Attempt</a>[]</em> = []</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L71">packages/lodestar/src/sync/range/batch.ts:71</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L71">packages/lodestar/src/sync/range/batch.ts:71</a></em></p>
 <p>The <code>Attempts</code> that have been made and failed to send us this batch.</p>
 <hr/>
 <h3 id="private-logger"><code>Private</code> logger<a class="headerlink" href="#private-logger" title="Permanent link">¶</a></h3>
 <p>• <strong>logger</strong>: <em>ILogger</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L74">packages/lodestar/src/sync/range/batch.ts:74</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L74">packages/lodestar/src/sync/range/batch.ts:74</a></em></p>
 <hr/>
 <h3 id="private-opts"><code>Private</code> opts<a class="headerlink" href="#private-opts" title="Permanent link">¶</a></h3>
 <p>• <strong>opts</strong>: <em>Pick‹Required‹<a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_sync_range/#batchopts">BatchOpts</a>›, "logAfterAttempts"›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L75">packages/lodestar/src/sync/range/batch.ts:75</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L75">packages/lodestar/src/sync/range/batch.ts:75</a></em></p>
 <hr/>
 <h3 id="request">request<a class="headerlink" href="#request" title="Permanent link">¶</a></h3>
 <p>• <strong>request</strong>: <em>BeaconBlocksByRangeRequest</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L69">packages/lodestar/src/sync/range/batch.ts:69</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L69">packages/lodestar/src/sync/range/batch.ts:69</a></em></p>
 <p>BeaconBlocksByRangeRequest</p>
 <hr/>
 <h3 id="startepoch">startEpoch<a class="headerlink" href="#startepoch" title="Permanent link">¶</a></h3>
 <p>• <strong>startEpoch</strong>: <em><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#epoch">Epoch</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L65">packages/lodestar/src/sync/range/batch.ts:65</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L65">packages/lodestar/src/sync/range/batch.ts:65</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="downloadingerror">downloadingError<a class="headerlink" href="#downloadingerror" title="Permanent link">¶</a></h3>
 <p>▸ <strong>downloadingError</strong>(<code>e</code>: <a href="../reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain_regen.regenerror/#static-error">Error</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L130">packages/lodestar/src/sync/range/batch.ts:130</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L130">packages/lodestar/src/sync/range/batch.ts:130</a></em></p>
 <p>Downloading -&gt; AwaitingDownload</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -542,7 +542,7 @@ downloaded.</p>
 <hr/>
 <h3 id="downloadingsuccess">downloadingSuccess<a class="headerlink" href="#downloadingsuccess" title="Permanent link">¶</a></h3>
 <p>▸ <strong>downloadingSuccess</strong>(<code>blocks</code>: SignedBeaconBlock[]): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L118">packages/lodestar/src/sync/range/batch.ts:118</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L118">packages/lodestar/src/sync/range/batch.ts:118</a></em></p>
 <p>Downloading -&gt; AwaitingProcessing</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -563,7 +563,7 @@ downloaded.</p>
 <hr/>
 <h3 id="private-geterrortype"><code>Private</code> getErrorType<a class="headerlink" href="#private-geterrortype" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getErrorType</strong>(<code>expectedStatus</code>: <a href="../../enums/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_sync_range.batchstatus/">BatchStatus</a>): <em><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_sync_range/#batcherrortype">BatchErrorType</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L213">packages/lodestar/src/sync/range/batch.ts:213</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L213">packages/lodestar/src/sync/range/batch.ts:213</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -583,18 +583,18 @@ downloaded.</p>
 <hr/>
 <h3 id="getfailedpeers">getFailedPeers<a class="headerlink" href="#getfailedpeers" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFailedPeers</strong>(): <em>PeerId[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L95">packages/lodestar/src/sync/range/batch.ts:95</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L95">packages/lodestar/src/sync/range/batch.ts:95</a></em></p>
 <p>Gives a list of peers from which this batch has had a failed download or processing attempt.</p>
 <p><strong>Returns:</strong> <em>PeerId[]</em></p>
 <hr/>
 <h3 id="getmetadata">getMetadata<a class="headerlink" href="#getmetadata" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getMetadata</strong>(): <em><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_sync_range/#batchmetadata">BatchMetadata</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L99">packages/lodestar/src/sync/range/batch.ts:99</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L99">packages/lodestar/src/sync/range/batch.ts:99</a></em></p>
 <p><strong>Returns:</strong> <em><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_sync_range/#batchmetadata">BatchMetadata</a></em></p>
 <hr/>
 <h3 id="processingerror">processingError<a class="headerlink" href="#processingerror" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processingError</strong>(<code>e</code>: <a href="../reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain_regen.regenerror/#static-error">Error</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L178">packages/lodestar/src/sync/range/batch.ts:178</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L178">packages/lodestar/src/sync/range/batch.ts:178</a></em></p>
 <p>Processing -&gt; AwaitingDownload</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -615,13 +615,13 @@ downloaded.</p>
 <hr/>
 <h3 id="processingsuccess">processingSuccess<a class="headerlink" href="#processingsuccess" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processingSuccess</strong>(): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L166">packages/lodestar/src/sync/range/batch.ts:166</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L166">packages/lodestar/src/sync/range/batch.ts:166</a></em></p>
 <p>Processing -&gt; AwaitingValidation</p>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="startdownloading">startDownloading<a class="headerlink" href="#startdownloading" title="Permanent link">¶</a></h3>
 <p>▸ <strong>startDownloading</strong>(<code>peer</code>: PeerId): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L106">packages/lodestar/src/sync/range/batch.ts:106</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L106">packages/lodestar/src/sync/range/batch.ts:106</a></em></p>
 <p>AwaitingDownload -&gt; Downloading</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -642,23 +642,23 @@ downloaded.</p>
 <hr/>
 <h3 id="startprocessing">startProcessing<a class="headerlink" href="#startprocessing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>startProcessing</strong>(): <em>SignedBeaconBlock[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L149">packages/lodestar/src/sync/range/batch.ts:149</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L149">packages/lodestar/src/sync/range/batch.ts:149</a></em></p>
 <p>AwaitingProcessing -&gt; Processing</p>
 <p><strong>Returns:</strong> <em>SignedBeaconBlock[]</em></p>
 <hr/>
 <h3 id="validationerror">validationError<a class="headerlink" href="#validationerror" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validationError</strong>(): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L197">packages/lodestar/src/sync/range/batch.ts:197</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L197">packages/lodestar/src/sync/range/batch.ts:197</a></em></p>
 <p>AwaitingValidation -&gt; AwaitingDownload</p>
 <p><strong>Returns:</strong> <em>void</em></p>
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="state">state<a class="headerlink" href="#state" title="Permanent link">¶</a></h3>
 <h3 id="state-object">▪ <strong>state</strong>: <em>object</em><a class="headerlink" href="#state-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L67">packages/lodestar/src/sync/range/batch.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L67">packages/lodestar/src/sync/range/batch.ts:67</a></em></p>
 <p>State of the batch.</p>
 <h3 id="status">status<a class="headerlink" href="#status" title="Permanent link">¶</a></h3>
 <p>• <strong>status</strong>: <em><a href="../../enums/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_sync_range.batchstatus/#awaitingdownload">AwaitingDownload</a></em> = BatchStatus.AwaitingDownload</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/range/batch.ts#L67">packages/lodestar/src/sync/range/batch.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/range/batch.ts#L67">packages/lodestar/src/sync/range/batch.ts:67</a></em></p>
 </article>
 </div>
 </div>

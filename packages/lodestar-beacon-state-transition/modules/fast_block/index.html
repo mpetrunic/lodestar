@@ -430,11 +430,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="operation">Operation<a class="headerlink" href="#operation" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>Operation</strong>: <em>ProposerSlashing | AttesterSlashing | Attestation | Deposit | VoluntaryExit</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts#L18">packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts#L18">packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts:18</a></em></p>
 <hr/>
 <h3 id="operationfunction">OperationFunction<a class="headerlink" href="#operationfunction" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>OperationFunction</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts#L19">packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts#L19">packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts:19</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>op</code>: <a href="./#operation">Operation</a>, <code>verify</code>: boolean): <em>void</em></p>
 <p><strong>Parameters:</strong></p>
@@ -467,7 +467,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getindexedattestationsignatureset">getIndexedAttestationSignatureSet<a class="headerlink" href="#getindexedattestationsignatureset" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getIndexedAttestationSignatureSet</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>indexedAttestation</code>: IndexedAttestation, <code>indices?</code>: number[]): <em><a href="../fast_signaturesets/#isignatureset">ISignatureSet</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts#L49">packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts:49</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts#L49">packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts:49</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -499,7 +499,7 @@
 <hr/>
 <h3 id="getindices">getIndices<a class="headerlink" href="#getindices" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getIndices</strong>(<code>indexedAttestation</code>: IndexedAttestation): <em>number[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts#L67">packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts#L67">packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts:67</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -519,7 +519,7 @@
 <hr/>
 <h3 id="getneweth1data">getNewEth1Data<a class="headerlink" href="#getneweth1data" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getNewEth1Data</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>newEth1Data</code>: Eth1Data): <em>Eth1Data | null</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processEth1Data.ts#L19">packages/lodestar-beacon-state-transition/src/fast/block/processEth1Data.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processEth1Data.ts#L19">packages/lodestar-beacon-state-transition/src/fast/block/processEth1Data.ts:19</a></em></p>
 <p>Returns <code>newEth1Data</code> if adding the given <code>eth1Data</code> to <code>state.eth1DataVotes</code> would
 result in a change to <code>state.eth1Data</code>.</p>
 <p><strong>Parameters:</strong></p>
@@ -549,7 +549,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="getproposerslashingsignaturesets">getProposerSlashingSignatureSets<a class="headerlink" href="#getproposerslashingsignaturesets" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerSlashingSignatureSets</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>proposerSlashing</code>: ProposerSlashing): <em><a href="../fast_signaturesets/#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processProposerSlashing.ts#L55">packages/lodestar-beacon-state-transition/src/fast/block/processProposerSlashing.ts:55</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processProposerSlashing.ts#L55">packages/lodestar-beacon-state-transition/src/fast/block/processProposerSlashing.ts:55</a></em></p>
 <p>Extract signatures to allow validating all block signatures at once</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -578,7 +578,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="getrandaorevealsignatureset">getRandaoRevealSignatureSet<a class="headerlink" href="#getrandaorevealsignatureset" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getRandaoRevealSignatureSet</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>block</code>: BeaconBlock): <em><a href="../fast_signaturesets/#isignatureset">ISignatureSet</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processRandao.ts#L37">packages/lodestar-beacon-state-transition/src/fast/block/processRandao.ts:37</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processRandao.ts#L37">packages/lodestar-beacon-state-transition/src/fast/block/processRandao.ts:37</a></em></p>
 <p>Extract signatures to allow validating all block signatures at once</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -607,7 +607,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="getvoluntaryexitsignatureset">getVoluntaryExitSignatureSet<a class="headerlink" href="#getvoluntaryexitsignatureset" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getVoluntaryExitSignatureSet</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>signedVoluntaryExit</code>: SignedVoluntaryExit): <em><a href="../fast_signaturesets/#isignatureset">ISignatureSet</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processVoluntaryExit.ts#L52">packages/lodestar-beacon-state-transition/src/fast/block/processVoluntaryExit.ts:52</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processVoluntaryExit.ts#L52">packages/lodestar-beacon-state-transition/src/fast/block/processVoluntaryExit.ts:52</a></em></p>
 <p>Extract signatures to allow validating all block signatures at once</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -636,7 +636,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="initiatevalidatorexit">initiateValidatorExit<a class="headerlink" href="#initiatevalidatorexit" title="Permanent link">¶</a></h3>
 <p>▸ <strong>initiateValidatorExit</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>index</code>: ValidatorIndex): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/initiateValidatorExit.ts#L10">packages/lodestar-beacon-state-transition/src/fast/block/initiateValidatorExit.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/initiateValidatorExit.ts#L10">packages/lodestar-beacon-state-transition/src/fast/block/initiateValidatorExit.ts:10</a></em></p>
 <p>Initiate the exit of the validator with index <code>index</code>.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -665,7 +665,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="isvalidindexedattestation">isValidIndexedAttestation<a class="headerlink" href="#isvalidindexedattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isValidIndexedAttestation</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>indexedAttestation</code>: IndexedAttestation, <code>verifySignature</code>: boolean): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts#L10">packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts#L10">packages/lodestar-beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts:10</a></em></p>
 <p>Check if <code>indexedAttestation</code> has sorted and unique indices and a valid aggregate signature.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -703,7 +703,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processattestation">processAttestation<a class="headerlink" href="#processattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processAttestation</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>attestation</code>: Attestation, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processAttestation.ts#L7">packages/lodestar-beacon-state-transition/src/fast/block/processAttestation.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processAttestation.ts#L7">packages/lodestar-beacon-state-transition/src/fast/block/processAttestation.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -740,7 +740,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processattesterslashing">processAttesterSlashing<a class="headerlink" href="#processattesterslashing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processAttesterSlashing</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>attesterSlashing</code>: AttesterSlashing, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processAttesterSlashing.ts#L8">packages/lodestar-beacon-state-transition/src/fast/block/processAttesterSlashing.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processAttesterSlashing.ts#L8">packages/lodestar-beacon-state-transition/src/fast/block/processAttesterSlashing.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -777,7 +777,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processblock">processBlock<a class="headerlink" href="#processblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processBlock</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>block</code>: BeaconBlock, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/index.ts#L26">packages/lodestar-beacon-state-transition/src/fast/block/index.ts:26</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/index.ts#L26">packages/lodestar-beacon-state-transition/src/fast/block/index.ts:26</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -814,7 +814,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processblockheader">processBlockHeader<a class="headerlink" href="#processblockheader" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processBlockHeader</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>block</code>: BeaconBlock): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processBlockHeader.ts#L5">packages/lodestar-beacon-state-transition/src/fast/block/processBlockHeader.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processBlockHeader.ts#L5">packages/lodestar-beacon-state-transition/src/fast/block/processBlockHeader.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -842,7 +842,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processdeposit">processDeposit<a class="headerlink" href="#processdeposit" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processDeposit</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>deposit</code>: Deposit): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processDeposit.ts#L9">packages/lodestar-beacon-state-transition/src/fast/block/processDeposit.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processDeposit.ts#L9">packages/lodestar-beacon-state-transition/src/fast/block/processDeposit.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -870,7 +870,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processeth1data">processEth1Data<a class="headerlink" href="#processeth1data" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processEth1Data</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>body</code>: BeaconBlockBody): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processEth1Data.ts#L6">packages/lodestar-beacon-state-transition/src/fast/block/processEth1Data.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processEth1Data.ts#L6">packages/lodestar-beacon-state-transition/src/fast/block/processEth1Data.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -898,7 +898,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processoperations">processOperations<a class="headerlink" href="#processoperations" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processOperations</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>body</code>: BeaconBlockBody, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts#L26">packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts:26</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts#L26">packages/lodestar-beacon-state-transition/src/fast/block/processOperations.ts:26</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -935,7 +935,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processproposerslashing">processProposerSlashing<a class="headerlink" href="#processproposerslashing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processProposerSlashing</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>proposerSlashing</code>: ProposerSlashing, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processProposerSlashing.ts#L8">packages/lodestar-beacon-state-transition/src/fast/block/processProposerSlashing.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processProposerSlashing.ts#L8">packages/lodestar-beacon-state-transition/src/fast/block/processProposerSlashing.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -972,7 +972,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processrandao">processRandao<a class="headerlink" href="#processrandao" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processRandao</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>block</code>: BeaconBlock, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processRandao.ts#L9">packages/lodestar-beacon-state-transition/src/fast/block/processRandao.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processRandao.ts#L9">packages/lodestar-beacon-state-transition/src/fast/block/processRandao.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1009,7 +1009,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processvoluntaryexit">processVoluntaryExit<a class="headerlink" href="#processvoluntaryexit" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processVoluntaryExit</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>signedVoluntaryExit</code>: SignedVoluntaryExit, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/processVoluntaryExit.ts#L8">packages/lodestar-beacon-state-transition/src/fast/block/processVoluntaryExit.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/processVoluntaryExit.ts#L8">packages/lodestar-beacon-state-transition/src/fast/block/processVoluntaryExit.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1046,7 +1046,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="slashvalidator">slashValidator<a class="headerlink" href="#slashvalidator" title="Permanent link">¶</a></h3>
 <p>▸ <strong>slashValidator</strong>(<code>epochCtx</code>: <a href="../../classes/fast_util.epochcontext/">EpochContext</a>, <code>state</code>: <a href="../../classes/fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>, <code>slashedIndex</code>: ValidatorIndex, <code>whistleblowerIndex?</code>: ValidatorIndex): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/fast/block/slashValidator.ts#L7">packages/lodestar-beacon-state-transition/src/fast/block/slashValidator.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/fast/block/slashValidator.ts#L7">packages/lodestar-beacon-state-transition/src/fast/block/slashValidator.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

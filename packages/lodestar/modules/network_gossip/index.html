@@ -515,11 +515,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="gossipeventemitter">GossipEventEmitter<a class="headerlink" href="#gossipeventemitter" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipEventEmitter</strong>: <em>StrictEventEmitter‹EventEmitter, <a href="../../interfaces/network_gossip.igossipevents/">IGossipEvents</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/interface.ts#L37">packages/lodestar/src/network/gossip/interface.ts:37</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/interface.ts#L37">packages/lodestar/src/network/gossip/interface.ts:37</a></em></p>
 <hr/>
 <h3 id="gossiphandlerfn">GossipHandlerFn<a class="headerlink" href="#gossiphandlerfn" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipHandlerFn</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossip.ts#L38">packages/lodestar/src/network/gossip/gossip.ts:38</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/gossip.ts#L38">packages/lodestar/src/network/gossip/gossip.ts:38</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>this</code>: <a href="../../classes/network_gossip.gossip/">Gossip</a>, <code>obj</code>: <a href="./#gossipobject">GossipObject</a>): <em>void</em></p>
 <p><strong>Parameters:</strong></p>
@@ -544,7 +544,7 @@
 <hr/>
 <h3 id="gossipmessagevalidatorfn">GossipMessageValidatorFn<a class="headerlink" href="#gossipmessagevalidatorfn" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipMessageValidatorFn</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/interface.ts#L118">packages/lodestar/src/network/gossip/interface.ts:118</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/interface.ts#L118">packages/lodestar/src/network/gossip/interface.ts:118</a></em></p>
 <h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <p>▸ (<code>message</code>: <a href="./#gossipobject">GossipObject</a>, <code>subnet?</code>: undefined | number): <em>Promise‹<a href="../../enums/network_gossip.extendedvalidatorresult/">ExtendedValidatorResult</a>›</em></p>
 <p><strong>Parameters:</strong></p>
@@ -569,11 +569,11 @@
 <hr/>
 <h3 id="gossipobject">GossipObject<a class="headerlink" href="#gossipobject" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipObject</strong>: <em>SignedBeaconBlock | Attestation | SignedAggregateAndProof | SignedVoluntaryExit | ProposerSlashing | AttesterSlashing</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/interface.ts#L110">packages/lodestar/src/network/gossip/interface.ts:110</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/interface.ts#L110">packages/lodestar/src/network/gossip/interface.ts:110</a></em></p>
 <hr/>
 <h3 id="validatorfn">ValidatorFn<a class="headerlink" href="#validatorfn" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ValidatorFn</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L23">packages/lodestar/src/network/gossip/gossipsub.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/gossipsub.ts#L23">packages/lodestar/src/network/gossip/gossipsub.ts:23</a></em></p>
 <h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
 <p>▸ (<code>topic</code>: string, <code>msg</code>: InMessage): <em>Promise‹void›</em></p>
 <p><strong>Parameters:</strong></p>
@@ -598,29 +598,29 @@
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-attestationsubnetregexp"><code>Const</code> AttestationSubnetRegExp<a class="headerlink" href="#const-attestationsubnetregexp" title="Permanent link">¶</a></h3>
 <p>• <strong>AttestationSubnetRegExp</strong>: <em>RegExp‹›</em> = new RegExp("^(/eth2/)([a-f0-9]{8})(/beacon_attestation_)([0-9]+/)([a-z_]+)$")</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/constants.ts#L18">packages/lodestar/src/network/gossip/constants.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/constants.ts#L18">packages/lodestar/src/network/gossip/constants.ts:18</a></em></p>
 <hr/>
 <h3 id="const-gossip_msgid_length"><code>Const</code> GOSSIP_MSGID_LENGTH<a class="headerlink" href="#const-gossip_msgid_length" title="Permanent link">¶</a></h3>
 <p>• <strong>GOSSIP_MSGID_LENGTH</strong>: <em>20</em> = 20</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/constants.ts#L33">packages/lodestar/src/network/gossip/constants.ts:33</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/constants.ts#L33">packages/lodestar/src/network/gossip/constants.ts:33</a></em></p>
 <hr/>
 <h3 id="const-gossiptopicregexp"><code>Const</code> GossipTopicRegExp<a class="headerlink" href="#const-gossiptopicregexp" title="Permanent link">¶</a></h3>
 <p>• <strong>GossipTopicRegExp</strong>: <em>RegExp‹›</em> = new RegExp("^(/eth2/)([a-f0-9]{8})/(\w+)(/[a-z]+)")</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/constants.ts#L21">packages/lodestar/src/network/gossip/constants.ts:21</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/constants.ts#L21">packages/lodestar/src/network/gossip/constants.ts:21</a></em></p>
 <hr/>
 <h3 id="const-message_domain_invalid_snappy"><code>Const</code> MESSAGE_DOMAIN_INVALID_SNAPPY<a class="headerlink" href="#const-message_domain_invalid_snappy" title="Permanent link">¶</a></h3>
 <p>• <strong>MESSAGE_DOMAIN_INVALID_SNAPPY</strong>: <em>Buffer‹›</em> = Buffer.from("01000000", "hex")</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/constants.ts#L43">packages/lodestar/src/network/gossip/constants.ts:43</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/constants.ts#L43">packages/lodestar/src/network/gossip/constants.ts:43</a></em></p>
 <p>4-byte domain for gossip message-id isolation of <em>valid</em> snappy messages</p>
 <hr/>
 <h3 id="const-message_domain_valid_snappy"><code>Const</code> MESSAGE_DOMAIN_VALID_SNAPPY<a class="headerlink" href="#const-message_domain_valid_snappy" title="Permanent link">¶</a></h3>
 <p>• <strong>MESSAGE_DOMAIN_VALID_SNAPPY</strong>: <em>Buffer‹›</em> = Buffer.from("00000000", "hex")</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/constants.ts#L38">packages/lodestar/src/network/gossip/constants.ts:38</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/constants.ts#L38">packages/lodestar/src/network/gossip/constants.ts:38</a></em></p>
 <p>4-byte domain for gossip message-id isolation of <em>invalid</em> snappy messages</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="computemsgid">computeMsgId<a class="headerlink" href="#computemsgid" title="Permanent link">¶</a></h3>
 <p>▸ <strong>computeMsgId</strong>(<code>topic</code>: string, <code>data</code>: Uint8Array): <em>Uint8Array</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/encoding.ts#L46">packages/lodestar/src/network/gossip/encoding.ts:46</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/encoding.ts#L46">packages/lodestar/src/network/gossip/encoding.ts:46</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -644,7 +644,7 @@
 <hr/>
 <h3 id="decodemessagedata">decodeMessageData<a class="headerlink" href="#decodemessagedata" title="Permanent link">¶</a></h3>
 <p>▸ <strong>decodeMessageData</strong>(<code>topic</code>: string, <code>data</code>: Uint8Array): <em>Uint8Array</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/encoding.ts#L22">packages/lodestar/src/network/gossip/encoding.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/encoding.ts#L22">packages/lodestar/src/network/gossip/encoding.ts:22</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -668,7 +668,7 @@
 <hr/>
 <h3 id="encodemessagedata">encodeMessageData<a class="headerlink" href="#encodemessagedata" title="Permanent link">¶</a></h3>
 <p>▸ <strong>encodeMessageData</strong>(<code>topic</code>: string, <code>data</code>: Uint8Array): <em>Uint8Array</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/encoding.ts#L34">packages/lodestar/src/network/gossip/encoding.ts:34</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/encoding.ts#L34">packages/lodestar/src/network/gossip/encoding.ts:34</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -692,7 +692,7 @@
 <hr/>
 <h3 id="getattestationsubnetevent">getAttestationSubnetEvent<a class="headerlink" href="#getattestationsubnetevent" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationSubnetEvent</strong>(<code>subnet</code>: number): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/utils.ts#L41">packages/lodestar/src/network/gossip/utils.ts:41</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/utils.ts#L41">packages/lodestar/src/network/gossip/utils.ts:41</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -712,7 +712,7 @@
 <hr/>
 <h3 id="getcommitteesubnetevent">getCommitteeSubnetEvent<a class="headerlink" href="#getcommitteesubnetevent" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getCommitteeSubnetEvent</strong>(<code>index</code>: <a href="../reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#committeeindex">CommitteeIndex</a>): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/constants.ts#L23">packages/lodestar/src/network/gossip/constants.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/constants.ts#L23">packages/lodestar/src/network/gossip/constants.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -732,7 +732,7 @@
 <hr/>
 <h3 id="getgossiptopic">getGossipTopic<a class="headerlink" href="#getgossiptopic" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getGossipTopic</strong>(<code>event</code>: <a href="../../enums/network_gossip.gossipevent/">GossipEvent</a>, <code>forkDigestValue</code>: <a href="../reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#forkdigest">ForkDigest</a>, <code>encoding</code>: <a href="../../enums/network_gossip.gossipencoding/">GossipEncoding</a>, <code>params</code>: <a href="../../interfaces/chain.ieventmap/#map">Map</a>‹string, string›): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/utils.ts#L13">packages/lodestar/src/network/gossip/utils.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/utils.ts#L13">packages/lodestar/src/network/gossip/utils.ts:13</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -769,7 +769,7 @@
 <hr/>
 <h3 id="getsubnetfromattestationsubnettopic">getSubnetFromAttestationSubnetTopic<a class="headerlink" href="#getsubnetfromattestationsubnettopic" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSubnetFromAttestationSubnetTopic</strong>(<code>topic</code>: string): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/utils.ts#L53">packages/lodestar/src/network/gossip/utils.ts:53</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/utils.ts#L53">packages/lodestar/src/network/gossip/utils.ts:53</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -789,7 +789,7 @@
 <hr/>
 <h3 id="gettopicencoding">getTopicEncoding<a class="headerlink" href="#gettopicencoding" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getTopicEncoding</strong>(<code>topic</code>: string): <em><a href="../../enums/network_gossip.gossipencoding/">GossipEncoding</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/encoding.ts#L10">packages/lodestar/src/network/gossip/encoding.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/encoding.ts#L10">packages/lodestar/src/network/gossip/encoding.ts:10</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -809,7 +809,7 @@
 <hr/>
 <h3 id="isattestationsubnetevent">isAttestationSubnetEvent<a class="headerlink" href="#isattestationsubnetevent" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isAttestationSubnetEvent</strong>(<code>event</code>: keyof IGossipEvents | string): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/utils.ts#L45">packages/lodestar/src/network/gossip/utils.ts:45</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/utils.ts#L45">packages/lodestar/src/network/gossip/utils.ts:45</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -829,7 +829,7 @@
 <hr/>
 <h3 id="isattestationsubnettopic">isAttestationSubnetTopic<a class="headerlink" href="#isattestationsubnettopic" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isAttestationSubnetTopic</strong>(<code>topic</code>: string): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/utils.ts#L49">packages/lodestar/src/network/gossip/utils.ts:49</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/utils.ts#L49">packages/lodestar/src/network/gossip/utils.ts:49</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -849,7 +849,7 @@
 <hr/>
 <h3 id="mapgossipevent">mapGossipEvent<a class="headerlink" href="#mapgossipevent" title="Permanent link">¶</a></h3>
 <p>▸ <strong>mapGossipEvent</strong>(<code>event</code>: keyof IGossipEvents | string): <em><a href="../../enums/network_gossip.gossipevent/">GossipEvent</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/utils.ts#L27">packages/lodestar/src/network/gossip/utils.ts:27</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/utils.ts#L27">packages/lodestar/src/network/gossip/utils.ts:27</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -869,7 +869,7 @@
 <hr/>
 <h3 id="msgidtostring">msgIdToString<a class="headerlink" href="#msgidtostring" title="Permanent link">¶</a></h3>
 <p>▸ <strong>msgIdToString</strong>(<code>msgId</code>: Uint8Array): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/utils.ts#L61">packages/lodestar/src/network/gossip/utils.ts:61</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/utils.ts#L61">packages/lodestar/src/network/gossip/utils.ts:61</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -889,7 +889,7 @@
 <hr/>
 <h3 id="topictogossipevent">topicToGossipEvent<a class="headerlink" href="#topictogossipevent" title="Permanent link">¶</a></h3>
 <p>▸ <strong>topicToGossipEvent</strong>(<code>topic</code>: string): <em><a href="../../enums/network_gossip.gossipevent/">GossipEvent</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/utils.ts#L34">packages/lodestar/src/network/gossip/utils.ts:34</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/gossip/utils.ts#L34">packages/lodestar/src/network/gossip/utils.ts:34</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

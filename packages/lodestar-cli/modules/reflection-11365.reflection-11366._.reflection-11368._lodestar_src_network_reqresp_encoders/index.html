@@ -329,7 +329,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="readerrormessage">readErrorMessage<a class="headerlink" href="#readerrormessage" title="Permanent link">¶</a></h3>
 <p>▸ <strong>readErrorMessage</strong>(<code>bufferedSource</code>: <a href="../../classes/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network_reqresp_utils.bufferedsource/">BufferedSource</a>): <em>Promise‹string›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/encoders/responseDecode.ts#L89">packages/lodestar/src/network/reqresp/encoders/responseDecode.ts:89</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/encoders/responseDecode.ts#L89">packages/lodestar/src/network/reqresp/encoders/responseDecode.ts:89</a></em></p>
 <p>Consumes a stream source to read an optional <code>&lt;error_response&gt;?</code>
 <div class="highlight"><pre><span></span><code>error_response  <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">result</span><span class="p">&gt;</span> | <span class="p">&lt;</span><span class="nc">error_message</span><span class="p">&gt;</span>?
 result          <span class="o">::=</span> "1" | "2" | ["128" ... "255"]
@@ -353,7 +353,7 @@ result          <span class="o">::=</span> "1" | "2" | ["128" ... "255"]
 <hr/>
 <h3 id="readresultheader">readResultHeader<a class="headerlink" href="#readresultheader" title="Permanent link">¶</a></h3>
 <p>▸ <strong>readResultHeader</strong>(<code>bufferedSource</code>: <a href="../../classes/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network_reqresp_utils.bufferedsource/">BufferedSource</a>): <em>Promise‹<a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.rpcresponsestatus/">RpcResponseStatus</a> | <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network_reqresp_encoders.streamstatus/">StreamStatus</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/encoders/responseDecode.ts#L68">packages/lodestar/src/network/reqresp/encoders/responseDecode.ts:68</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/encoders/responseDecode.ts#L68">packages/lodestar/src/network/reqresp/encoders/responseDecode.ts:68</a></em></p>
 <p>Consumes a stream source to read a <code>&lt;result&gt;</code>
 <div class="highlight"><pre><span></span><code>result  <span class="o">::=</span> "0" | "1" | "2" | ["128" ... "255"]
 </code></pre></div>
@@ -377,7 +377,7 @@ result          <span class="o">::=</span> "1" | "2" | ["128" ... "255"]
 <hr/>
 <h3 id="requestdecode">requestDecode<a class="headerlink" href="#requestdecode" title="Permanent link">¶</a></h3>
 <p>▸ <strong>requestDecode</strong>(<code>config</code>: IBeaconConfig, <code>method</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.reqrespencoding/">ReqRespEncoding</a>): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/encoders/requestDecode.ts#L14">packages/lodestar/src/network/reqresp/encoders/requestDecode.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/encoders/requestDecode.ts#L14">packages/lodestar/src/network/reqresp/encoders/requestDecode.ts:14</a></em></p>
 <p>Consumes a stream source to read a <code>&lt;request&gt;</code>
 <div class="highlight"><pre><span></span><code>request  <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">encoding-dependent-header</span><span class="p">&gt;</span> | <span class="p">&lt;</span><span class="nc">encoded-payload</span><span class="p">&gt;</span>
 </code></pre></div></p>
@@ -424,7 +424,7 @@ result          <span class="o">::=</span> "1" | "2" | ["128" ... "255"]
 <hr/>
 <h3 id="requestencode">requestEncode<a class="headerlink" href="#requestencode" title="Permanent link">¶</a></h3>
 <p>▸ <strong>requestEncode</strong>(<code>config</code>: IBeaconConfig, <code>method</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.reqrespencoding/">ReqRespEncoding</a>, <code>requestBody</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#requestbody">RequestBody</a>): <em>AsyncGenerator‹Buffer›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/encoders/requestEncode.ts#L14">packages/lodestar/src/network/reqresp/encoders/requestEncode.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/encoders/requestEncode.ts#L14">packages/lodestar/src/network/reqresp/encoders/requestEncode.ts:14</a></em></p>
 <p>Yields byte chunks for a <code>&lt;request&gt;</code>
 <div class="highlight"><pre><span></span><code>request  <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">encoding-dependent-header</span><span class="p">&gt;</span> | <span class="p">&lt;</span><span class="nc">encoded-payload</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -461,7 +461,7 @@ if so, it would yield no byte chunks</p>
 <hr/>
 <h3 id="responsedecode">responseDecode<a class="headerlink" href="#responsedecode" title="Permanent link">¶</a></h3>
 <p>▸ <strong>responseDecode</strong>(<code>config</code>: IBeaconConfig, <code>method</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.reqrespencoding/">ReqRespEncoding</a>): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/encoders/responseDecode.ts#L24">packages/lodestar/src/network/reqresp/encoders/responseDecode.ts:24</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/encoders/responseDecode.ts#L24">packages/lodestar/src/network/reqresp/encoders/responseDecode.ts:24</a></em></p>
 <p>Consumes a stream source to read a <code>&lt;response&gt;</code>
 <div class="highlight"><pre><span></span><code>response        <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">response_chunk</span><span class="p">&gt;</span>*
 response_chunk  <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">result</span><span class="p">&gt;</span> | <span class="p">&lt;</span><span class="nc">encoding-dependent-header</span><span class="p">&gt;</span> | <span class="p">&lt;</span><span class="nc">encoded-payload</span><span class="p">&gt;</span>
@@ -510,7 +510,7 @@ result          <span class="o">::=</span> "0" | "1" | "2" | ["128" ... "255"]
 <hr/>
 <h3 id="responseencodeerror">responseEncodeError<a class="headerlink" href="#responseencodeerror" title="Permanent link">¶</a></h3>
 <p>▸ <strong>responseEncodeError</strong>(<code>status</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants/#rpcresponsestatuserror">RpcResponseStatusError</a>, <code>errorMessage</code>: string): <em>AsyncGenerator‹Buffer›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/encoders/responseEncode.ts#L41">packages/lodestar/src/network/reqresp/encoders/responseEncode.ts:41</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/encoders/responseEncode.ts#L41">packages/lodestar/src/network/reqresp/encoders/responseEncode.ts:41</a></em></p>
 <p>Yields byte chunks for a <code>&lt;response_chunk&gt;</code> with a non-zero response code <code>&lt;result&gt;</code>
 denoted as <code>&lt;error_response&gt;</code>
 <div class="highlight"><pre><span></span><code>error_response  <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">result</span><span class="p">&gt;</span> | <span class="p">&lt;</span><span class="nc">error_message</span><span class="p">&gt;</span>?
@@ -541,7 +541,7 @@ fn yields exactly one <code>&lt;error_response&gt;</code> and afterwards the str
 <hr/>
 <h3 id="responseencodesuccess">responseEncodeSuccess<a class="headerlink" href="#responseencodesuccess" title="Permanent link">¶</a></h3>
 <p>▸ <strong>responseEncodeSuccess</strong>(<code>config</code>: IBeaconConfig, <code>method</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.reqrespencoding/">ReqRespEncoding</a>): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/encoders/responseEncode.ts#L16">packages/lodestar/src/network/reqresp/encoders/responseEncode.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/encoders/responseEncode.ts#L16">packages/lodestar/src/network/reqresp/encoders/responseEncode.ts:16</a></em></p>
 <p>Yields byte chunks for a <code>&lt;response&gt;</code> with a zero response code <code>&lt;result&gt;</code>
 <div class="highlight"><pre><span></span><code>response        <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">response_chunk</span><span class="p">&gt;</span>*
 response_chunk  <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">result</span><span class="p">&gt;</span> | <span class="p">&lt;</span><span class="nc">encoding-dependent-header</span><span class="p">&gt;</span> | <span class="p">&lt;</span><span class="nc">encoded-payload</span><span class="p">&gt;</span>

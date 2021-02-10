@@ -399,11 +399,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="operation">Operation<a class="headerlink" href="#operation" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>Operation</strong>: <em>ProposerSlashing | AttesterSlashing | Attestation | Deposit | SignedVoluntaryExit</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/block/operations/index.ts#L26">packages/lodestar-beacon-state-transition/src/block/operations/index.ts:26</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/block/operations/index.ts#L26">packages/lodestar-beacon-state-transition/src/block/operations/index.ts:26</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="processattestation_1">processAttestation<a class="headerlink" href="#processattestation_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processAttestation</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attestation</code>: Attestation, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/block/operations/attestation.ts#L20">packages/lodestar-beacon-state-transition/src/block/operations/attestation.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/block/operations/attestation.ts#L20">packages/lodestar-beacon-state-transition/src/block/operations/attestation.ts:20</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -440,7 +440,7 @@
 <hr/>
 <h3 id="processattesterslashing_1">processAttesterSlashing<a class="headerlink" href="#processattesterslashing_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processAttesterSlashing</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attesterSlashing</code>: AttesterSlashing, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/block/operations/attesterSlashing.ts#L14">packages/lodestar-beacon-state-transition/src/block/operations/attesterSlashing.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/block/operations/attesterSlashing.ts#L14">packages/lodestar-beacon-state-transition/src/block/operations/attesterSlashing.ts:14</a></em></p>
 <p>Process <code>AttesterSlashing</code> operation.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -478,7 +478,7 @@
 <hr/>
 <h3 id="processdeposit_1">processDeposit<a class="headerlink" href="#processdeposit_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processDeposit</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>deposit</code>: Deposit): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/block/operations/deposit.ts#L16">packages/lodestar-beacon-state-transition/src/block/operations/deposit.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/block/operations/deposit.ts#L16">packages/lodestar-beacon-state-transition/src/block/operations/deposit.ts:16</a></em></p>
 <p>Process an Eth1 deposit, registering a validator or increasing its balance.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -507,7 +507,7 @@
 <hr/>
 <h3 id="processoperations">processOperations<a class="headerlink" href="#processoperations" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processOperations</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>body</code>: BeaconBlockBody, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/block/operations/index.ts#L28">packages/lodestar-beacon-state-transition/src/block/operations/index.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/block/operations/index.ts#L28">packages/lodestar-beacon-state-transition/src/block/operations/index.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -544,7 +544,7 @@
 <hr/>
 <h3 id="processproposerslashing_1">processProposerSlashing<a class="headerlink" href="#processproposerslashing_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processProposerSlashing</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>proposerSlashing</code>: ProposerSlashing, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/block/operations/proposerSlashing.ts#L11">packages/lodestar-beacon-state-transition/src/block/operations/proposerSlashing.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/block/operations/proposerSlashing.ts#L11">packages/lodestar-beacon-state-transition/src/block/operations/proposerSlashing.ts:11</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -581,7 +581,7 @@
 <hr/>
 <h3 id="processvoluntaryexit_1">processVoluntaryExit<a class="headerlink" href="#processvoluntaryexit_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processVoluntaryExit</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>signedExit</code>: SignedVoluntaryExit, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/block/operations/voluntaryExit.ts#L14">packages/lodestar-beacon-state-transition/src/block/operations/voluntaryExit.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar-beacon-state-transition/src/block/operations/voluntaryExit.ts#L14">packages/lodestar-beacon-state-transition/src/block/operations/voluntaryExit.ts:14</a></em></p>
 <p>Process <code>VoluntaryExit</code> operation.</p>
 <p><strong>Parameters:</strong></p>
 <table>

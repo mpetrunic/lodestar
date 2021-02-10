@@ -364,7 +364,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="applydeposits">applyDeposits<a class="headerlink" href="#applydeposits" title="Permanent link">¶</a></h3>
 <p>▸ <strong>applyDeposits</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>newDeposits</code>: Deposit[], <code>fullDepositDataRootList?</code>: TreeBacked‹List‹<a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#root">Root</a>››): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L62">packages/lodestar/src/chain/genesis/util.ts:62</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L62">packages/lodestar/src/chain/genesis/util.ts:62</a></em></p>
 <p>Apply deposits to state.
 For spec test, fullDepositDataRootList is undefined.
 For genesis builder, fullDepositDataRootList is full list of deposit data root from index 0.</p>
@@ -404,7 +404,7 @@ For genesis builder, fullDepositDataRootList is full list of deposit data root f
 <hr/>
 <h3 id="applyeth1blockhash">applyEth1BlockHash<a class="headerlink" href="#applyeth1blockhash" title="Permanent link">¶</a></h3>
 <p>▸ <strong>applyEth1BlockHash</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>eth1BlockHash</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#bytes32">Bytes32</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L38">packages/lodestar/src/chain/genesis/util.ts:38</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L38">packages/lodestar/src/chain/genesis/util.ts:38</a></em></p>
 <p>Apply eth1 block hash to state.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -437,7 +437,7 @@ For genesis builder, fullDepositDataRootList is full list of deposit data root f
 <hr/>
 <h3 id="applytimestamp">applyTimestamp<a class="headerlink" href="#applytimestamp" title="Permanent link">¶</a></h3>
 <p>▸ <strong>applyTimestamp</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: TreeBacked‹BeaconState›, <code>eth1Timestamp</code>: number): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L49">packages/lodestar/src/chain/genesis/util.ts:49</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L49">packages/lodestar/src/chain/genesis/util.ts:49</a></em></p>
 <p>Apply eth1 block timestamp to state.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -470,7 +470,7 @@ For genesis builder, fullDepositDataRootList is full list of deposit data root f
 <hr/>
 <h3 id="calculatestatetime">calculateStateTime<a class="headerlink" href="#calculatestatetime" title="Permanent link">¶</a></h3>
 <p>▸ <strong>calculateStateTime</strong>(<code>config</code>: IBeaconConfig, <code>eth1Timestamp</code>: number): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L115">packages/lodestar/src/chain/genesis/util.ts:115</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L115">packages/lodestar/src/chain/genesis/util.ts:115</a></em></p>
 <p>This is used to either calculate genesis timestamp or estimate eth1 block forming genesis state.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -495,24 +495,24 @@ For genesis builder, fullDepositDataRootList is full list of deposit data root f
 <hr/>
 <h3 id="getemptyblock">getEmptyBlock<a class="headerlink" href="#getemptyblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getEmptyBlock</strong>(): <em>BeaconBlock</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L203">packages/lodestar/src/chain/genesis/util.ts:203</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L203">packages/lodestar/src/chain/genesis/util.ts:203</a></em></p>
 <p>Get an empty <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types.beaconblock/">BeaconBlock</a>.</p>
 <p><strong>Returns:</strong> <em>BeaconBlock</em></p>
 <hr/>
 <h3 id="getemptyblockbody">getEmptyBlockBody<a class="headerlink" href="#getemptyblockbody" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getEmptyBlockBody</strong>(): <em>BeaconBlockBody</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L172">packages/lodestar/src/chain/genesis/util.ts:172</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L172">packages/lodestar/src/chain/genesis/util.ts:172</a></em></p>
 <p><strong>Returns:</strong> <em>BeaconBlockBody</em></p>
 <hr/>
 <h3 id="getemptysignedblock">getEmptySignedBlock<a class="headerlink" href="#getemptysignedblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getEmptySignedBlock</strong>(): <em>SignedBeaconBlock</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L192">packages/lodestar/src/chain/genesis/util.ts:192</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L192">packages/lodestar/src/chain/genesis/util.ts:192</a></em></p>
 <p>Get an empty <a href="../../interfaces/reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types.beaconblock/">BeaconBlock</a>.</p>
 <p><strong>Returns:</strong> <em>SignedBeaconBlock</em></p>
 <hr/>
 <h3 id="getgenesisbeaconstate">getGenesisBeaconState<a class="headerlink" href="#getgenesisbeaconstate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getGenesisBeaconState</strong>(<code>config</code>: IBeaconConfig, <code>genesisEth1Data</code>: Eth1Data, <code>latestBlockHeader</code>: BeaconBlockHeader): <em>TreeBacked‹BeaconState›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L143">packages/lodestar/src/chain/genesis/util.ts:143</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L143">packages/lodestar/src/chain/genesis/util.ts:143</a></em></p>
 <p>Generate the initial beacon chain state.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -541,7 +541,7 @@ For genesis builder, fullDepositDataRootList is full list of deposit data root f
 <hr/>
 <h3 id="initializebeaconstatefrometh1">initializeBeaconStateFromEth1<a class="headerlink" href="#initializebeaconstatefrometh1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>initializeBeaconStateFromEth1</strong>(<code>config</code>: IBeaconConfig, <code>eth1BlockHash</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#bytes32">Bytes32</a>, <code>eth1Timestamp</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#number64">Number64</a>, <code>deposits</code>: Deposit[]): <em>TreeBacked‹BeaconState›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/genesis.ts#L140">packages/lodestar/src/chain/genesis/genesis.ts:140</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/genesis.ts#L140">packages/lodestar/src/chain/genesis/genesis.ts:140</a></em></p>
 <p>Mainly used for spec test.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -579,7 +579,7 @@ For genesis builder, fullDepositDataRootList is full list of deposit data root f
 <hr/>
 <h3 id="isvalidgenesisstate">isValidGenesisState<a class="headerlink" href="#isvalidgenesisstate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isValidGenesisState</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L124">packages/lodestar/src/chain/genesis/util.ts:124</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L124">packages/lodestar/src/chain/genesis/util.ts:124</a></em></p>
 <p>Check if it's valid genesis state.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -607,7 +607,7 @@ For genesis builder, fullDepositDataRootList is full list of deposit data root f
 <hr/>
 <h3 id="isvalidgenesisvalidators">isValidGenesisValidators<a class="headerlink" href="#isvalidgenesisvalidators" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isValidGenesisValidators</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/chain/genesis/util.ts#L133">packages/lodestar/src/chain/genesis/util.ts:133</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/chain/genesis/util.ts#L133">packages/lodestar/src/chain/genesis/util.ts:133</a></em></p>
 <p>Check if it's valid genesis validators state.</p>
 <p><strong>Parameters:</strong></p>
 <table>

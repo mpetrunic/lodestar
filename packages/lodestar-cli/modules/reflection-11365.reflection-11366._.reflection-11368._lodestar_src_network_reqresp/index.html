@@ -496,11 +496,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="ireqrespoptions_1">IReqRespOptions<a class="headerlink" href="#ireqrespoptions_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>IReqRespOptions</strong>: <em>Partial‹typeof timeoutOptions›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/reqResp.ts#L30">packages/lodestar/src/network/reqresp/reqResp.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/reqResp.ts#L30">packages/lodestar/src/network/reqresp/reqResp.ts:30</a></em></p>
 <hr/>
 <h3 id="reqresphandler_1">ReqRespHandler<a class="headerlink" href="#reqresphandler_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ReqRespHandler</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/interface.ts#L30">packages/lodestar/src/network/reqresp/interface.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/interface.ts#L30">packages/lodestar/src/network/reqresp/interface.ts:30</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>method</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.method/">Method</a>, <code>requestBody</code>: <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#requestbody">RequestBody</a>, <code>peerId</code>: PeerId): <em>AsyncIterable‹<a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#responsebody">ResponseBody</a>›</em></p>
 <p><strong>Parameters:</strong></p>
@@ -529,7 +529,7 @@
 <hr/>
 <h3 id="reqresprequest_1">ReqRespRequest<a class="headerlink" href="#reqresprequest_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ReqRespRequest</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/interface.ts#L16">packages/lodestar/src/network/reqresp/interface.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/interface.ts#L16">packages/lodestar/src/network/reqresp/interface.ts:16</a></em></p>
 <h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -548,15 +548,15 @@
 <hr/>
 <h3 id="requestorresponsebody_1">RequestOrResponseBody<a class="headerlink" href="#requestorresponsebody_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>RequestOrResponseBody</strong>: <em><a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#responsebody">ResponseBody</a> | <a href="../reflection-11365.reflection-11366._.reflection-11368._lodestar_types_src_types/#requestbody">RequestBody</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/interface.ts#L28">packages/lodestar/src/network/reqresp/interface.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/interface.ts#L28">packages/lodestar/src/network/reqresp/interface.ts:28</a></em></p>
 <hr/>
 <h3 id="requestorresponsetype_1">RequestOrResponseType<a class="headerlink" href="#requestorresponsetype_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>RequestOrResponseType</strong>: <em>Exclude‹<a href="../cmds_account_cmds_validator/#returntype">ReturnType</a>‹typeof Methods[Method]["responseSSZType"]› | <a href="../cmds_account_cmds_validator/#returntype">ReturnType</a>‹typeof Methods[Method]["requestSSZType"]›, null›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/interface.ts#L23">packages/lodestar/src/network/reqresp/interface.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/interface.ts#L23">packages/lodestar/src/network/reqresp/interface.ts:23</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="errortoscoreevent">errorToScoreEvent<a class="headerlink" href="#errortoscoreevent" title="Permanent link">¶</a></h3>
 <p>▸ <strong>errorToScoreEvent</strong>(<code>e</code>: <a href="../../classes/util.yargserror/#static-error">Error</a>, <code>method</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.method/">Method</a>): <em><a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network_peers_score.rpcscoreevent/">RpcScoreEvent</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/score.ts#L27">packages/lodestar/src/network/reqresp/score.ts:27</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/score.ts#L27">packages/lodestar/src/network/reqresp/score.ts:27</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -580,7 +580,7 @@
 <hr/>
 <h3 id="successtoscoreevent">successToScoreEvent<a class="headerlink" href="#successtoscoreevent" title="Permanent link">¶</a></h3>
 <p>▸ <strong>successToScoreEvent</strong>(<code>method</code>: <a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_constants.method/">Method</a>): <em><a href="../../enums/reflection-11365.reflection-11366._.reflection-11368._lodestar_src_network_peers_score.rpcscoreevent/">RpcScoreEvent</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/score.ts#L15">packages/lodestar/src/network/reqresp/score.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/score.ts#L15">packages/lodestar/src/network/reqresp/score.ts:15</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -600,13 +600,13 @@
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="const-libp2perrorcodes"><code>Const</code> libp2pErrorCodes<a class="headerlink" href="#const-libp2perrorcodes" title="Permanent link">¶</a></h3>
 <h3 id="libp2perrorcodes-object">▪ <strong>libp2pErrorCodes</strong>: <em>object</em><a class="headerlink" href="#libp2perrorcodes-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/score.ts#L10">packages/lodestar/src/network/reqresp/score.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/score.ts#L10">packages/lodestar/src/network/reqresp/score.ts:10</a></em></p>
 <p>libp2p-ts does not include types for the error codes.
 When libp2p has native types, this object won't be necessary.
 https://github.com/libp2p/js-libp2p/blob/6350a187c7c207086e42436ccbcabd59af6f5e3d/src/errors.js#L32</p>
 <h3 id="err_unsupported_protocol">ERR_UNSUPPORTED_PROTOCOL<a class="headerlink" href="#err_unsupported_protocol" title="Permanent link">¶</a></h3>
 <p>• <strong>ERR_UNSUPPORTED_PROTOCOL</strong>: <em>string</em> = "ERR_UNSUPPORTED_PROTOCOL"</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/reqresp/score.ts#L12">packages/lodestar/src/network/reqresp/score.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/network/reqresp/score.ts#L12">packages/lodestar/src/network/reqresp/score.ts:12</a></em></p>
 </article>
 </div>
 </div>

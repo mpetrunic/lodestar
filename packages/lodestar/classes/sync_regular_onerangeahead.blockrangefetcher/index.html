@@ -432,7 +432,7 @@ This is ok, we handle that by beacon_blocks_by_root in sync service.</p>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new BlockRangeFetcher</strong>(<code>options</code>: Partial‹<a href="../../interfaces/sync_regular.iregularsyncoptions/">IRegularSyncOptions</a>›, <code>modules</code>: <a href="../../modules/sync_regular/#iregularsyncmodules">IRegularSyncModules</a>, <code>getPeers</code>: function): <em><a href="./">BlockRangeFetcher</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L33">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:33</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L33">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:33</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>options</strong>: <em>Partial‹<a href="../../interfaces/sync_regular.iregularsyncoptions/">IRegularSyncOptions</a>›</em></p>
 <p>▪ <strong>modules</strong>: <em><a href="../../modules/sync_regular/#iregularsyncmodules">IRegularSyncModules</a></em></p>
@@ -457,15 +457,15 @@ This is ok, we handle that by beacon_blocks_by_root in sync service.</p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-readonly-chain"><code>Private</code> <code>Readonly</code> chain<a class="headerlink" href="#private-readonly-chain" title="Permanent link">¶</a></h3>
 <p>• <strong>chain</strong>: <em><a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L25">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L25">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:25</a></em></p>
 <hr/>
 <h3 id="protected-readonly-config"><code>Protected</code> <code>Readonly</code> config<a class="headerlink" href="#protected-readonly-config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L23">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L23">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:23</a></em></p>
 <hr/>
 <h3 id="private-getpeers"><code>Private</code> getPeers<a class="headerlink" href="#private-getpeers" title="Permanent link">¶</a></h3>
 <p>• <strong>getPeers</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L33">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:33</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L33">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:33</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>exludedPeers?</code>: string[]): <em>Promise‹PeerId[]›</em></p>
 <p><strong>Parameters:</strong></p>
@@ -486,43 +486,43 @@ This is ok, we handle that by beacon_blocks_by_root in sync service.</p>
 <hr/>
 <h3 id="private-lastfetchcheckpoint"><code>Private</code> lastFetchCheckpoint<a class="headerlink" href="#private-lastfetchcheckpoint" title="Permanent link">¶</a></h3>
 <p>• <strong>lastFetchCheckpoint</strong>: <em>SlotRoot</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L29">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:29</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L29">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:29</a></em></p>
 <hr/>
 <h3 id="private-readonly-logger"><code>Private</code> <code>Readonly</code> logger<a class="headerlink" href="#private-readonly-logger" title="Permanent link">¶</a></h3>
 <p>• <strong>logger</strong>: <em>ILogger</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L26">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:26</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L26">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:26</a></em></p>
 <hr/>
 <h3 id="private-readonly-network"><code>Private</code> <code>Readonly</code> network<a class="headerlink" href="#private-readonly-network" title="Permanent link">¶</a></h3>
 <p>• <strong>network</strong>: <em><a href="../../interfaces/network.inetwork/">INetwork</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L24">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:24</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L24">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:24</a></em></p>
 <hr/>
 <h3 id="private-readonly-opts"><code>Private</code> <code>Readonly</code> opts<a class="headerlink" href="#private-readonly-opts" title="Permanent link">¶</a></h3>
 <p>• <strong>opts</strong>: <em><a href="../../interfaces/sync_regular.iregularsyncoptions/">IRegularSyncOptions</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L27">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:27</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L27">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:27</a></em></p>
 <hr/>
 <h3 id="private-rangeend"><code>Private</code> rangeEnd<a class="headerlink" href="#private-rangeend" title="Permanent link">¶</a></h3>
 <p>• <strong>rangeEnd</strong>: <em><a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#slot">Slot</a></em> = 0</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L32">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:32</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L32">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:32</a></em></p>
 <hr/>
 <h3 id="private-rangestart"><code>Private</code> rangeStart<a class="headerlink" href="#private-rangestart" title="Permanent link">¶</a></h3>
 <p>• <strong>rangeStart</strong>: <em><a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#slot">Slot</a></em> = 0</p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L31">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L31">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:31</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="private-getnewtarget"><code>Private</code> getNewTarget<a class="headerlink" href="#private-getnewtarget" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getNewTarget</strong>(): <em><a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#slot">Slot</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L152">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:152</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L152">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:152</a></em></p>
 <p><strong>Returns:</strong> <em><a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#slot">Slot</a></em></p>
 <hr/>
 <h3 id="getnextblockrange">getNextBlockRange<a class="headerlink" href="#getnextblockrange" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getNextBlockRange</strong>(): <em>Promise‹SignedBeaconBlock[]›</em></p>
 <p><em>Implementation of <a href="../../interfaces/sync_regular_onerangeahead.iblockrangefetcher/">IBlockRangeFetcher</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L56">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:56</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L56">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:56</a></em></p>
 <p>Get next block range.</p>
 <p><strong>Returns:</strong> <em>Promise‹SignedBeaconBlock[]›</em></p>
 <hr/>
 <h3 id="private-handleemptyrange"><code>Private</code> handleEmptyRange<a class="headerlink" href="#private-handleemptyrange" title="Permanent link">¶</a></h3>
 <p>▸ <strong>handleEmptyRange</strong>(<code>peer</code>: PeerId, <code>blocks</code>: SignedBeaconBlock[]): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L125">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:125</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L125">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:125</a></em></p>
 <p>Since we query 1 additional block to check linear chain, a return of 0 or 1 block
 should go to this handler.</p>
 <p><strong>Parameters:</strong></p>
@@ -552,7 +552,7 @@ should go to this handler.</p>
 <h3 id="setlastprocessedblock">setLastProcessedBlock<a class="headerlink" href="#setlastprocessedblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>setLastProcessedBlock</strong>(<code>lastFetchCheckpoint</code>: SlotRoot): <em>void</em></p>
 <p><em>Implementation of <a href="../../interfaces/sync_regular_onerangeahead.iblockrangefetcher/">IBlockRangeFetcher</a></em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L49">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:49</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L49">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:49</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -572,7 +572,7 @@ should go to this handler.</p>
 <hr/>
 <h3 id="private-updatenextrange"><code>Private</code> updateNextRange<a class="headerlink" href="#private-updatenextrange" title="Permanent link">¶</a></h3>
 <p>▸ <strong>updateNextRange</strong>(): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L114">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:114</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts#L114">packages/lodestar/src/sync/regular/oneRangeAhead/fetcher.ts:114</a></em></p>
 <p><strong>Returns:</strong> <em>void</em></p>
 </article>
 </div>

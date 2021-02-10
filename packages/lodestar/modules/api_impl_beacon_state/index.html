@@ -458,7 +458,7 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="apistatecontext_1">ApiStateContext<a class="headerlink" href="#apistatecontext_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ApiStateContext</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/interface.ts#L42">packages/lodestar/src/api/impl/beacon/state/interface.ts:42</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/interface.ts#L42">packages/lodestar/src/api/impl/beacon/state/interface.ts:42</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -471,15 +471,15 @@
 <hr/>
 <h3 id="stateid_1">StateId<a class="headerlink" href="#stateid_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>StateId</strong>: <em>string | "head" | "genesis" | "finalized" | "justified"</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/interface.ts#L28">packages/lodestar/src/api/impl/beacon/state/interface.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/interface.ts#L28">packages/lodestar/src/api/impl/beacon/state/interface.ts:28</a></em></p>
 <hr/>
 <h3 id="validatorstatus_1">ValidatorStatus<a class="headerlink" href="#validatorstatus_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ValidatorStatus</strong>: <em>"active"</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/interface.ts#L30">packages/lodestar/src/api/impl/beacon/state/interface.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/interface.ts#L30">packages/lodestar/src/api/impl/beacon/state/interface.ts:30</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getepochbeaconcommittees">getEpochBeaconCommittees<a class="headerlink" href="#getepochbeaconcommittees" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getEpochBeaconCommittees</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>stateContext</code>: <a href="./#apistatecontext">ApiStateContext</a>, <code>epoch</code>: <a href="../reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#epoch">Epoch</a>): <em><a href="../reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>[][][]</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/utils.ts#L54">packages/lodestar/src/api/impl/beacon/state/utils.ts:54</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/utils.ts#L54">packages/lodestar/src/api/impl/beacon/state/utils.ts:54</a></em></p>
 <p>Returns committees mapped by index -&gt; slot -&gt; validator index</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -512,7 +512,7 @@
 <hr/>
 <h3 id="resolvestateid">resolveStateId<a class="headerlink" href="#resolvestateid" title="Permanent link">¶</a></h3>
 <p>▸ <strong>resolveStateId</strong>(<code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>stateId</code>: <a href="./#stateid">StateId</a>): <em>Promise‹<a href="./#apistatecontext">ApiStateContext</a> | null›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/utils.ts#L22">packages/lodestar/src/api/impl/beacon/state/utils.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/utils.ts#L22">packages/lodestar/src/api/impl/beacon/state/utils.ts:22</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -540,7 +540,7 @@
 <hr/>
 <h3 id="statebyname">stateByName<a class="headerlink" href="#statebyname" title="Permanent link">¶</a></h3>
 <p>▸ <strong>stateByName</strong>(<code>db</code>: <a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>stateCache</code>: <a href="../../classes/chain_statecache.statecontextcache/">StateContextCache</a>, <code>forkChoice</code>: IForkChoice, <code>stateId</code>: <a href="./#stateid">StateId</a>): <em>Promise‹<a href="./#apistatecontext">ApiStateContext</a> | null›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/utils.ts#L86">packages/lodestar/src/api/impl/beacon/state/utils.ts:86</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/utils.ts#L86">packages/lodestar/src/api/impl/beacon/state/utils.ts:86</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -572,7 +572,7 @@
 <hr/>
 <h3 id="statebyroot">stateByRoot<a class="headerlink" href="#statebyroot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>stateByRoot</strong>(<code>db</code>: <a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>stateCache</code>: <a href="../../classes/chain_statecache.statecontextcache/">StateContextCache</a>, <code>stateId</code>: <a href="./#stateid">StateId</a>): <em>Promise‹<a href="./#apistatecontext">ApiStateContext</a> | null›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/utils.ts#L108">packages/lodestar/src/api/impl/beacon/state/utils.ts:108</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/utils.ts#L108">packages/lodestar/src/api/impl/beacon/state/utils.ts:108</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -600,7 +600,7 @@
 <hr/>
 <h3 id="statebyslot">stateBySlot<a class="headerlink" href="#statebyslot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>stateBySlot</strong>(<code>db</code>: <a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>stateCache</code>: <a href="../../classes/chain_statecache.statecontextcache/">StateContextCache</a>, <code>forkChoice</code>: IForkChoice, <code>slot</code>: <a href="../reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹<a href="./#apistatecontext">ApiStateContext</a> | null›</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/utils.ts#L124">packages/lodestar/src/api/impl/beacon/state/utils.ts:124</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/utils.ts#L124">packages/lodestar/src/api/impl/beacon/state/utils.ts:124</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -632,7 +632,7 @@
 <hr/>
 <h3 id="tovalidatorresponse">toValidatorResponse<a class="headerlink" href="#tovalidatorresponse" title="Permanent link">¶</a></h3>
 <p>▸ <strong>toValidatorResponse</strong>(<code>index</code>: <a href="../reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>, <code>validator</code>: Validator, <code>balance</code>: <a href="../reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#gwei">Gwei</a>): <em>ValidatorResponse</em></p>
-<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/api/impl/beacon/state/utils.ts#L42">packages/lodestar/src/api/impl/beacon/state/utils.ts:42</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/773e056/packages/lodestar/src/api/impl/beacon/state/utils.ts#L42">packages/lodestar/src/api/impl/beacon/state/utils.ts:42</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
