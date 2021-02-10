@@ -16,7 +16,7 @@ jobs:
       - name: Get latest tag
         uses: actions-ecosystem/action-get-latest-tag@v1
         with:
-          with_initial_version: false
+          with_initial_version: v15.0.0
         id: get-latest-tag
 
       - name: Create tag
@@ -118,5 +118,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - run: docker build --tag chainsafe/lodestar:${{ needs.tag.outputs.tag }} .
-      - run: docker push chainsafe/lodestar:${{ needs.tag.outputs.tag }}
+      - run: docker build --tag mpetrunic/lodestar:${{ needs.tag.outputs.tag }} .
+      - run: docker push mpetrunic/lodestar:${{ needs.tag.outputs.tag }}
