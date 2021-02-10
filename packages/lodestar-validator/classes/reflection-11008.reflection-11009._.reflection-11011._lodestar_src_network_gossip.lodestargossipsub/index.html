@@ -1,0 +1,2870 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
+<link href="https://chainsafe.github.io/lodestar/packages/lodestar-validator/classes/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip.lodestargossipsub/" rel="canonical"/>
+<link href="../../../../images/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.8" name="generator"/>
+<title>Reflection 11008.reflection 11009. .reflection 11011. lodestar src network gossip.lodestargossipsub - Lodestar documentation</title>
+<link href="../../../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../../../stylesheets/extras.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="black" data-md-color-primary="" data-md-color-scheme="preference" dir="ltr">
+<script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#class-lodestargossipsub">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="Lodestar documentation" class="md-header-nav__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            Lodestar documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Reflection 11008.reflection 11009. .reflection 11011. lodestar src network gossip.lodestargossipsub
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header-nav__source">
+<a class="md-source" href="https://github.com/chainsafe/lodestar/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    chainsafe/lodestar
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Lodestar documentation" class="md-nav__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
+</a>
+    Lodestar documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" href="https://github.com/chainsafe/lodestar/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    chainsafe/lodestar
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+        Getting started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../installation/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Design
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Design" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/architecture/">
+        Beacon node architecture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/events/">
+        Beacon node events
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/depgraph/">
+        Lodestar package structure
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Usage
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Usage" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Usage
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../usage/testnet/">
+        Mainnet or public testnet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../usage/local/">
+        Local testnet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../usage/key-management/">
+        Key management
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../usage/prometheus-grafana/">
+        Prometheus &amp; Grafana Setup
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Reference
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Reference" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../reference/cli/">
+        Command line
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../">
+        Packages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contributing/">
+        Contributing
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hierarchy">
+    Hierarchy
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#index">
+    Index
+  </a>
+<nav aria-label="Index" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constructors">
+    Constructors
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methods">
+    Methods
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constructors_1">
+    Constructors
+  </a>
+<nav aria-label="Constructors" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constructor">
+    constructor
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_1">
+    Properties
+  </a>
+<nav aria-label="Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_directpeerinitial">
+    _directPeerInitial
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_libp2p">
+    _libp2p
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_msgidfn">
+    _msgIdFn
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_options">
+    _options
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_registrarid">
+    _registrarId
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backoff">
+    backoff
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#canrelaymessage">
+    canRelayMessage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-config">
+    Private config
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#control">
+    control
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defaultmsgidfn">
+    defaultMsgIdFn
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct">
+    direct
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emit">
+    emit
+  </a>
+<nav aria-label="emit" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emitself">
+    emitSelf
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fanout">
+    fanout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#globalsignaturepolicy">
+    globalSignaturePolicy
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gossip">
+    gossip
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gossiptracer">
+    gossipTracer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heartbeat">
+    heartbeat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heartbeatticks">
+    heartbeatTicks
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iasked">
+    iasked
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-optional-interval">
+    Private Optional interval
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lastpub">
+    lastpub
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log">
+    log
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-logger">
+    Private Readonly logger
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mesh">
+    mesh
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#messagecache">
+    messageCache
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multicodecs">
+    multicodecs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#outbound">
+    outbound
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#peerid">
+    peerId
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#peerhave">
+    peerhave
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#peers">
+    peers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registrar">
+    registrar
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#score">
+    score
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seencache">
+    seenCache
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#started">
+    started
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subscriptions">
+    subscriptions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-timetolive">
+    Private timeToLive
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topicvalidators">
+    topicValidators
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topics">
+    topics
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-transformedobjects">
+    Private transformedObjects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-validator">
+    Private validator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#static-multicodec">
+    Static multicodec
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methods_1">
+    Methods
+  </a>
+<nav aria-label="Methods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_acceptfrom">
+    _acceptFrom
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_addbackoff">
+    _addBackoff
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_addpeer">
+    _addPeer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_applyiwantpenalties">
+    _applyIwantPenalties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_buildmessage">
+    _buildMessage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_clearbackoff">
+    _clearBackoff
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_connect">
+    _connect
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_decoderpc">
+    _decodeRpc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_directconnect">
+    _directConnect
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_doaddbackoff">
+    _doAddBackoff
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_emitgossip">
+    _emitGossip
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_emitmessage">
+    _emitMessage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_encoderpc">
+    _encodeRpc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_flush">
+    _flush
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_handlegraft">
+    _handleGraft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_handleihave">
+    _handleIHave
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_handleiwant">
+    _handleIWant
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_handleprune">
+    _handlePrune
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_makeprune">
+    _makePrune
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_now">
+    _now
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-_onincomingstream">
+    Protected _onIncomingStream
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-_onpeerconnected">
+    Protected _onPeerConnected
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-_onpeerdisconnected">
+    Protected _onPeerDisconnected
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_piggybackcontrol">
+    _piggybackControl
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_piggybackgossip">
+    _piggybackGossip
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_processmessages">
+    _processMessages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_processrpc">
+    _processRpc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_processrpccontrolmessage">
+    _processRpcControlMessage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_processrpcmessage">
+    _processRpcMessage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_processrpcsubopt">
+    _processRpcSubOpt
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_publish">
+    _publish
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_pushgossip">
+    _pushGossip
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_pxconnect">
+    _pxConnect
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_removepeer">
+    _removePeer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_sendgraft">
+    _sendGraft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_sendgraftprune">
+    _sendGraftPrune
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_sendprune">
+    _sendPrune
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_sendrpc">
+    _sendRpc
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_sendsubscriptions">
+    _sendSubscriptions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#addlistener">
+    addListener
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-cleanup">
+    Private cleanUp
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-deserializegossipmessage">
+    Private deserializeGossipMessage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-genericisvalid">
+    Private genericIsValid
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-getlodestartopicvalidator">
+    Private getLodestarTopicValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getmaxlisteners">
+    getMaxListeners
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getmsgid">
+    getMsgId
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getsubscribers">
+    getSubscribers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gettopics">
+    getTopics
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#join">
+    join
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#leave">
+    leave
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#libp2ptopicvalidator">
+    libP2pTopicValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#listenercount">
+    listenerCount
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#listeners">
+    listeners
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#off">
+    off
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on">
+    on
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#once">
+    once
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#publish">
+    publish
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rawlisteners">
+    rawListeners
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registerlibp2ptopicvalidators">
+    registerLibp2pTopicValidators
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removealllisteners">
+    removeAllListeners
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removelistener">
+    removeListener
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setmaxlisteners">
+    setMaxListeners
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start">
+    start
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stop">
+    stop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subscribe">
+    subscribe
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsubscribe">
+    unsubscribe
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validate">
+    validate
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar-validator/classes/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip.lodestargossipsub.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<p><a href="../../">@chainsafe/lodestar-validator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/reflection-11008/"></a> › <a href="../../modules/reflection-11008.reflection-11009/"></a> › <a href="../../modules/reflection-11008.reflection-11009._/">/</a> › <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011/"></a> › <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip/">/lodestar/src/network/gossip</a> › <a href="./">LodestarGossipsub</a></p>
+<h1 id="class-lodestargossipsub">Class: LodestarGossipsub<a class="headerlink" href="#class-lodestargossipsub" title="Permanent link">¶</a></h1>
+<p>This validates messages in Gossipsub and emit the transformed messages.
+We don't want to double deserialize messages for performance benefit.</p>
+<h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
+<ul>
+<li>Gossipsub</li>
+</ul>
+<p>↳ <strong>LodestarGossipsub</strong></p>
+<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
+<h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#constructor">constructor</a></li>
+</ul>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#_directpeerinitial">_directPeerInitial</a></li>
+<li><a href="./#_libp2p">_libp2p</a></li>
+<li><a href="./#_msgidfn">_msgIdFn</a></li>
+<li><a href="./#_options">_options</a></li>
+<li><a href="./#_registrarid">_registrarId</a></li>
+<li><a href="./#backoff">backoff</a></li>
+<li><a href="./#canrelaymessage">canRelayMessage</a></li>
+<li><a href="./#private-config">config</a></li>
+<li><a href="./#control">control</a></li>
+<li><a href="./#defaultmsgidfn">defaultMsgIdFn</a></li>
+<li><a href="./#direct">direct</a></li>
+<li><a href="./#emit">emit</a></li>
+<li><a href="./#emitself">emitSelf</a></li>
+<li><a href="./#fanout">fanout</a></li>
+<li><a href="./#globalsignaturepolicy">globalSignaturePolicy</a></li>
+<li><a href="./#gossip">gossip</a></li>
+<li><a href="./#gossiptracer">gossipTracer</a></li>
+<li><a href="./#heartbeat">heartbeat</a></li>
+<li><a href="./#heartbeatticks">heartbeatTicks</a></li>
+<li><a href="./#iasked">iasked</a></li>
+<li><a href="./#private-optional-interval">interval</a></li>
+<li><a href="./#lastpub">lastpub</a></li>
+<li><a href="./#log">log</a></li>
+<li><a href="./#private-readonly-logger">logger</a></li>
+<li><a href="./#mesh">mesh</a></li>
+<li><a href="./#messagecache">messageCache</a></li>
+<li><a href="./#multicodecs">multicodecs</a></li>
+<li><a href="./#outbound">outbound</a></li>
+<li><a href="./#peerid">peerId</a></li>
+<li><a href="./#peerhave">peerhave</a></li>
+<li><a href="./#peers">peers</a></li>
+<li><a href="./#registrar">registrar</a></li>
+<li><a href="./#score">score</a></li>
+<li><a href="./#seencache">seenCache</a></li>
+<li><a href="./#started">started</a></li>
+<li><a href="./#subscriptions">subscriptions</a></li>
+<li><a href="./#private-timetolive">timeToLive</a></li>
+<li><a href="./#topicvalidators">topicValidators</a></li>
+<li><a href="./#topics">topics</a></li>
+<li><a href="./#private-transformedobjects">transformedObjects</a></li>
+<li><a href="./#private-validator">validator</a></li>
+<li><a href="./#static-multicodec">multicodec</a></li>
+</ul>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#_acceptfrom">_acceptFrom</a></li>
+<li><a href="./#_addbackoff">_addBackoff</a></li>
+<li><a href="./#_addpeer">_addPeer</a></li>
+<li><a href="./#_applyiwantpenalties">_applyIwantPenalties</a></li>
+<li><a href="./#_buildmessage">_buildMessage</a></li>
+<li><a href="./#_clearbackoff">_clearBackoff</a></li>
+<li><a href="./#_connect">_connect</a></li>
+<li><a href="./#_decoderpc">_decodeRpc</a></li>
+<li><a href="./#_directconnect">_directConnect</a></li>
+<li><a href="./#_doaddbackoff">_doAddBackoff</a></li>
+<li><a href="./#_emitgossip">_emitGossip</a></li>
+<li><a href="./#_emitmessage">_emitMessage</a></li>
+<li><a href="./#_encoderpc">_encodeRpc</a></li>
+<li><a href="./#_flush">_flush</a></li>
+<li><a href="./#_handlegraft">_handleGraft</a></li>
+<li><a href="./#_handleihave">_handleIHave</a></li>
+<li><a href="./#_handleiwant">_handleIWant</a></li>
+<li><a href="./#_handleprune">_handlePrune</a></li>
+<li><a href="./#_makeprune">_makePrune</a></li>
+<li><a href="./#_now">_now</a></li>
+<li><a href="./#protected-_onincomingstream">_onIncomingStream</a></li>
+<li><a href="./#protected-_onpeerconnected">_onPeerConnected</a></li>
+<li><a href="./#protected-_onpeerdisconnected">_onPeerDisconnected</a></li>
+<li><a href="./#_piggybackcontrol">_piggybackControl</a></li>
+<li><a href="./#_piggybackgossip">_piggybackGossip</a></li>
+<li><a href="./#_processmessages">_processMessages</a></li>
+<li><a href="./#_processrpc">_processRpc</a></li>
+<li><a href="./#_processrpccontrolmessage">_processRpcControlMessage</a></li>
+<li><a href="./#_processrpcmessage">_processRpcMessage</a></li>
+<li><a href="./#_processrpcsubopt">_processRpcSubOpt</a></li>
+<li><a href="./#_publish">_publish</a></li>
+<li><a href="./#_pushgossip">_pushGossip</a></li>
+<li><a href="./#_pxconnect">_pxConnect</a></li>
+<li><a href="./#_removepeer">_removePeer</a></li>
+<li><a href="./#_sendgraft">_sendGraft</a></li>
+<li><a href="./#_sendgraftprune">_sendGraftPrune</a></li>
+<li><a href="./#_sendprune">_sendPrune</a></li>
+<li><a href="./#_sendrpc">_sendRpc</a></li>
+<li><a href="./#_sendsubscriptions">_sendSubscriptions</a></li>
+<li><a href="./#addlistener">addListener</a></li>
+<li><a href="./#private-cleanup">cleanUp</a></li>
+<li><a href="./#private-deserializegossipmessage">deserializeGossipMessage</a></li>
+<li><a href="./#private-genericisvalid">genericIsValid</a></li>
+<li><a href="./#private-getlodestartopicvalidator">getLodestarTopicValidator</a></li>
+<li><a href="./#getmaxlisteners">getMaxListeners</a></li>
+<li><a href="./#getmsgid">getMsgId</a></li>
+<li><a href="./#getsubscribers">getSubscribers</a></li>
+<li><a href="./#gettopics">getTopics</a></li>
+<li><a href="./#join">join</a></li>
+<li><a href="./#leave">leave</a></li>
+<li><a href="./#libp2ptopicvalidator">libP2pTopicValidator</a></li>
+<li><a href="./#listenercount">listenerCount</a></li>
+<li><a href="./#listeners">listeners</a></li>
+<li><a href="./#off">off</a></li>
+<li><a href="./#on">on</a></li>
+<li><a href="./#once">once</a></li>
+<li><a href="./#publish">publish</a></li>
+<li><a href="./#rawlisteners">rawListeners</a></li>
+<li><a href="./#registerlibp2ptopicvalidators">registerLibp2pTopicValidators</a></li>
+<li><a href="./#removealllisteners">removeAllListeners</a></li>
+<li><a href="./#removelistener">removeListener</a></li>
+<li><a href="./#setmaxlisteners">setMaxListeners</a></li>
+<li><a href="./#start">start</a></li>
+<li><a href="./#stop">stop</a></li>
+<li><a href="./#subscribe">subscribe</a></li>
+<li><a href="./#unsubscribe">unsubscribe</a></li>
+<li><a href="./#validate">validate</a></li>
+</ul>
+<h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
+<h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
+<p>+ <strong>new LodestarGossipsub</strong>(<code>config</code>: IBeaconConfig, <code>validator</code>: <a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip.igossipmessagevalidator/">IGossipMessageValidator</a>, <code>logger</code>: ILogger, <code>libp2p</code>: Libp2p, <code>options</code>: object): <em><a href="./">LodestarGossipsub</a></em></p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L37">packages/lodestar/src/network/gossip/gossipsub.ts:37</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>validator</code></td>
+<td><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip.igossipmessagevalidator/">IGossipMessageValidator</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>logger</code></td>
+<td>ILogger</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>libp2p</code></td>
+<td>Libp2p</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>object</td>
+<td>{}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="./">LodestarGossipsub</a></em></p>
+<h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="_directpeerinitial">_directPeerInitial<a class="headerlink" href="#_directpeerinitial" title="Permanent link">¶</a></h3>
+<p>• <strong>_directPeerInitial</strong>: <em>Timeout</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_directpeerinitial">_directPeerInitial</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:83</p>
+<hr/>
+<h3 id="_libp2p">_libp2p<a class="headerlink" href="#_libp2p" title="Permanent link">¶</a></h3>
+<p>• <strong>_libp2p</strong>: <em>Libp2p</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_libp2p">_libp2p</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:81</p>
+<hr/>
+<h3 id="_msgidfn">_msgIdFn<a class="headerlink" href="#_msgidfn" title="Permanent link">¶</a></h3>
+<p>• <strong>_msgIdFn</strong>: <em>MessageIdFunction</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_msgidfn">_msgIdFn</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:71</p>
+<hr/>
+<h3 id="_options">_options<a class="headerlink" href="#_options" title="Permanent link">¶</a></h3>
+<p>• <strong>_options</strong>: <em>GossipOptions</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_options">_options</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:82</p>
+<hr/>
+<h3 id="_registrarid">_registrarId<a class="headerlink" href="#_registrarid" title="Permanent link">¶</a></h3>
+<p>• <strong>_registrarId</strong>: <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_registrarid">_registrarId</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:109</p>
+<hr/>
+<h3 id="backoff">backoff<a class="headerlink" href="#backoff" title="Permanent link">¶</a></h3>
+<p>• <strong>backoff</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, <a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, number››</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#backoff">backoff</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:68</p>
+<hr/>
+<h3 id="canrelaymessage">canRelayMessage<a class="headerlink" href="#canrelaymessage" title="Permanent link">¶</a></h3>
+<p>• <strong>canRelayMessage</strong>: <em>boolean</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#canrelaymessage">canRelayMessage</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:88</p>
+<p>If router can relay received messages, even if not subscribed</p>
+<hr/>
+<h3 id="private-config"><code>Private</code> config<a class="headerlink" href="#private-config" title="Permanent link">¶</a></h3>
+<p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L33">packages/lodestar/src/network/gossip/gossipsub.ts:33</a></em></p>
+<hr/>
+<h3 id="control">control<a class="headerlink" href="#control" title="Permanent link">¶</a></h3>
+<p>• <strong>control</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, ControlMessage›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#control">control</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:65</p>
+<hr/>
+<h3 id="defaultmsgidfn">defaultMsgIdFn<a class="headerlink" href="#defaultmsgidfn" title="Permanent link">¶</a></h3>
+<p>• <strong>defaultMsgIdFn</strong>: <em>MessageIdFunction</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#defaultmsgidfn">defaultMsgIdFn</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:70</p>
+<hr/>
+<h3 id="direct">direct<a class="headerlink" href="#direct" title="Permanent link">¶</a></h3>
+<p>• <strong>direct</strong>: <em>Set‹string›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#direct">direct</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:58</p>
+<hr/>
+<h3 id="emit">emit<a class="headerlink" href="#emit" title="Permanent link">¶</a></h3>
+<p>• <strong>emit</strong>: <em>function</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#emit">emit</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:85</p>
+<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
+<p>▸ (<code>event</code>: string | symbol, ...<code>args</code>: any[]): <em>boolean</em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>event</code></td>
+<td>string | symbol</td>
+</tr>
+<tr>
+<td><code>...args</code></td>
+<td>any[]</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="emitself">emitSelf<a class="headerlink" href="#emitself" title="Permanent link">¶</a></h3>
+<p>• <strong>emitSelf</strong>: <em>boolean</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#emitself">emitSelf</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:94</p>
+<p>if publish should emit to self, if subscribed</p>
+<hr/>
+<h3 id="fanout">fanout<a class="headerlink" href="#fanout" title="Permanent link">¶</a></h3>
+<p>• <strong>fanout</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, Set‹string››</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#fanout">fanout</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:62</p>
+<hr/>
+<h3 id="globalsignaturepolicy">globalSignaturePolicy<a class="headerlink" href="#globalsignaturepolicy" title="Permanent link">¶</a></h3>
+<p>• <strong>globalSignaturePolicy</strong>: <em>string</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#globalsignaturepolicy">globalSignaturePolicy</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:82</p>
+<p>The signature policy to follow by default</p>
+<hr/>
+<h3 id="gossip">gossip<a class="headerlink" href="#gossip" title="Permanent link">¶</a></h3>
+<p>• <strong>gossip</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, ControlIHave[]›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#gossip">gossip</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:64</p>
+<hr/>
+<h3 id="gossiptracer">gossipTracer<a class="headerlink" href="#gossiptracer" title="Permanent link">¶</a></h3>
+<p>• <strong>gossipTracer</strong>: <em>IWantTracer</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#gossiptracer">gossipTracer</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:76</p>
+<hr/>
+<h3 id="heartbeat">heartbeat<a class="headerlink" href="#heartbeat" title="Permanent link">¶</a></h3>
+<p>• <strong>heartbeat</strong>: <em>Heartbeat</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#heartbeat">heartbeat</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:74</p>
+<hr/>
+<h3 id="heartbeatticks">heartbeatTicks<a class="headerlink" href="#heartbeatticks" title="Permanent link">¶</a></h3>
+<p>• <strong>heartbeatTicks</strong>: <em>number</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#heartbeatticks">heartbeatTicks</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:75</p>
+<hr/>
+<h3 id="iasked">iasked<a class="headerlink" href="#iasked" title="Permanent link">¶</a></h3>
+<p>• <strong>iasked</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, number›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#iasked">iasked</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:67</p>
+<hr/>
+<h3 id="private-optional-interval"><code>Private</code> <code>Optional</code> interval<a class="headerlink" href="#private-optional-interval" title="Permanent link">¶</a></h3>
+<p>• <strong>interval</strong>? : <em>NodeJS.Timeout</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L35">packages/lodestar/src/network/gossip/gossipsub.ts:35</a></em></p>
+<hr/>
+<h3 id="lastpub">lastpub<a class="headerlink" href="#lastpub" title="Permanent link">¶</a></h3>
+<p>• <strong>lastpub</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, number›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#lastpub">lastpub</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:63</p>
+<hr/>
+<h3 id="log">log<a class="headerlink" href="#log" title="Permanent link">¶</a></h3>
+<p>• <strong>log</strong>: <em>Debugger</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#log">log</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:84</p>
+<hr/>
+<h3 id="private-readonly-logger"><code>Private</code> <code>Readonly</code> logger<a class="headerlink" href="#private-readonly-logger" title="Permanent link">¶</a></h3>
+<p>• <strong>logger</strong>: <em>ILogger</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L37">packages/lodestar/src/network/gossip/gossipsub.ts:37</a></em></p>
+<hr/>
+<h3 id="mesh">mesh<a class="headerlink" href="#mesh" title="Permanent link">¶</a></h3>
+<p>• <strong>mesh</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, Set‹string››</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#mesh">mesh</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:61</p>
+<hr/>
+<h3 id="messagecache">messageCache<a class="headerlink" href="#messagecache" title="Permanent link">¶</a></h3>
+<p>• <strong>messageCache</strong>: <em>MessageCache</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#messagecache">messageCache</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:72</p>
+<hr/>
+<h3 id="multicodecs">multicodecs<a class="headerlink" href="#multicodecs" title="Permanent link">¶</a></h3>
+<p>• <strong>multicodecs</strong>: <em>string[]</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#multicodecs">multicodecs</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:77</p>
+<hr/>
+<h3 id="outbound">outbound<a class="headerlink" href="#outbound" title="Permanent link">¶</a></h3>
+<p>• <strong>outbound</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, boolean›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#outbound">outbound</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:69</p>
+<hr/>
+<h3 id="peerid">peerId<a class="headerlink" href="#peerid" title="Permanent link">¶</a></h3>
+<p>• <strong>peerId</strong>: <em>PeerId</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#peerid">peerId</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:79</p>
+<hr/>
+<h3 id="peerhave">peerhave<a class="headerlink" href="#peerhave" title="Permanent link">¶</a></h3>
+<p>• <strong>peerhave</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, number›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#peerhave">peerhave</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:66</p>
+<hr/>
+<h3 id="peers">peers<a class="headerlink" href="#peers" title="Permanent link">¶</a></h3>
+<p>• <strong>peers</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, PeerStreams›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#peers">peers</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:57</p>
+<hr/>
+<h3 id="registrar">registrar<a class="headerlink" href="#registrar" title="Permanent link">¶</a></h3>
+<p>• <strong>registrar</strong>: <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#registrar">registrar</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:53</p>
+<hr/>
+<h3 id="score">score<a class="headerlink" href="#score" title="Permanent link">¶</a></h3>
+<p>• <strong>score</strong>: <em>PeerScore</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#score">score</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:73</p>
+<hr/>
+<h3 id="seencache">seenCache<a class="headerlink" href="#seencache" title="Permanent link">¶</a></h3>
+<p>• <strong>seenCache</strong>: <em>TimeCache</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#seencache">seenCache</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:59</p>
+<hr/>
+<h3 id="started">started<a class="headerlink" href="#started" title="Permanent link">¶</a></h3>
+<p>• <strong>started</strong>: <em>boolean</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#started">started</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:78</p>
+<hr/>
+<h3 id="subscriptions">subscriptions<a class="headerlink" href="#subscriptions" title="Permanent link">¶</a></h3>
+<p>• <strong>subscriptions</strong>: <em>Set‹string›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#subscriptions">subscriptions</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:80</p>
+<hr/>
+<h3 id="private-timetolive"><code>Private</code> timeToLive<a class="headerlink" href="#private-timetolive" title="Permanent link">¶</a></h3>
+<p>• <strong>timeToLive</strong>: <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L36">packages/lodestar/src/network/gossip/gossipsub.ts:36</a></em></p>
+<hr/>
+<h3 id="topicvalidators">topicValidators<a class="headerlink" href="#topicvalidators" title="Permanent link">¶</a></h3>
+<p>• <strong>topicValidators</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip/#validatorfn">ValidatorFn</a>›</em> = new Map()</p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L31">packages/lodestar/src/network/gossip/gossipsub.ts:31</a></em></p>
+<hr/>
+<h3 id="topics">topics<a class="headerlink" href="#topics" title="Permanent link">¶</a></h3>
+<p>• <strong>topics</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, Set‹string››</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#topics">topics</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:60</p>
+<hr/>
+<h3 id="private-transformedobjects"><code>Private</code> transformedObjects<a class="headerlink" href="#private-transformedobjects" title="Permanent link">¶</a></h3>
+<p>• <strong>transformedObjects</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, object›</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L32">packages/lodestar/src/network/gossip/gossipsub.ts:32</a></em></p>
+<hr/>
+<h3 id="private-validator"><code>Private</code> validator<a class="headerlink" href="#private-validator" title="Permanent link">¶</a></h3>
+<p>• <strong>validator</strong>: <em><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip.igossipmessagevalidator/">IGossipMessageValidator</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L34">packages/lodestar/src/network/gossip/gossipsub.ts:34</a></em></p>
+<hr/>
+<h3 id="static-multicodec"><code>Static</code> multicodec<a class="headerlink" href="#static-multicodec" title="Permanent link">¶</a></h3>
+<p>▪ <strong>multicodec</strong>: <em>string</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#static-multicodec">multicodec</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:86</p>
+<h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
+<h3 id="_acceptfrom">_acceptFrom<a class="headerlink" href="#_acceptfrom" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_acceptFrom</strong>(<code>id</code>: string): <em>boolean</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_acceptfrom">_acceptFrom</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:166</p>
+<p>Whether to accept a message from a peer</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="_addbackoff">_addBackoff<a class="headerlink" href="#_addbackoff" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_addBackoff</strong>(<code>id</code>: string, <code>topic</code>: string): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_addbackoff">_addBackoff</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:209</p>
+<p>Add standard backoff log for a peer in a topic</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_addpeer">_addPeer<a class="headerlink" href="#_addpeer" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_addPeer</strong>(<code>peerId</code>: PeerId, <code>protocol</code>: string): <em>PeerStreams</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_addpeer">_addPeer</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:127</p>
+<p>Add a peer to the router</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>peerId</code></td>
+<td>PeerId</td>
+</tr>
+<tr>
+<td><code>protocol</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>PeerStreams</em></p>
+<hr/>
+<h3 id="_applyiwantpenalties">_applyIwantPenalties<a class="headerlink" href="#_applyiwantpenalties" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_applyIwantPenalties</strong>(): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_applyiwantpenalties">_applyIwantPenalties</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:222</p>
+<p>Apply penalties from broken IHAVE/IWANT promises</p>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_buildmessage">_buildMessage<a class="headerlink" href="#_buildmessage" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_buildMessage</strong>(<code>msg</code>: InMessage): <em>Promise‹InMessage›</em></p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L151">packages/lodestar/src/network/gossip/gossipsub.ts:151</a></em></p>
+<p>Override default <code>_buildMessage</code> to snappy-compress the data</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>msg</code></td>
+<td>InMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹InMessage›</em></p>
+<hr/>
+<h3 id="_clearbackoff">_clearBackoff<a class="headerlink" href="#_clearbackoff" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_clearBackoff</strong>(): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_clearbackoff">_clearBackoff</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:227</p>
+<p>Clear expired backoff expiries</p>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_connect">_connect<a class="headerlink" href="#_connect" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_connect</strong>(<code>id</code>: string): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_connect">_connect</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:257</p>
+<p>Connect to a peer using the gossipsub protocol</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_decoderpc">_decodeRpc<a class="headerlink" href="#_decoderpc" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_decodeRpc</strong>(<code>bytes</code>: Uint8Array): <em>RPC</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_decoderpc">_decodeRpc</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:111</p>
+<p>Decode a Uint8Array into an RPC object
+Overrided to use an extended protocol-specific protobuf decoder</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bytes</code></td>
+<td>Uint8Array</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>RPC</em></p>
+<hr/>
+<h3 id="_directconnect">_directConnect<a class="headerlink" href="#_directconnect" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_directConnect</strong>(): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_directconnect">_directConnect</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:232</p>
+<p>Maybe reconnect to direct peers</p>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_doaddbackoff">_doAddBackoff<a class="headerlink" href="#_doaddbackoff" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_doAddBackoff</strong>(<code>id</code>: string, <code>topic</code>: string, <code>interval</code>: number): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_doaddbackoff">_doAddBackoff</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:217</p>
+<p>Add backoff expiry interval for a peer in a topic</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>number</td>
+<td>backoff duration in milliseconds</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_emitgossip">_emitGossip<a class="headerlink" href="#_emitgossip" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_emitGossip</strong>(<code>topic</code>: string, <code>exclude</code>: Set‹string›): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_emitgossip">_emitGossip</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:324</p>
+<p>Emits gossip to peers in a particular topic</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>exclude</code></td>
+<td>Set‹string›</td>
+<td>peers to exclude</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_emitmessage">_emitMessage<a class="headerlink" href="#_emitmessage" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_emitMessage</strong>(<code>message</code>: InMessage): <em>void</em></p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L139">packages/lodestar/src/network/gossip/gossipsub.ts:139</a></em></p>
+<p>Override https://github.com/libp2p/js-libp2p-interfaces/blob/v0.5.2/src/pubsub/index.js#L428
+we want to emit our transformed object instead of the raw message here.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>InMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_encoderpc">_encodeRpc<a class="headerlink" href="#_encoderpc" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_encodeRpc</strong>(<code>rpc</code>: RPC): <em>Uint8Array</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_encoderpc">_encodeRpc</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:119</p>
+<p>Encode an RPC object into a Uint8Array
+Overrided to use an extended protocol-specific protobuf encoder</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rpc</code></td>
+<td>RPC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Uint8Array</em></p>
+<hr/>
+<h3 id="_flush">_flush<a class="headerlink" href="#_flush" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_flush</strong>(): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_flush">_flush</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:328</p>
+<p>Flush gossip and control messages</p>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_handlegraft">_handleGraft<a class="headerlink" href="#_handlegraft" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_handleGraft</strong>(<code>id</code>: string, <code>graft</code>: ControlGraft[]): <em>ControlPrune[]</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_handlegraft">_handleGraft</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:195</p>
+<p>Handles Graft messages</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>peer id</td>
+</tr>
+<tr>
+<td><code>graft</code></td>
+<td>ControlGraft[]</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ControlPrune[]</em></p>
+<hr/>
+<h3 id="_handleihave">_handleIHave<a class="headerlink" href="#_handleihave" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_handleIHave</strong>(<code>id</code>: string, <code>ihave</code>: ControlIHave[]): <em>ControlIWant[]</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_handleihave">_handleIHave</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:180</p>
+<p>Handles IHAVE messages</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>peer id</td>
+</tr>
+<tr>
+<td><code>ihave</code></td>
+<td>ControlIHave[]</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ControlIWant[]</em></p>
+<hr/>
+<h3 id="_handleiwant">_handleIWant<a class="headerlink" href="#_handleiwant" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_handleIWant</strong>(<code>id</code>: string, <code>iwant</code>: ControlIWant[]): <em>Message[]</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_handleiwant">_handleIWant</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:188</p>
+<p>Handles IWANT messages
+Returns messages to send back to peer</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>peer id</td>
+</tr>
+<tr>
+<td><code>iwant</code></td>
+<td>ControlIWant[]</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Message[]</em></p>
+<hr/>
+<h3 id="_handleprune">_handlePrune<a class="headerlink" href="#_handleprune" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_handlePrune</strong>(<code>id</code>: string, <code>prune</code>: ControlPrune[]): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_handleprune">_handlePrune</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:202</p>
+<p>Handles Prune messages</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>peer id</td>
+</tr>
+<tr>
+<td><code>prune</code></td>
+<td>ControlPrune[]</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_makeprune">_makePrune<a class="headerlink" href="#_makeprune" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_makePrune</strong>(<code>id</code>: string, <code>topic</code>: string, <code>doPX</code>: boolean): <em>ControlPrune</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_makeprune">_makePrune</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:348</p>
+<p>Make a PRUNE control message for a peer in a topic</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>doPX</code></td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ControlPrune</em></p>
+<hr/>
+<h3 id="_now">_now<a class="headerlink" href="#_now" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_now</strong>(): <em>number</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_now">_now</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:340</p>
+<p>Returns the current time in milliseconds</p>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="protected-_onincomingstream"><code>Protected</code> _onIncomingStream<a class="headerlink" href="#protected-_onincomingstream" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_onIncomingStream</strong>(<code>__namedParameters</code>: object): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#protected-_onincomingstream">_onIncomingStream</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:119</p>
+<p>On an inbound stream opened.</p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>connection</code></td>
+<td>Connection‹›</td>
+</tr>
+<tr>
+<td><code>protocol</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>stream</code></td>
+<td>MuxedStream‹›</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="protected-_onpeerconnected"><code>Protected</code> _onPeerConnected<a class="headerlink" href="#protected-_onpeerconnected" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_onPeerConnected</strong>(<code>peerId</code>: PeerId, <code>conn</code>: Connection): <em>Promise‹void›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#protected-_onpeerconnected">_onPeerConnected</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:131</p>
+<p>Registrar notifies an established connection with pubsub protocol.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>peerId</code></td>
+<td>PeerId</td>
+<td>remote peer-id</td>
+</tr>
+<tr>
+<td><code>conn</code></td>
+<td>Connection</td>
+<td>connection to the peer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="protected-_onpeerdisconnected"><code>Protected</code> _onPeerDisconnected<a class="headerlink" href="#protected-_onpeerdisconnected" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_onPeerDisconnected</strong>(<code>peerId</code>: PeerId, <code>err?</code>: <a href="../reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain_regen.regenerror/#static-error">Error</a> | undefined): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#protected-_onpeerdisconnected">_onPeerDisconnected</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:139</p>
+<p>Registrar notifies a closing connection with pubsub protocol.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>peerId</code></td>
+<td>PeerId</td>
+<td>peerId</td>
+</tr>
+<tr>
+<td><code>err?</code></td>
+<td><a href="../reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain_regen.regenerror/#static-error">Error</a> | undefined</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_piggybackcontrol">_piggybackControl<a class="headerlink" href="#_piggybackcontrol" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_piggybackControl</strong>(<code>id</code>: string, <code>outRpc</code>: RPC, <code>ctrl</code>: ControlMessage): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_piggybackcontrol">_piggybackControl</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:310</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>outRpc</code></td>
+<td>RPC</td>
+</tr>
+<tr>
+<td><code>ctrl</code></td>
+<td>ControlMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_piggybackgossip">_piggybackGossip<a class="headerlink" href="#_piggybackgossip" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_piggybackGossip</strong>(<code>id</code>: string, <code>outRpc</code>: RPC, <code>ihave</code>: ControlIHave[]): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_piggybackgossip">_piggybackGossip</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:311</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>outRpc</code></td>
+<td>RPC</td>
+</tr>
+<tr>
+<td><code>ihave</code></td>
+<td>ControlIHave[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_processmessages">_processMessages<a class="headerlink" href="#_processmessages" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_processMessages</strong>(<code>idB58Str</code>: string, <code>stream</code>: AsyncIterable‹Uint8Array | BufferList›, <code>peerStreams</code>: PeerStreams): <em>Promise‹void›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_processmessages">_processMessages</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:177</p>
+<p>Responsible for processing each RPC message received by other peers.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>idB58Str</code></td>
+<td>string</td>
+<td>peer id string in base58</td>
+</tr>
+<tr>
+<td><code>stream</code></td>
+<td>AsyncIterable‹Uint8Array | BufferList›</td>
+<td>inbound stream</td>
+</tr>
+<tr>
+<td><code>peerStreams</code></td>
+<td>PeerStreams</td>
+<td>PubSub peer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="_processrpc">_processRpc<a class="headerlink" href="#_processrpc" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_processRpc</strong>(<code>id</code>: string, <code>peerStreams</code>: PeerStreams, <code>rpc</code>: RPC): <em>boolean</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_processrpc">_processRpc</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:144</p>
+<p>Handles an rpc request from a peer</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>peerStreams</code></td>
+<td>PeerStreams</td>
+</tr>
+<tr>
+<td><code>rpc</code></td>
+<td>RPC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="_processrpccontrolmessage">_processRpcControlMessage<a class="headerlink" href="#_processrpccontrolmessage" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_processRpcControlMessage</strong>(<code>id</code>: string, <code>controlMsg</code>: ControlMessage): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_processrpccontrolmessage">_processRpcControlMessage</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:151</p>
+<p>Handles an rpc control message from a peer</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>peer id</td>
+</tr>
+<tr>
+<td><code>controlMsg</code></td>
+<td>ControlMessage</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_processrpcmessage">_processRpcMessage<a class="headerlink" href="#_processrpcmessage" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_processRpcMessage</strong>(<code>msg</code>: InMessage): <em>Promise‹void›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_processrpcmessage">_processRpcMessage</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:159</p>
+<p>Process incoming message,
+emitting locally and forwarding on to relevant floodsub and gossipsub peers</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>msg</code></td>
+<td>InMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="_processrpcsubopt">_processRpcSubOpt<a class="headerlink" href="#_processrpcsubopt" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_processRpcSubOpt</strong>(<code>id</code>: string, <code>subOpt</code>: RPCSubOpts): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_processrpcsubopt">_processRpcSubOpt</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:193</p>
+<p>Handles a subscription change from a peer</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>subOpt</code></td>
+<td>RPCSubOpts</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_publish">_publish<a class="headerlink" href="#_publish" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_publish</strong>(<code>msg</code>: InMessage): <em>Promise‹void›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_publish">_publish</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:291</p>
+<p>Publish messages</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>msg</code></td>
+<td>InMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="_pushgossip">_pushGossip<a class="headerlink" href="#_pushgossip" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_pushGossip</strong>(<code>id</code>: string, <code>controlIHaveMsgs</code>: ControlIHave): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_pushgossip">_pushGossip</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:335</p>
+<p>Adds new IHAVE messages to pending gossip</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>controlIHaveMsgs</code></td>
+<td>ControlIHave</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_pxconnect">_pxConnect<a class="headerlink" href="#_pxconnect" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_pxConnect</strong>(<code>peers</code>: PeerInfo[]): <em>Promise‹void›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_pxconnect">_pxConnect</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:238</p>
+<p>Maybe attempt connection given signed peer records</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>peers</code></td>
+<td>PeerInfo[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="_removepeer">_removePeer<a class="headerlink" href="#_removepeer" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_removePeer</strong>(<code>peerId</code>: PeerId): <em>PeerStreams | undefined</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_removepeer">_removePeer</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:134</p>
+<p>Removes a peer from the router</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>peerId</code></td>
+<td>PeerId</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>PeerStreams | undefined</em></p>
+<hr/>
+<h3 id="_sendgraft">_sendGraft<a class="headerlink" href="#_sendgraft" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_sendGraft</strong>(<code>id</code>: string, <code>topic</code>: string): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_sendgraft">_sendGraft</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:298</p>
+<p>Sends a GRAFT message to a peer</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>peer id</td>
+</tr>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_sendgraftprune">_sendGraftPrune<a class="headerlink" href="#_sendgraftprune" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_sendGraftPrune</strong>(<code>tograft</code>: <a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, string[]›, <code>toprune</code>: <a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, string[]›, <code>noPX</code>: <a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, boolean›): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_sendgraftprune">_sendGraftPrune</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:317</p>
+<p>Send graft and prune messages</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tograft</code></td>
+<td><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, string[]›</td>
+<td>peer id =&gt; topic[]</td>
+</tr>
+<tr>
+<td><code>toprune</code></td>
+<td><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, string[]›</td>
+<td>peer id =&gt; topic[]</td>
+</tr>
+<tr>
+<td><code>noPX</code></td>
+<td><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_chain.ieventmap/#map">Map</a>‹string, boolean›</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_sendprune">_sendPrune<a class="headerlink" href="#_sendprune" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_sendPrune</strong>(<code>id</code>: string, <code>topic</code>: string): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_sendprune">_sendPrune</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:305</p>
+<p>Sends a PRUNE message to a peer</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>peer id</td>
+</tr>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_sendrpc">_sendRpc<a class="headerlink" href="#_sendrpc" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_sendRpc</strong>(<code>id</code>: string, <code>outRpc</code>: RPC): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_sendrpc">_sendRpc</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:309</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>outRpc</code></td>
+<td>RPC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="_sendsubscriptions">_sendSubscriptions<a class="headerlink" href="#_sendsubscriptions" title="Permanent link">¶</a></h3>
+<p>▸ <strong>_sendSubscriptions</strong>(<code>id</code>: string, <code>topics</code>: string[], <code>subscribe</code>: boolean): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#_sendsubscriptions">_sendSubscriptions</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:256</p>
+<p>Send subscroptions to a peer</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>peer id</td>
+</tr>
+<tr>
+<td><code>topics</code></td>
+<td>string[]</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>subscribe</code></td>
+<td>boolean</td>
+<td>set to false for unsubscriptions</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="addlistener">addListener<a class="headerlink" href="#addlistener" title="Permanent link">¶</a></h3>
+<p>▸ <strong>addListener</strong>(<code>event</code>: string | symbol, <code>listener</code>: function): <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#addlistener">addListener</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:5</p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>event</strong>: <em>string | symbol</em></p>
+<p>▪ <strong>listener</strong>: <em>function</em></p>
+<p>▸ (...<code>args</code>: any[]): <em>void</em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>...args</code></td>
+<td>any[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>any</em></p>
+<hr/>
+<h3 id="private-cleanup"><code>Private</code> cleanUp<a class="headerlink" href="#private-cleanup" title="Permanent link">¶</a></h3>
+<p>▸ <strong>cleanUp</strong>(): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L232">packages/lodestar/src/network/gossip/gossipsub.ts:232</a></em></p>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="private-deserializegossipmessage"><code>Private</code> deserializeGossipMessage<a class="headerlink" href="#private-deserializegossipmessage" title="Permanent link">¶</a></h3>
+<p>▸ <strong>deserializeGossipMessage</strong>(<code>topic</code>: string, <code>msg</code>: InMessage): <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L199">packages/lodestar/src/network/gossip/gossipsub.ts:199</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>msg</code></td>
+<td>InMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>object</em></p>
+<ul>
+<li>
+<p><strong>object</strong>: <em><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip/#gossipobject">GossipObject</a></em></p>
+</li>
+<li>
+<p><strong>subnet</strong>? : <em>undefined | number</em></p>
+</li>
+</ul>
+<hr/>
+<h3 id="private-genericisvalid"><code>Private</code> genericIsValid<a class="headerlink" href="#private-genericisvalid" title="Permanent link">¶</a></h3>
+<p>▸ <strong>genericIsValid</strong>(<code>message</code>: InMessage): <em>boolean | undefined</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L166">packages/lodestar/src/network/gossip/gossipsub.ts:166</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>InMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean | undefined</em></p>
+<hr/>
+<h3 id="private-getlodestartopicvalidator"><code>Private</code> getLodestarTopicValidator<a class="headerlink" href="#private-getlodestartopicvalidator" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getLodestarTopicValidator</strong>(<code>topic</code>: string): <em><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip/#gossipmessagevalidatorfn">GossipMessageValidatorFn</a></em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L170">packages/lodestar/src/network/gossip/gossipsub.ts:170</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip/#gossipmessagevalidatorfn">GossipMessageValidatorFn</a></em></p>
+<hr/>
+<h3 id="getmaxlisteners">getMaxListeners<a class="headerlink" href="#getmaxlisteners" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getMaxListeners</strong>(): <em>number</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#getmaxlisteners">getMaxListeners</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:12</p>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="getmsgid">getMsgId<a class="headerlink" href="#getmsgid" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getMsgId</strong>(<code>msg</code>: <a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip.ilodestargossipmessage/">ILodestarGossipMessage</a>): <em>Uint8Array</em></p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L159">packages/lodestar/src/network/gossip/gossipsub.ts:159</a></em></p>
+<p>Override default <code>getMsgId</code> function to cache the message-id</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>msg</code></td>
+<td><a href="../../interfaces/reflection-11008.reflection-11009._.reflection-11011._lodestar_src_network_gossip.ilodestargossipmessage/">ILodestarGossipMessage</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Uint8Array</em></p>
+<hr/>
+<h3 id="getsubscribers">getSubscribers<a class="headerlink" href="#getsubscribers" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getSubscribers</strong>(<code>topic</code>: string): <em>Array‹string›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#getsubscribers">getSubscribers</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:280</p>
+<p>Get a list of the peer-ids that are subscribed to one topic.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Array‹string›</em></p>
+<hr/>
+<h3 id="gettopics">getTopics<a class="headerlink" href="#gettopics" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getTopics</strong>(): <em>Array‹string›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#gettopics">getTopics</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:322</p>
+<p>Get the list of topics which the peer is subscribed to.</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Returns:</strong> <em>Array‹string›</em></p>
+<hr/>
+<h3 id="join">join<a class="headerlink" href="#join" title="Permanent link">¶</a></h3>
+<p>▸ <strong>join</strong>(<code>topic</code>: string): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#join">join</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:277</p>
+<p>Join topic</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="leave">leave<a class="headerlink" href="#leave" title="Permanent link">¶</a></h3>
+<p>▸ <strong>leave</strong>(<code>topic</code>: string): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#leave">leave</a></em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:283</p>
+<p>Leave topic</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="libp2ptopicvalidator">libP2pTopicValidator<a class="headerlink" href="#libp2ptopicvalidator" title="Permanent link">¶</a></h3>
+<p>▸ <strong>libP2pTopicValidator</strong>(<code>topic</code>: string, <code>message</code>: InMessage): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L105">packages/lodestar/src/network/gossip/gossipsub.ts:105</a></em></p>
+<p>Should throw ERR_TOPIC_VALIDATOR_IGNORE or ERR_TOPIC_VALIDATOR_REJECT
+If we don't throw it means accept
+Refer to https://github.com/libp2p/js-libp2p-interfaces/blob/v0.5.2/src/pubsub/index.js#L529
+and https://github.com/ChainSafe/js-libp2p-gossipsub/blob/v0.6.3/ts/index.ts#L447</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>InMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="listenercount">listenerCount<a class="headerlink" href="#listenercount" title="Permanent link">¶</a></h3>
+<p>▸ <strong>listenerCount</strong>(<code>event</code>: string | symbol): <em>number</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#listenercount">listenerCount</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:16</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>event</code></td>
+<td>string | symbol</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="listeners">listeners<a class="headerlink" href="#listeners" title="Permanent link">¶</a></h3>
+<p>▸ <strong>listeners</strong>(<code>event</code>: string | symbol): <em>Function[]</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#listeners">listeners</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:13</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>event</code></td>
+<td>string | symbol</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Function[]</em></p>
+<hr/>
+<h3 id="off">off<a class="headerlink" href="#off" title="Permanent link">¶</a></h3>
+<p>▸ <strong>off</strong>(<code>event</code>: string | symbol, <code>listener</code>: function): <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#off">off</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:9</p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>event</strong>: <em>string | symbol</em></p>
+<p>▪ <strong>listener</strong>: <em>function</em></p>
+<p>▸ (...<code>args</code>: any[]): <em>void</em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>...args</code></td>
+<td>any[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>any</em></p>
+<hr/>
+<h3 id="on">on<a class="headerlink" href="#on" title="Permanent link">¶</a></h3>
+<p>▸ <strong>on</strong>(<code>event</code>: string | symbol, <code>listener</code>: function): <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#on">on</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:6</p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>event</strong>: <em>string | symbol</em></p>
+<p>▪ <strong>listener</strong>: <em>function</em></p>
+<p>▸ (...<code>args</code>: any[]): <em>void</em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>...args</code></td>
+<td>any[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>any</em></p>
+<hr/>
+<h3 id="once">once<a class="headerlink" href="#once" title="Permanent link">¶</a></h3>
+<p>▸ <strong>once</strong>(<code>event</code>: string | symbol, <code>listener</code>: function): <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#once">once</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:7</p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>event</strong>: <em>string | symbol</em></p>
+<p>▪ <strong>listener</strong>: <em>function</em></p>
+<p>▸ (...<code>args</code>: any[]): <em>void</em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>...args</code></td>
+<td>any[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>any</em></p>
+<hr/>
+<h3 id="publish">publish<a class="headerlink" href="#publish" title="Permanent link">¶</a></h3>
+<p>▸ <strong>publish</strong>(<code>topic</code>: string, <code>message</code>: Uint8Array): <em>Promise‹void›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#publish">publish</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/pubsub/index.d.ts:289</p>
+<p>Publishes messages to all subscribed peers</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>Uint8Array</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="rawlisteners">rawListeners<a class="headerlink" href="#rawlisteners" title="Permanent link">¶</a></h3>
+<p>▸ <strong>rawListeners</strong>(<code>event</code>: string | symbol): <em>Function[]</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#rawlisteners">rawListeners</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:14</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>event</code></td>
+<td>string | symbol</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Function[]</em></p>
+<hr/>
+<h3 id="registerlibp2ptopicvalidators">registerLibp2pTopicValidators<a class="headerlink" href="#registerlibp2ptopicvalidators" title="Permanent link">¶</a></h3>
+<p>▸ <strong>registerLibp2pTopicValidators</strong>(<code>forkDigest</code>: <a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#forkdigest">ForkDigest</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L77">packages/lodestar/src/network/gossip/gossipsub.ts:77</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>forkDigest</code></td>
+<td><a href="../../modules/reflection-11008.reflection-11009._.reflection-11011._lodestar_types_src_types/#forkdigest">ForkDigest</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="removealllisteners">removeAllListeners<a class="headerlink" href="#removealllisteners" title="Permanent link">¶</a></h3>
+<p>▸ <strong>removeAllListeners</strong>(<code>event?</code>: string | symbol): <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#removealllisteners">removeAllListeners</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:10</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>event?</code></td>
+<td>string | symbol</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>any</em></p>
+<hr/>
+<h3 id="removelistener">removeListener<a class="headerlink" href="#removelistener" title="Permanent link">¶</a></h3>
+<p>▸ <strong>removeListener</strong>(<code>event</code>: string | symbol, <code>listener</code>: function): <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#removelistener">removeListener</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:8</p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>event</strong>: <em>string | symbol</em></p>
+<p>▪ <strong>listener</strong>: <em>function</em></p>
+<p>▸ (...<code>args</code>: any[]): <em>void</em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>...args</code></td>
+<td>any[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>any</em></p>
+<hr/>
+<h3 id="setmaxlisteners">setMaxListeners<a class="headerlink" href="#setmaxlisteners" title="Permanent link">¶</a></h3>
+<p>▸ <strong>setMaxListeners</strong>(<code>n</code>: number): <em>any</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#setmaxlisteners">setMaxListeners</a></em></p>
+<p>Defined in node_modules/libp2p-interfaces/dist/src/types.d.ts:11</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>n</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>any</em></p>
+<hr/>
+<h3 id="start">start<a class="headerlink" href="#start" title="Permanent link">¶</a></h3>
+<p>▸ <strong>start</strong>(): <em>Promise‹void›</em></p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L56">packages/lodestar/src/network/gossip/gossipsub.ts:56</a></em></p>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="stop">stop<a class="headerlink" href="#stop" title="Permanent link">¶</a></h3>
+<p>▸ <strong>stop</strong>(): <em>Promise‹void›</em></p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar/src/network/gossip/gossipsub.ts#L63">packages/lodestar/src/network/gossip/gossipsub.ts:63</a></em></p>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="subscribe">subscribe<a class="headerlink" href="#subscribe" title="Permanent link">¶</a></h3>
+<p>▸ <strong>subscribe</strong>(<code>topic</code>: string): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#subscribe">subscribe</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:264</p>
+<p>Subscribes to a topic</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="unsubscribe">unsubscribe<a class="headerlink" href="#unsubscribe" title="Permanent link">¶</a></h3>
+<p>▸ <strong>unsubscribe</strong>(<code>topic</code>: string): <em>void</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#unsubscribe">unsubscribe</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:271</p>
+<p>Unsubscribe to a topic</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>topic</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="validate">validate<a class="headerlink" href="#validate" title="Permanent link">¶</a></h3>
+<p>▸ <strong>validate</strong>(<code>message</code>: InMessage): <em>Promise‹void›</em></p>
+<p><em>Inherited from <a href="./">LodestarGossipsub</a>.<a href="./#validate">validate</a></em></p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/libp2p-gossipsub/src/index.d.ts:173</p>
+<p>Validate incoming message</p>
+<p><strong><code>override</code></strong> </p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>InMessage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ChainSafe/lodestar" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 480 512" xmlns="http://www.w3.org/2000/svg"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
+</a>
+<a class="md-footer-social__link" href="https://twitter.com/ChainSafe" rel="noopener" target="_blank" title="twitter.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+<a class="md-footer-social__link" href="https://discord.gg/yjyvFRP" rel="noopener" target="_blank" title="discord.gg">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"></path></svg>
+</a>
+<a class="md-footer-social__link" href="https://medium.com/ChainSafe" rel="noopener" target="_blank" title="medium.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+</body>
+</html>

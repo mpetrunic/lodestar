@@ -1,0 +1,3162 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
+<link href="https://chainsafe.github.io/lodestar/packages/lodestar-beacon-state-transition/modules/util/" rel="canonical"/>
+<link href="../../../../images/favicon.ico" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.2.8" name="generator"/>
+<title>Util - Lodestar documentation</title>
+<link href="../../../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="../../../../stylesheets/extras.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="black" data-md-color-primary="" data-md-color-scheme="preference" dir="ltr">
+<script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#module-util">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="Lodestar documentation" class="md-header-nav__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            Lodestar documentation
+          </span>
+</div>
+<div class="md-header-nav__topic">
+<span class="md-ellipsis">
+            
+              Util
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header-nav__source">
+<a class="md-source" href="https://github.com/chainsafe/lodestar/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    chainsafe/lodestar
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Lodestar documentation" class="md-nav__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
+</a>
+    Lodestar documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" href="https://github.com/chainsafe/lodestar/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    chainsafe/lodestar
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+        Getting started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../installation/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+        Design
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Design" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/architecture/">
+        Beacon node architecture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/events/">
+        Beacon node events
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/depgraph/">
+        Lodestar package structure
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+        Usage
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Usage" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon"></span>
+          Usage
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../usage/testnet/">
+        Mainnet or public testnet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../usage/local/">
+        Local testnet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../usage/key-management/">
+        Key management
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../usage/prometheus-grafana/">
+        Prometheus &amp; Grafana Setup
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+        Reference
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Reference" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../reference/cli/">
+        Command line
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../">
+        Packages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contributing/">
+        Contributing
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#index">
+    Index
+  </a>
+<nav aria-label="Index" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+    References
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables">
+    Variables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions">
+    Functions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references_1">
+    References
+  </a>
+<nav aria-label="References" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blocktoheader">
+    blockToHeader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeactivationexitepoch">
+    computeActivationExitEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computecommittee">
+    computeCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computecompactvalidator">
+    computeCompactValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computedomain">
+    computeDomain
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeepochatslot">
+    computeEpochAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeforkdataroot">
+    computeForkDataRoot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeforkdigest">
+    computeForkDigest
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeproposerindex">
+    computeProposerIndex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeshuffledindex">
+    computeShuffledIndex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computesigningroot">
+    computeSigningRoot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeslotssinceepochstart">
+    computeSlotsSinceEpochStart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computestartslotatepoch">
+    computeStartSlotAtEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computesubnetforattestation">
+    computeSubnetForAttestation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computesubnetforcommitteesatslot">
+    computeSubnetForCommitteesAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computesubnetforslot">
+    computeSubnetForSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computetimeatslot">
+    computeTimeAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decreasebalance">
+    decreaseBalance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getactivevalidatorindices">
+    getActiveValidatorIndices
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getattestingindices">
+    getAttestingIndices
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getattestingindicesfromcommittee">
+    getAttestingIndicesFromCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbeaconcommittee">
+    getBeaconCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbeaconproposerindex">
+    getBeaconProposerIndex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getblockroot">
+    getBlockRoot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getblockrootatslot">
+    getBlockRootAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getchurnlimit">
+    getChurnLimit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcommitteeassignment">
+    getCommitteeAssignment
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcommitteecountatslot">
+    getCommitteeCountAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcurrentepoch">
+    getCurrentEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcurrentslot">
+    getCurrentSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getdomain">
+    getDomain
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getindexedattestation">
+    getIndexedAttestation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getpreviousepoch">
+    getPreviousEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getrandaomix">
+    getRandaoMix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getseed">
+    getSeed
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getslotssincegenesis">
+    getSlotsSinceGenesis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gettemporaryblockheader">
+    getTemporaryBlockHeader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gettotalactivebalance">
+    getTotalActiveBalance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gettotalbalance">
+    getTotalBalance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getvalidatorchurnlimit">
+    getValidatorChurnLimit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#increasebalance">
+    increaseBalance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiatevalidatorexit">
+    initiateValidatorExit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isactivevalidator">
+    isActiveValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isaggregator">
+    isAggregator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isaggregatorfromcommitteelength">
+    isAggregatorFromCommitteeLength
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iseligibleforactivation">
+    isEligibleForActivation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iseligibleforactivationqueue">
+    isEligibleForActivationQueue
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isproposeratslot">
+    isProposerAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isslashableattestationdata">
+    isSlashableAttestationData
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isslashablevalidator">
+    isSlashableValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isunaggregatedattestation">
+    isUnaggregatedAttestation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidattestationslot">
+    isValidAttestationSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidattesterslashing">
+    isValidAttesterSlashing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidindexedattestation">
+    isValidIndexedAttestation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidproposerslashing">
+    isValidProposerSlashing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidvoluntaryexit">
+    isValidVoluntaryExit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shufflelist">
+    shuffleList
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#signedblocktosignedheader">
+    signedBlockToSignedHeader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slashvalidator">
+    slashValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unshufflelist">
+    unshuffleList
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verifyblocksignature">
+    verifyBlockSignature
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables_1">
+    Variables
+  </a>
+<nav aria-label="Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-_shuffle_h_pivot_view_size">
+    Const _SHUFFLE_H_PIVOT_VIEW_SIZE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-_shuffle_h_position_window_size">
+    Const _SHUFFLE_H_POSITION_WINDOW_SIZE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-_shuffle_h_round_size">
+    Const _SHUFFLE_H_ROUND_SIZE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-_shuffle_h_seed_size">
+    Const _SHUFFLE_H_SEED_SIZE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-_shuffle_h_total_size">
+    Const _SHUFFLE_H_TOTAL_SIZE
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions_1">
+    Functions
+  </a>
+<nav aria-label="Functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blocktoheader_1">
+    blockToHeader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeactivationexitepoch_1">
+    computeActivationExitEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computecommittee_1">
+    computeCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computecompactvalidator_1">
+    computeCompactValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computedomain_1">
+    computeDomain
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeepochatslot_1">
+    computeEpochAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeforkdataroot_1">
+    computeForkDataRoot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeforkdigest_1">
+    computeForkDigest
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeproposerindex_1">
+    computeProposerIndex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeshuffledindex_1">
+    computeShuffledIndex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computesigningroot_1">
+    computeSigningRoot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeslotssinceepochstart_1">
+    computeSlotsSinceEpochStart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computestartslotatepoch_1">
+    computeStartSlotAtEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computesubnetforattestation_1">
+    computeSubnetForAttestation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computesubnetforcommitteesatslot_1">
+    computeSubnetForCommitteesAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computesubnetforslot_1">
+    computeSubnetForSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computetimeatslot_1">
+    computeTimeAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decreasebalance_1">
+    decreaseBalance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getactivevalidatorindices_1">
+    getActiveValidatorIndices
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getattestingindices_1">
+    getAttestingIndices
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getattestingindicesfromcommittee_1">
+    getAttestingIndicesFromCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbeaconcommittee_1">
+    getBeaconCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbeaconproposerindex_1">
+    getBeaconProposerIndex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getblockroot_1">
+    getBlockRoot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getblockrootatslot_1">
+    getBlockRootAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getchurnlimit_1">
+    getChurnLimit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcommitteeassignment_1">
+    getCommitteeAssignment
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcommitteecountatslot_1">
+    getCommitteeCountAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcurrentepoch_1">
+    getCurrentEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcurrentslot_1">
+    getCurrentSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getdomain_1">
+    getDomain
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getindexedattestation_1">
+    getIndexedAttestation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getpreviousepoch_1">
+    getPreviousEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getrandaomix_1">
+    getRandaoMix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getseed_1">
+    getSeed
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getslotssincegenesis_1">
+    getSlotsSinceGenesis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gettemporaryblockheader_1">
+    getTemporaryBlockHeader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gettotalactivebalance_1">
+    getTotalActiveBalance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gettotalbalance_1">
+    getTotalBalance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getvalidatorchurnlimit_1">
+    getValidatorChurnLimit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#increasebalance_1">
+    increaseBalance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiatevalidatorexit_1">
+    initiateValidatorExit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#innershufflelist">
+    innerShuffleList
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isactivevalidator_1">
+    isActiveValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isaggregator_1">
+    isAggregator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isaggregatorfromcommitteelength_1">
+    isAggregatorFromCommitteeLength
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iseligibleforactivation_1">
+    isEligibleForActivation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iseligibleforactivationqueue_1">
+    isEligibleForActivationQueue
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isproposeratslot_1">
+    isProposerAtSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isslashableattestationdata_1">
+    isSlashableAttestationData
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isslashablevalidator_1">
+    isSlashableValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isunaggregatedattestation_1">
+    isUnaggregatedAttestation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidattestationslot_1">
+    isValidAttestationSlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidattesterslashing_1">
+    isValidAttesterSlashing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidindexedattestation_1">
+    isValidIndexedAttestation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidproposerslashing_1">
+    isValidProposerSlashing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidvoluntaryexit_1">
+    isValidVoluntaryExit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shufflelist_1">
+    shuffleList
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#signedblocktosignedheader_1">
+    signedBlockToSignedHeader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slashvalidator_1">
+    slashValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unshufflelist_1">
+    unshuffleList
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verifyblocksignature_1">
+    verifyBlockSignature
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar-beacon-state-transition/modules/util.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="./">util</a></p>
+<h1 id="module-util">Module: util<a class="headerlink" href="#module-util" title="Permanent link">¶</a></h1>
+<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#blocktoheader">blockToHeader</a></li>
+<li><a href="./#computeactivationexitepoch">computeActivationExitEpoch</a></li>
+<li><a href="./#computecommittee">computeCommittee</a></li>
+<li><a href="./#computecompactvalidator">computeCompactValidator</a></li>
+<li><a href="./#computedomain">computeDomain</a></li>
+<li><a href="./#computeepochatslot">computeEpochAtSlot</a></li>
+<li><a href="./#computeforkdataroot">computeForkDataRoot</a></li>
+<li><a href="./#computeforkdigest">computeForkDigest</a></li>
+<li><a href="./#computeproposerindex">computeProposerIndex</a></li>
+<li><a href="./#computeshuffledindex">computeShuffledIndex</a></li>
+<li><a href="./#computesigningroot">computeSigningRoot</a></li>
+<li><a href="./#computeslotssinceepochstart">computeSlotsSinceEpochStart</a></li>
+<li><a href="./#computestartslotatepoch">computeStartSlotAtEpoch</a></li>
+<li><a href="./#computesubnetforattestation">computeSubnetForAttestation</a></li>
+<li><a href="./#computesubnetforcommitteesatslot">computeSubnetForCommitteesAtSlot</a></li>
+<li><a href="./#computesubnetforslot">computeSubnetForSlot</a></li>
+<li><a href="./#computetimeatslot">computeTimeAtSlot</a></li>
+<li><a href="./#decreasebalance">decreaseBalance</a></li>
+<li><a href="./#getactivevalidatorindices">getActiveValidatorIndices</a></li>
+<li><a href="./#getattestingindices">getAttestingIndices</a></li>
+<li><a href="./#getattestingindicesfromcommittee">getAttestingIndicesFromCommittee</a></li>
+<li><a href="./#getbeaconcommittee">getBeaconCommittee</a></li>
+<li><a href="./#getbeaconproposerindex">getBeaconProposerIndex</a></li>
+<li><a href="./#getblockroot">getBlockRoot</a></li>
+<li><a href="./#getblockrootatslot">getBlockRootAtSlot</a></li>
+<li><a href="./#getchurnlimit">getChurnLimit</a></li>
+<li><a href="./#getcommitteeassignment">getCommitteeAssignment</a></li>
+<li><a href="./#getcommitteecountatslot">getCommitteeCountAtSlot</a></li>
+<li><a href="./#getcurrentepoch">getCurrentEpoch</a></li>
+<li><a href="./#getcurrentslot">getCurrentSlot</a></li>
+<li><a href="./#getdomain">getDomain</a></li>
+<li><a href="./#getindexedattestation">getIndexedAttestation</a></li>
+<li><a href="./#getpreviousepoch">getPreviousEpoch</a></li>
+<li><a href="./#getrandaomix">getRandaoMix</a></li>
+<li><a href="./#getseed">getSeed</a></li>
+<li><a href="./#getslotssincegenesis">getSlotsSinceGenesis</a></li>
+<li><a href="./#gettemporaryblockheader">getTemporaryBlockHeader</a></li>
+<li><a href="./#gettotalactivebalance">getTotalActiveBalance</a></li>
+<li><a href="./#gettotalbalance">getTotalBalance</a></li>
+<li><a href="./#getvalidatorchurnlimit">getValidatorChurnLimit</a></li>
+<li><a href="./#increasebalance">increaseBalance</a></li>
+<li><a href="./#initiatevalidatorexit">initiateValidatorExit</a></li>
+<li><a href="./#isactivevalidator">isActiveValidator</a></li>
+<li><a href="./#isaggregator">isAggregator</a></li>
+<li><a href="./#isaggregatorfromcommitteelength">isAggregatorFromCommitteeLength</a></li>
+<li><a href="./#iseligibleforactivation">isEligibleForActivation</a></li>
+<li><a href="./#iseligibleforactivationqueue">isEligibleForActivationQueue</a></li>
+<li><a href="./#isproposeratslot">isProposerAtSlot</a></li>
+<li><a href="./#isslashableattestationdata">isSlashableAttestationData</a></li>
+<li><a href="./#isslashablevalidator">isSlashableValidator</a></li>
+<li><a href="./#isunaggregatedattestation">isUnaggregatedAttestation</a></li>
+<li><a href="./#isvalidattestationslot">isValidAttestationSlot</a></li>
+<li><a href="./#isvalidattesterslashing">isValidAttesterSlashing</a></li>
+<li><a href="./#isvalidindexedattestation">isValidIndexedAttestation</a></li>
+<li><a href="./#isvalidproposerslashing">isValidProposerSlashing</a></li>
+<li><a href="./#isvalidvoluntaryexit">isValidVoluntaryExit</a></li>
+<li><a href="./#shufflelist">shuffleList</a></li>
+<li><a href="./#signedblocktosignedheader">signedBlockToSignedHeader</a></li>
+<li><a href="./#slashvalidator">slashValidator</a></li>
+<li><a href="./#unshufflelist">unshuffleList</a></li>
+<li><a href="./#verifyblocksignature">verifyBlockSignature</a></li>
+</ul>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#const-_shuffle_h_pivot_view_size">_SHUFFLE_H_PIVOT_VIEW_SIZE</a></li>
+<li><a href="./#const-_shuffle_h_position_window_size">_SHUFFLE_H_POSITION_WINDOW_SIZE</a></li>
+<li><a href="./#const-_shuffle_h_round_size">_SHUFFLE_H_ROUND_SIZE</a></li>
+<li><a href="./#const-_shuffle_h_seed_size">_SHUFFLE_H_SEED_SIZE</a></li>
+<li><a href="./#const-_shuffle_h_total_size">_SHUFFLE_H_TOTAL_SIZE</a></li>
+</ul>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#blocktoheader">blockToHeader</a></li>
+<li><a href="./#computeactivationexitepoch">computeActivationExitEpoch</a></li>
+<li><a href="./#computecommittee">computeCommittee</a></li>
+<li><a href="./#computecompactvalidator">computeCompactValidator</a></li>
+<li><a href="./#computedomain">computeDomain</a></li>
+<li><a href="./#computeepochatslot">computeEpochAtSlot</a></li>
+<li><a href="./#computeforkdataroot">computeForkDataRoot</a></li>
+<li><a href="./#computeforkdigest">computeForkDigest</a></li>
+<li><a href="./#computeproposerindex">computeProposerIndex</a></li>
+<li><a href="./#computeshuffledindex">computeShuffledIndex</a></li>
+<li><a href="./#computesigningroot">computeSigningRoot</a></li>
+<li><a href="./#computeslotssinceepochstart">computeSlotsSinceEpochStart</a></li>
+<li><a href="./#computestartslotatepoch">computeStartSlotAtEpoch</a></li>
+<li><a href="./#computesubnetforattestation">computeSubnetForAttestation</a></li>
+<li><a href="./#computesubnetforcommitteesatslot">computeSubnetForCommitteesAtSlot</a></li>
+<li><a href="./#computesubnetforslot">computeSubnetForSlot</a></li>
+<li><a href="./#computetimeatslot">computeTimeAtSlot</a></li>
+<li><a href="./#decreasebalance">decreaseBalance</a></li>
+<li><a href="./#getactivevalidatorindices">getActiveValidatorIndices</a></li>
+<li><a href="./#getattestingindices">getAttestingIndices</a></li>
+<li><a href="./#getattestingindicesfromcommittee">getAttestingIndicesFromCommittee</a></li>
+<li><a href="./#getbeaconcommittee">getBeaconCommittee</a></li>
+<li><a href="./#getbeaconproposerindex">getBeaconProposerIndex</a></li>
+<li><a href="./#getblockroot">getBlockRoot</a></li>
+<li><a href="./#getblockrootatslot">getBlockRootAtSlot</a></li>
+<li><a href="./#getchurnlimit">getChurnLimit</a></li>
+<li><a href="./#getcommitteeassignment">getCommitteeAssignment</a></li>
+<li><a href="./#getcommitteecountatslot">getCommitteeCountAtSlot</a></li>
+<li><a href="./#getcurrentepoch">getCurrentEpoch</a></li>
+<li><a href="./#getcurrentslot">getCurrentSlot</a></li>
+<li><a href="./#getdomain">getDomain</a></li>
+<li><a href="./#getindexedattestation">getIndexedAttestation</a></li>
+<li><a href="./#getpreviousepoch">getPreviousEpoch</a></li>
+<li><a href="./#getrandaomix">getRandaoMix</a></li>
+<li><a href="./#getseed">getSeed</a></li>
+<li><a href="./#getslotssincegenesis">getSlotsSinceGenesis</a></li>
+<li><a href="./#gettemporaryblockheader">getTemporaryBlockHeader</a></li>
+<li><a href="./#gettotalactivebalance">getTotalActiveBalance</a></li>
+<li><a href="./#gettotalbalance">getTotalBalance</a></li>
+<li><a href="./#getvalidatorchurnlimit">getValidatorChurnLimit</a></li>
+<li><a href="./#increasebalance">increaseBalance</a></li>
+<li><a href="./#initiatevalidatorexit">initiateValidatorExit</a></li>
+<li><a href="./#innershufflelist">innerShuffleList</a></li>
+<li><a href="./#isactivevalidator">isActiveValidator</a></li>
+<li><a href="./#isaggregator">isAggregator</a></li>
+<li><a href="./#isaggregatorfromcommitteelength">isAggregatorFromCommitteeLength</a></li>
+<li><a href="./#iseligibleforactivation">isEligibleForActivation</a></li>
+<li><a href="./#iseligibleforactivationqueue">isEligibleForActivationQueue</a></li>
+<li><a href="./#isproposeratslot">isProposerAtSlot</a></li>
+<li><a href="./#isslashableattestationdata">isSlashableAttestationData</a></li>
+<li><a href="./#isslashablevalidator">isSlashableValidator</a></li>
+<li><a href="./#isunaggregatedattestation">isUnaggregatedAttestation</a></li>
+<li><a href="./#isvalidattestationslot">isValidAttestationSlot</a></li>
+<li><a href="./#isvalidattesterslashing">isValidAttesterSlashing</a></li>
+<li><a href="./#isvalidindexedattestation">isValidIndexedAttestation</a></li>
+<li><a href="./#isvalidproposerslashing">isValidProposerSlashing</a></li>
+<li><a href="./#isvalidvoluntaryexit">isValidVoluntaryExit</a></li>
+<li><a href="./#shufflelist">shuffleList</a></li>
+<li><a href="./#signedblocktosignedheader">signedBlockToSignedHeader</a></li>
+<li><a href="./#slashvalidator">slashValidator</a></li>
+<li><a href="./#unshufflelist">unshuffleList</a></li>
+<li><a href="./#verifyblocksignature">verifyBlockSignature</a></li>
+</ul>
+<h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
+<h3 id="blocktoheader">blockToHeader<a class="headerlink" href="#blocktoheader" title="Permanent link">¶</a></h3>
+<p>• <strong>blockToHeader</strong>:</p>
+<hr/>
+<h3 id="computeactivationexitepoch">computeActivationExitEpoch<a class="headerlink" href="#computeactivationexitepoch" title="Permanent link">¶</a></h3>
+<p>• <strong>computeActivationExitEpoch</strong>:</p>
+<hr/>
+<h3 id="computecommittee">computeCommittee<a class="headerlink" href="#computecommittee" title="Permanent link">¶</a></h3>
+<p>• <strong>computeCommittee</strong>:</p>
+<hr/>
+<h3 id="computecompactvalidator">computeCompactValidator<a class="headerlink" href="#computecompactvalidator" title="Permanent link">¶</a></h3>
+<p>• <strong>computeCompactValidator</strong>:</p>
+<hr/>
+<h3 id="computedomain">computeDomain<a class="headerlink" href="#computedomain" title="Permanent link">¶</a></h3>
+<p>• <strong>computeDomain</strong>:</p>
+<hr/>
+<h3 id="computeepochatslot">computeEpochAtSlot<a class="headerlink" href="#computeepochatslot" title="Permanent link">¶</a></h3>
+<p>• <strong>computeEpochAtSlot</strong>:</p>
+<hr/>
+<h3 id="computeforkdataroot">computeForkDataRoot<a class="headerlink" href="#computeforkdataroot" title="Permanent link">¶</a></h3>
+<p>• <strong>computeForkDataRoot</strong>:</p>
+<hr/>
+<h3 id="computeforkdigest">computeForkDigest<a class="headerlink" href="#computeforkdigest" title="Permanent link">¶</a></h3>
+<p>• <strong>computeForkDigest</strong>:</p>
+<hr/>
+<h3 id="computeproposerindex">computeProposerIndex<a class="headerlink" href="#computeproposerindex" title="Permanent link">¶</a></h3>
+<p>• <strong>computeProposerIndex</strong>:</p>
+<hr/>
+<h3 id="computeshuffledindex">computeShuffledIndex<a class="headerlink" href="#computeshuffledindex" title="Permanent link">¶</a></h3>
+<p>• <strong>computeShuffledIndex</strong>:</p>
+<hr/>
+<h3 id="computesigningroot">computeSigningRoot<a class="headerlink" href="#computesigningroot" title="Permanent link">¶</a></h3>
+<p>• <strong>computeSigningRoot</strong>:</p>
+<hr/>
+<h3 id="computeslotssinceepochstart">computeSlotsSinceEpochStart<a class="headerlink" href="#computeslotssinceepochstart" title="Permanent link">¶</a></h3>
+<p>• <strong>computeSlotsSinceEpochStart</strong>:</p>
+<hr/>
+<h3 id="computestartslotatepoch">computeStartSlotAtEpoch<a class="headerlink" href="#computestartslotatepoch" title="Permanent link">¶</a></h3>
+<p>• <strong>computeStartSlotAtEpoch</strong>:</p>
+<hr/>
+<h3 id="computesubnetforattestation">computeSubnetForAttestation<a class="headerlink" href="#computesubnetforattestation" title="Permanent link">¶</a></h3>
+<p>• <strong>computeSubnetForAttestation</strong>:</p>
+<hr/>
+<h3 id="computesubnetforcommitteesatslot">computeSubnetForCommitteesAtSlot<a class="headerlink" href="#computesubnetforcommitteesatslot" title="Permanent link">¶</a></h3>
+<p>• <strong>computeSubnetForCommitteesAtSlot</strong>:</p>
+<hr/>
+<h3 id="computesubnetforslot">computeSubnetForSlot<a class="headerlink" href="#computesubnetforslot" title="Permanent link">¶</a></h3>
+<p>• <strong>computeSubnetForSlot</strong>:</p>
+<hr/>
+<h3 id="computetimeatslot">computeTimeAtSlot<a class="headerlink" href="#computetimeatslot" title="Permanent link">¶</a></h3>
+<p>• <strong>computeTimeAtSlot</strong>:</p>
+<hr/>
+<h3 id="decreasebalance">decreaseBalance<a class="headerlink" href="#decreasebalance" title="Permanent link">¶</a></h3>
+<p>• <strong>decreaseBalance</strong>:</p>
+<hr/>
+<h3 id="getactivevalidatorindices">getActiveValidatorIndices<a class="headerlink" href="#getactivevalidatorindices" title="Permanent link">¶</a></h3>
+<p>• <strong>getActiveValidatorIndices</strong>:</p>
+<hr/>
+<h3 id="getattestingindices">getAttestingIndices<a class="headerlink" href="#getattestingindices" title="Permanent link">¶</a></h3>
+<p>• <strong>getAttestingIndices</strong>:</p>
+<hr/>
+<h3 id="getattestingindicesfromcommittee">getAttestingIndicesFromCommittee<a class="headerlink" href="#getattestingindicesfromcommittee" title="Permanent link">¶</a></h3>
+<p>• <strong>getAttestingIndicesFromCommittee</strong>:</p>
+<hr/>
+<h3 id="getbeaconcommittee">getBeaconCommittee<a class="headerlink" href="#getbeaconcommittee" title="Permanent link">¶</a></h3>
+<p>• <strong>getBeaconCommittee</strong>:</p>
+<hr/>
+<h3 id="getbeaconproposerindex">getBeaconProposerIndex<a class="headerlink" href="#getbeaconproposerindex" title="Permanent link">¶</a></h3>
+<p>• <strong>getBeaconProposerIndex</strong>:</p>
+<hr/>
+<h3 id="getblockroot">getBlockRoot<a class="headerlink" href="#getblockroot" title="Permanent link">¶</a></h3>
+<p>• <strong>getBlockRoot</strong>:</p>
+<hr/>
+<h3 id="getblockrootatslot">getBlockRootAtSlot<a class="headerlink" href="#getblockrootatslot" title="Permanent link">¶</a></h3>
+<p>• <strong>getBlockRootAtSlot</strong>:</p>
+<hr/>
+<h3 id="getchurnlimit">getChurnLimit<a class="headerlink" href="#getchurnlimit" title="Permanent link">¶</a></h3>
+<p>• <strong>getChurnLimit</strong>:</p>
+<hr/>
+<h3 id="getcommitteeassignment">getCommitteeAssignment<a class="headerlink" href="#getcommitteeassignment" title="Permanent link">¶</a></h3>
+<p>• <strong>getCommitteeAssignment</strong>:</p>
+<hr/>
+<h3 id="getcommitteecountatslot">getCommitteeCountAtSlot<a class="headerlink" href="#getcommitteecountatslot" title="Permanent link">¶</a></h3>
+<p>• <strong>getCommitteeCountAtSlot</strong>:</p>
+<hr/>
+<h3 id="getcurrentepoch">getCurrentEpoch<a class="headerlink" href="#getcurrentepoch" title="Permanent link">¶</a></h3>
+<p>• <strong>getCurrentEpoch</strong>:</p>
+<hr/>
+<h3 id="getcurrentslot">getCurrentSlot<a class="headerlink" href="#getcurrentslot" title="Permanent link">¶</a></h3>
+<p>• <strong>getCurrentSlot</strong>:</p>
+<hr/>
+<h3 id="getdomain">getDomain<a class="headerlink" href="#getdomain" title="Permanent link">¶</a></h3>
+<p>• <strong>getDomain</strong>:</p>
+<hr/>
+<h3 id="getindexedattestation">getIndexedAttestation<a class="headerlink" href="#getindexedattestation" title="Permanent link">¶</a></h3>
+<p>• <strong>getIndexedAttestation</strong>:</p>
+<hr/>
+<h3 id="getpreviousepoch">getPreviousEpoch<a class="headerlink" href="#getpreviousepoch" title="Permanent link">¶</a></h3>
+<p>• <strong>getPreviousEpoch</strong>:</p>
+<hr/>
+<h3 id="getrandaomix">getRandaoMix<a class="headerlink" href="#getrandaomix" title="Permanent link">¶</a></h3>
+<p>• <strong>getRandaoMix</strong>:</p>
+<hr/>
+<h3 id="getseed">getSeed<a class="headerlink" href="#getseed" title="Permanent link">¶</a></h3>
+<p>• <strong>getSeed</strong>:</p>
+<hr/>
+<h3 id="getslotssincegenesis">getSlotsSinceGenesis<a class="headerlink" href="#getslotssincegenesis" title="Permanent link">¶</a></h3>
+<p>• <strong>getSlotsSinceGenesis</strong>:</p>
+<hr/>
+<h3 id="gettemporaryblockheader">getTemporaryBlockHeader<a class="headerlink" href="#gettemporaryblockheader" title="Permanent link">¶</a></h3>
+<p>• <strong>getTemporaryBlockHeader</strong>:</p>
+<hr/>
+<h3 id="gettotalactivebalance">getTotalActiveBalance<a class="headerlink" href="#gettotalactivebalance" title="Permanent link">¶</a></h3>
+<p>• <strong>getTotalActiveBalance</strong>:</p>
+<hr/>
+<h3 id="gettotalbalance">getTotalBalance<a class="headerlink" href="#gettotalbalance" title="Permanent link">¶</a></h3>
+<p>• <strong>getTotalBalance</strong>:</p>
+<hr/>
+<h3 id="getvalidatorchurnlimit">getValidatorChurnLimit<a class="headerlink" href="#getvalidatorchurnlimit" title="Permanent link">¶</a></h3>
+<p>• <strong>getValidatorChurnLimit</strong>:</p>
+<hr/>
+<h3 id="increasebalance">increaseBalance<a class="headerlink" href="#increasebalance" title="Permanent link">¶</a></h3>
+<p>• <strong>increaseBalance</strong>:</p>
+<hr/>
+<h3 id="initiatevalidatorexit">initiateValidatorExit<a class="headerlink" href="#initiatevalidatorexit" title="Permanent link">¶</a></h3>
+<p>• <strong>initiateValidatorExit</strong>:</p>
+<hr/>
+<h3 id="isactivevalidator">isActiveValidator<a class="headerlink" href="#isactivevalidator" title="Permanent link">¶</a></h3>
+<p>• <strong>isActiveValidator</strong>:</p>
+<hr/>
+<h3 id="isaggregator">isAggregator<a class="headerlink" href="#isaggregator" title="Permanent link">¶</a></h3>
+<p>• <strong>isAggregator</strong>:</p>
+<hr/>
+<h3 id="isaggregatorfromcommitteelength">isAggregatorFromCommitteeLength<a class="headerlink" href="#isaggregatorfromcommitteelength" title="Permanent link">¶</a></h3>
+<p>• <strong>isAggregatorFromCommitteeLength</strong>:</p>
+<hr/>
+<h3 id="iseligibleforactivation">isEligibleForActivation<a class="headerlink" href="#iseligibleforactivation" title="Permanent link">¶</a></h3>
+<p>• <strong>isEligibleForActivation</strong>:</p>
+<hr/>
+<h3 id="iseligibleforactivationqueue">isEligibleForActivationQueue<a class="headerlink" href="#iseligibleforactivationqueue" title="Permanent link">¶</a></h3>
+<p>• <strong>isEligibleForActivationQueue</strong>:</p>
+<hr/>
+<h3 id="isproposeratslot">isProposerAtSlot<a class="headerlink" href="#isproposeratslot" title="Permanent link">¶</a></h3>
+<p>• <strong>isProposerAtSlot</strong>:</p>
+<hr/>
+<h3 id="isslashableattestationdata">isSlashableAttestationData<a class="headerlink" href="#isslashableattestationdata" title="Permanent link">¶</a></h3>
+<p>• <strong>isSlashableAttestationData</strong>:</p>
+<hr/>
+<h3 id="isslashablevalidator">isSlashableValidator<a class="headerlink" href="#isslashablevalidator" title="Permanent link">¶</a></h3>
+<p>• <strong>isSlashableValidator</strong>:</p>
+<hr/>
+<h3 id="isunaggregatedattestation">isUnaggregatedAttestation<a class="headerlink" href="#isunaggregatedattestation" title="Permanent link">¶</a></h3>
+<p>• <strong>isUnaggregatedAttestation</strong>:</p>
+<hr/>
+<h3 id="isvalidattestationslot">isValidAttestationSlot<a class="headerlink" href="#isvalidattestationslot" title="Permanent link">¶</a></h3>
+<p>• <strong>isValidAttestationSlot</strong>:</p>
+<hr/>
+<h3 id="isvalidattesterslashing">isValidAttesterSlashing<a class="headerlink" href="#isvalidattesterslashing" title="Permanent link">¶</a></h3>
+<p>• <strong>isValidAttesterSlashing</strong>:</p>
+<hr/>
+<h3 id="isvalidindexedattestation">isValidIndexedAttestation<a class="headerlink" href="#isvalidindexedattestation" title="Permanent link">¶</a></h3>
+<p>• <strong>isValidIndexedAttestation</strong>:</p>
+<hr/>
+<h3 id="isvalidproposerslashing">isValidProposerSlashing<a class="headerlink" href="#isvalidproposerslashing" title="Permanent link">¶</a></h3>
+<p>• <strong>isValidProposerSlashing</strong>:</p>
+<hr/>
+<h3 id="isvalidvoluntaryexit">isValidVoluntaryExit<a class="headerlink" href="#isvalidvoluntaryexit" title="Permanent link">¶</a></h3>
+<p>• <strong>isValidVoluntaryExit</strong>:</p>
+<hr/>
+<h3 id="shufflelist">shuffleList<a class="headerlink" href="#shufflelist" title="Permanent link">¶</a></h3>
+<p>• <strong>shuffleList</strong>:</p>
+<hr/>
+<h3 id="signedblocktosignedheader">signedBlockToSignedHeader<a class="headerlink" href="#signedblocktosignedheader" title="Permanent link">¶</a></h3>
+<p>• <strong>signedBlockToSignedHeader</strong>:</p>
+<hr/>
+<h3 id="slashvalidator">slashValidator<a class="headerlink" href="#slashvalidator" title="Permanent link">¶</a></h3>
+<p>• <strong>slashValidator</strong>:</p>
+<hr/>
+<h3 id="unshufflelist">unshuffleList<a class="headerlink" href="#unshufflelist" title="Permanent link">¶</a></h3>
+<p>• <strong>unshuffleList</strong>:</p>
+<hr/>
+<h3 id="verifyblocksignature">verifyBlockSignature<a class="headerlink" href="#verifyblocksignature" title="Permanent link">¶</a></h3>
+<p>• <strong>verifyBlockSignature</strong>:</p>
+<h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
+<h3 id="const-_shuffle_h_pivot_view_size"><code>Const</code> _SHUFFLE_H_PIVOT_VIEW_SIZE<a class="headerlink" href="#const-_shuffle_h_pivot_view_size" title="Permanent link">¶</a></h3>
+<p>• <strong>_SHUFFLE_H_PIVOT_VIEW_SIZE</strong>: <em>number</em> = _SHUFFLE_H_SEED_SIZE + _SHUFFLE_H_ROUND_SIZE</p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/shuffle.ts#L22">packages/lodestar-beacon-state-transition/src/util/shuffle.ts:22</a></em></p>
+<hr/>
+<h3 id="const-_shuffle_h_position_window_size"><code>Const</code> _SHUFFLE_H_POSITION_WINDOW_SIZE<a class="headerlink" href="#const-_shuffle_h_position_window_size" title="Permanent link">¶</a></h3>
+<p>• <strong>_SHUFFLE_H_POSITION_WINDOW_SIZE</strong>: <em>4</em> = 4</p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/shuffle.ts#L21">packages/lodestar-beacon-state-transition/src/util/shuffle.ts:21</a></em></p>
+<hr/>
+<h3 id="const-_shuffle_h_round_size"><code>Const</code> _SHUFFLE_H_ROUND_SIZE<a class="headerlink" href="#const-_shuffle_h_round_size" title="Permanent link">¶</a></h3>
+<p>• <strong>_SHUFFLE_H_ROUND_SIZE</strong>: <em>1</em> = 1</p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/shuffle.ts#L20">packages/lodestar-beacon-state-transition/src/util/shuffle.ts:20</a></em></p>
+<hr/>
+<h3 id="const-_shuffle_h_seed_size"><code>Const</code> _SHUFFLE_H_SEED_SIZE<a class="headerlink" href="#const-_shuffle_h_seed_size" title="Permanent link">¶</a></h3>
+<p>• <strong>_SHUFFLE_H_SEED_SIZE</strong>: <em>32</em> = 32</p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/shuffle.ts#L19">packages/lodestar-beacon-state-transition/src/util/shuffle.ts:19</a></em></p>
+<hr/>
+<h3 id="const-_shuffle_h_total_size"><code>Const</code> _SHUFFLE_H_TOTAL_SIZE<a class="headerlink" href="#const-_shuffle_h_total_size" title="Permanent link">¶</a></h3>
+<p>• <strong>_SHUFFLE_H_TOTAL_SIZE</strong>: <em>number</em> = _SHUFFLE_H_SEED_SIZE + _SHUFFLE_H_ROUND_SIZE + _SHUFFLE_H_POSITION_WINDOW_SIZE</p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/shuffle.ts#L23">packages/lodestar-beacon-state-transition/src/util/shuffle.ts:23</a></em></p>
+<h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
+<h3 id="blocktoheader_1">blockToHeader<a class="headerlink" href="#blocktoheader_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>blockToHeader</strong>(<code>config</code>: IBeaconConfig, <code>block</code>: BeaconBlock): <em>BeaconBlockHeader</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/blockRoot.ts#L57">packages/lodestar-beacon-state-transition/src/util/blockRoot.ts:57</a></em></p>
+<p>Receives a BeaconBlock, and produces the corresponding BeaconBlockHeader.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>block</code></td>
+<td>BeaconBlock</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>BeaconBlockHeader</em></p>
+<hr/>
+<h3 id="computeactivationexitepoch_1">computeActivationExitEpoch<a class="headerlink" href="#computeactivationexitepoch_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeActivationExitEpoch</strong>(<code>config</code>: IBeaconConfig, <code>epoch</code>: Epoch): <em>Epoch</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/epoch.ts#L27">packages/lodestar-beacon-state-transition/src/util/epoch.ts:27</a></em></p>
+<p>Return the epoch at which an activation or exit triggered in <code>epoch</code> takes effect.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Epoch</em></p>
+<hr/>
+<h3 id="computecommittee_1">computeCommittee<a class="headerlink" href="#computecommittee_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeCommittee</strong>(<code>config</code>: IBeaconConfig, <code>indices</code>: ValidatorIndex[], <code>seed</code>: Bytes32, <code>index</code>: number, <code>count</code>: number): <em>ValidatorIndex[]</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/committee.ts#L17">packages/lodestar-beacon-state-transition/src/util/committee.ts:17</a></em></p>
+<p>Return the [[index]]'th shuffled committee out of a total [[count]]
+using [[indices]] and [[seed]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>indices</code></td>
+<td>ValidatorIndex[]</td>
+</tr>
+<tr>
+<td><code>seed</code></td>
+<td>Bytes32</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>count</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ValidatorIndex[]</em></p>
+<hr/>
+<h3 id="computecompactvalidator_1">computeCompactValidator<a class="headerlink" href="#computecompactvalidator_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeCompactValidator</strong>(<code>config</code>: IBeaconConfig, <code>validator</code>: Validator, <code>index</code>: ValidatorIndex): <em>Uint64</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validator.ts#L21">packages/lodestar-beacon-state-transition/src/util/validator.ts:21</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>validator</code></td>
+<td>Validator</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>ValidatorIndex</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Uint64</em></p>
+<hr/>
+<h3 id="computedomain_1">computeDomain<a class="headerlink" href="#computedomain_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeDomain</strong>(<code>config</code>: IBeaconConfig, <code>domainType</code>: <a href="../../enums/constants.domaintype/">DomainType</a>, <code>forkVersion?</code>: Version, <code>genesisValidatorRoot</code>: Root): <em>Buffer</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/domain.ts#L16">packages/lodestar-beacon-state-transition/src/util/domain.ts:16</a></em></p>
+<p>Return the domain for the [[domainType]] and [[forkVersion]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>domainType</code></td>
+<td><a href="../../enums/constants.domaintype/">DomainType</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>forkVersion?</code></td>
+<td>Version</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>genesisValidatorRoot</code></td>
+<td>Root</td>
+<td>ZERO_HASH</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Buffer</em></p>
+<hr/>
+<h3 id="computeepochatslot_1">computeEpochAtSlot<a class="headerlink" href="#computeepochatslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeEpochAtSlot</strong>(<code>config</code>: IBeaconConfig, <code>slot</code>: Slot): <em>Epoch</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/epoch.ts#L13">packages/lodestar-beacon-state-transition/src/util/epoch.ts:13</a></em></p>
+<p>Return the epoch number at the given slot.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Epoch</em></p>
+<hr/>
+<h3 id="computeforkdataroot_1">computeForkDataRoot<a class="headerlink" href="#computeforkdataroot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeForkDataRoot</strong>(<code>config</code>: IBeaconConfig, <code>currentVersion</code>: Version, <code>genesisValidatorsRoot</code>: Root): <em>Root</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/fork.ts#L7">packages/lodestar-beacon-state-transition/src/util/fork.ts:7</a></em></p>
+<p>Used primarily in signature domains to avoid collisions across forks/chains.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>currentVersion</code></td>
+<td>Version</td>
+</tr>
+<tr>
+<td><code>genesisValidatorsRoot</code></td>
+<td>Root</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Root</em></p>
+<hr/>
+<h3 id="computeforkdigest_1">computeForkDigest<a class="headerlink" href="#computeforkdigest_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeForkDigest</strong>(<code>config</code>: IBeaconConfig, <code>currentVersion</code>: Version, <code>genesisValidatorsRoot</code>: Root): <em>ForkDigest</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/fork.ts#L15">packages/lodestar-beacon-state-transition/src/util/fork.ts:15</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>currentVersion</code></td>
+<td>Version</td>
+</tr>
+<tr>
+<td><code>genesisValidatorsRoot</code></td>
+<td>Root</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ForkDigest</em></p>
+<hr/>
+<h3 id="computeproposerindex_1">computeProposerIndex<a class="headerlink" href="#computeproposerindex_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeProposerIndex</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>indices</code>: ValidatorIndex[], <code>seed</code>: Uint8Array): <em>ValidatorIndex</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/proposer.ts#L30">packages/lodestar-beacon-state-transition/src/util/proposer.ts:30</a></em></p>
+<p>Return from <code>indices</code> a random index sampled by effective balance.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>indices</code></td>
+<td>ValidatorIndex[]</td>
+</tr>
+<tr>
+<td><code>seed</code></td>
+<td>Uint8Array</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ValidatorIndex</em></p>
+<hr/>
+<h3 id="computeshuffledindex_1">computeShuffledIndex<a class="headerlink" href="#computeshuffledindex_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeShuffledIndex</strong>(<code>config</code>: IBeaconConfig, <code>index</code>: number, <code>indexCount</code>: number, <code>seed</code>: Bytes32): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/seed.ts#L19">packages/lodestar-beacon-state-transition/src/util/seed.ts:19</a></em></p>
+<p>Return the shuffled validator index corresponding to <code>seed</code> (and <code>index_count</code>).</p>
+<p>Swap or not
+https://link.springer.com/content/pdf/10.1007%2F978-3-642-32009-5_1.pdf</p>
+<p>See the 'generalized domain' algorithm on page 3.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>indexCount</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>seed</code></td>
+<td>Bytes32</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="computesigningroot_1">computeSigningRoot<a class="headerlink" href="#computesigningroot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeSigningRoot</strong>‹<strong>T</strong>›(<code>config</code>: IBeaconConfig, <code>type</code>: Type‹T›, <code>sszObject</code>: T, <code>domain</code>: Domain): <em>Uint8Array</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/signingRoot.ts#L8">packages/lodestar-beacon-state-transition/src/util/signingRoot.ts:8</a></em></p>
+<p>Return the signing root of an object by calculating the root of the object-domain tree.</p>
+<p><strong>Type parameters:</strong></p>
+<p>▪ <strong>T</strong></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Type‹T›</td>
+</tr>
+<tr>
+<td><code>sszObject</code></td>
+<td>T</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td>Domain</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Uint8Array</em></p>
+<hr/>
+<h3 id="computeslotssinceepochstart_1">computeSlotsSinceEpochStart<a class="headerlink" href="#computeslotssinceepochstart_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeSlotsSinceEpochStart</strong>(<code>config</code>: IBeaconConfig, <code>slot</code>: Slot, <code>epoch?</code>: Epoch): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/slot.ts#L16">packages/lodestar-beacon-state-transition/src/util/slot.ts:16</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+<tr>
+<td><code>epoch?</code></td>
+<td>Epoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="computestartslotatepoch_1">computeStartSlotAtEpoch<a class="headerlink" href="#computestartslotatepoch_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeStartSlotAtEpoch</strong>(<code>config</code>: IBeaconConfig, <code>epoch</code>: Epoch): <em>Slot</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/epoch.ts#L20">packages/lodestar-beacon-state-transition/src/util/epoch.ts:20</a></em></p>
+<p>Return the starting slot of the given epoch.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Slot</em></p>
+<hr/>
+<h3 id="computesubnetforattestation_1">computeSubnetForAttestation<a class="headerlink" href="#computesubnetforattestation_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeSubnetForAttestation</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attestation</code>: Attestation): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L135">packages/lodestar-beacon-state-transition/src/util/attestation.ts:135</a></em></p>
+<p>Compute the correct subnet for an attestation for Phase 0.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>attestation</code></td>
+<td>Attestation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="computesubnetforcommitteesatslot_1">computeSubnetForCommitteesAtSlot<a class="headerlink" href="#computesubnetforcommitteesatslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeSubnetForCommitteesAtSlot</strong>(<code>config</code>: IBeaconConfig, <code>slot</code>: Slot, <code>committeesAtSlot</code>: number, <code>committeeIndex</code>: CommitteeIndex): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L157">packages/lodestar-beacon-state-transition/src/util/attestation.ts:157</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+<tr>
+<td><code>committeesAtSlot</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>committeeIndex</code></td>
+<td>CommitteeIndex</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="computesubnetforslot_1">computeSubnetForSlot<a class="headerlink" href="#computesubnetforslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeSubnetForSlot</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slot</code>: number, <code>committeeIndex</code>: number): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L147">packages/lodestar-beacon-state-transition/src/util/attestation.ts:147</a></em></p>
+<p>Compute the correct subnet for a slot/committee index for Phase 0.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>committeeIndex</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="computetimeatslot_1">computeTimeAtSlot<a class="headerlink" href="#computetimeatslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeTimeAtSlot</strong>(<code>config</code>: IBeaconConfig, <code>slot</code>: Slot, <code>genesisTime</code>: Number64): <em>Number64</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/slot.ts#L21">packages/lodestar-beacon-state-transition/src/util/slot.ts:21</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+<tr>
+<td><code>genesisTime</code></td>
+<td>Number64</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Number64</em></p>
+<hr/>
+<h3 id="decreasebalance_1">decreaseBalance<a class="headerlink" href="#decreasebalance_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>decreaseBalance</strong>(<code>state</code>: BeaconState, <code>index</code>: ValidatorIndex, <code>delta</code>: Gwei): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/balance.ts#L45">packages/lodestar-beacon-state-transition/src/util/balance.ts:45</a></em></p>
+<p>Decrease the balance for a validator with the given <code>index</code> by <code>delta</code>.</p>
+<p>Set to <code>0</code> when underflow.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>ValidatorIndex</td>
+</tr>
+<tr>
+<td><code>delta</code></td>
+<td>Gwei</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="getactivevalidatorindices_1">getActiveValidatorIndices<a class="headerlink" href="#getactivevalidatorindices_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getActiveValidatorIndices</strong>(<code>state</code>: BeaconState, <code>epoch</code>: Epoch): <em>ValidatorIndex[]</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validator.ts#L46">packages/lodestar-beacon-state-transition/src/util/validator.ts:46</a></em></p>
+<p>Return the sequence of active validator indices at [[epoch]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ValidatorIndex[]</em></p>
+<hr/>
+<h3 id="getattestingindices_1">getAttestingIndices<a class="headerlink" href="#getattestingindices_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getAttestingIndices</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>data</code>: AttestationData, <code>bits</code>: BitList): <em>ValidatorIndex[]</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L76">packages/lodestar-beacon-state-transition/src/util/attestation.ts:76</a></em></p>
+<p>Return the sorted attesting indices corresponding to [[data]] and [[bits]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>AttestationData</td>
+</tr>
+<tr>
+<td><code>bits</code></td>
+<td>BitList</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ValidatorIndex[]</em></p>
+<hr/>
+<h3 id="getattestingindicesfromcommittee_1">getAttestingIndicesFromCommittee<a class="headerlink" href="#getattestingindicesfromcommittee_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getAttestingIndicesFromCommittee</strong>(<code>committee</code>: ValidatorIndex[], <code>bits</code>: BitList): <em>ValidatorIndex[]</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L90">packages/lodestar-beacon-state-transition/src/util/attestation.ts:90</a></em></p>
+<p>Return the sorted attesting indices corresponding to [[data]] and [[bits]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>committee</code></td>
+<td>ValidatorIndex[]</td>
+</tr>
+<tr>
+<td><code>bits</code></td>
+<td>BitList</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ValidatorIndex[]</em></p>
+<hr/>
+<h3 id="getbeaconcommittee_1">getBeaconCommittee<a class="headerlink" href="#getbeaconcommittee_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getBeaconCommittee</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slot</code>: Slot, <code>index</code>: CommitteeIndex): <em>ValidatorIndex[]</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/committee.ts#L50">packages/lodestar-beacon-state-transition/src/util/committee.ts:50</a></em></p>
+<p>Return the beacon committee at [[slot]] for [[index]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>CommitteeIndex</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ValidatorIndex[]</em></p>
+<hr/>
+<h3 id="getbeaconproposerindex_1">getBeaconProposerIndex<a class="headerlink" href="#getbeaconproposerindex_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getBeaconProposerIndex</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>ValidatorIndex</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/proposer.ts#L18">packages/lodestar-beacon-state-transition/src/util/proposer.ts:18</a></em></p>
+<p>Return the beacon proposer index at <code>state.slot</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>ValidatorIndex</em></p>
+<hr/>
+<h3 id="getblockroot_1">getBlockRoot<a class="headerlink" href="#getblockroot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getBlockRoot</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: Epoch): <em>Root</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/blockRoot.ts#L37">packages/lodestar-beacon-state-transition/src/util/blockRoot.ts:37</a></em></p>
+<p>Return the block root at the start of a recent [[epoch]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Root</em></p>
+<hr/>
+<h3 id="getblockrootatslot_1">getBlockRootAtSlot<a class="headerlink" href="#getblockrootatslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getBlockRootAtSlot</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slot</code>: Slot): <em>Root</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/blockRoot.ts#L24">packages/lodestar-beacon-state-transition/src/util/blockRoot.ts:24</a></em></p>
+<p>Return the block root at a recent [[slot]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Root</em></p>
+<hr/>
+<h3 id="getchurnlimit_1">getChurnLimit<a class="headerlink" href="#getchurnlimit_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getChurnLimit</strong>(<code>config</code>: IBeaconConfig, <code>activeValidatorCount</code>: number): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validator.ts#L56">packages/lodestar-beacon-state-transition/src/util/validator.ts:56</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>activeValidatorCount</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="getcommitteeassignment_1">getCommitteeAssignment<a class="headerlink" href="#getcommitteeassignment_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getCommitteeAssignment</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: Epoch, <code>validatorIndex</code>: ValidatorIndex): <em>CommitteeAssignment | null</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/duties.ts#L22">packages/lodestar-beacon-state-transition/src/util/duties.ts:22</a></em></p>
+<p>Return the committee assignment in the <code>epoch</code> for <code>validator_index</code>.
+<code>assignment</code> returned is a tuple of the following form:
+<code>assignment[0]</code> is the list of validators in the committee
+<code>assignment[1]</code> is the index to which the committee is assigned
+<code>assignment[2]</code> is the slot at which the committee is assigned
+Return null if no assignment..</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+<tr>
+<td><code>validatorIndex</code></td>
+<td>ValidatorIndex</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>CommitteeAssignment | null</em></p>
+<hr/>
+<h3 id="getcommitteecountatslot_1">getCommitteeCountAtSlot<a class="headerlink" href="#getcommitteecountatslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getCommitteeCountAtSlot</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slot</code>: Slot): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/committee.ts#L35">packages/lodestar-beacon-state-transition/src/util/committee.ts:35</a></em></p>
+<p>Return the number of committees at [[epoch]].
+Return the number of committees at [[slot]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="getcurrentepoch_1">getCurrentEpoch<a class="headerlink" href="#getcurrentepoch_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getCurrentEpoch</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>Epoch</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/epoch.ts#L34">packages/lodestar-beacon-state-transition/src/util/epoch.ts:34</a></em></p>
+<p>Return the current epoch of the given state.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Epoch</em></p>
+<hr/>
+<h3 id="getcurrentslot_1">getCurrentSlot<a class="headerlink" href="#getcurrentslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getCurrentSlot</strong>(<code>config</code>: IBeaconConfig, <code>genesisTime</code>: Number64): <em>Slot</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/slot.ts#L12">packages/lodestar-beacon-state-transition/src/util/slot.ts:12</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>genesisTime</code></td>
+<td>Number64</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Slot</em></p>
+<hr/>
+<h3 id="getdomain_1">getDomain<a class="headerlink" href="#getdomain_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getDomain</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>domainType</code>: <a href="../../enums/constants.domaintype/">DomainType</a>, <code>messageEpoch</code>: Epoch | null): <em>Buffer</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/domain.ts#L32">packages/lodestar-beacon-state-transition/src/util/domain.ts:32</a></em></p>
+<p>Return the signature domain (fork version concatenated with domain type) of a message.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>domainType</code></td>
+<td><a href="../../enums/constants.domaintype/">DomainType</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>messageEpoch</code></td>
+<td>Epoch | null</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Buffer</em></p>
+<hr/>
+<h3 id="getindexedattestation_1">getIndexedAttestation<a class="headerlink" href="#getindexedattestation_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getIndexedAttestation</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attestation</code>: Attestation): <em>IndexedAttestation</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L98">packages/lodestar-beacon-state-transition/src/util/attestation.ts:98</a></em></p>
+<p>Return the indexed attestation corresponding to [[attestation]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>attestation</code></td>
+<td>Attestation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>IndexedAttestation</em></p>
+<hr/>
+<h3 id="getpreviousepoch_1">getPreviousEpoch<a class="headerlink" href="#getpreviousepoch_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getPreviousEpoch</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>Epoch</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/epoch.ts#L41">packages/lodestar-beacon-state-transition/src/util/epoch.ts:41</a></em></p>
+<p>Return the previous epoch of the given state.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Epoch</em></p>
+<hr/>
+<h3 id="getrandaomix_1">getRandaoMix<a class="headerlink" href="#getrandaomix_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getRandaoMix</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: Epoch): <em>Bytes32</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/seed.ts#L41">packages/lodestar-beacon-state-transition/src/util/seed.ts:41</a></em></p>
+<p>Return the randao mix at a recent [[epoch]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Bytes32</em></p>
+<hr/>
+<h3 id="getseed_1">getSeed<a class="headerlink" href="#getseed_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getSeed</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: Epoch, <code>domainType</code>: <a href="../../enums/constants.domaintype/">DomainType</a>): <em>Uint8Array</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/seed.ts#L48">packages/lodestar-beacon-state-transition/src/util/seed.ts:48</a></em></p>
+<p>Return the seed at [[epoch]].</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+<tr>
+<td><code>domainType</code></td>
+<td><a href="../../enums/constants.domaintype/">DomainType</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Uint8Array</em></p>
+<hr/>
+<h3 id="getslotssincegenesis_1">getSlotsSinceGenesis<a class="headerlink" href="#getslotssincegenesis_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getSlotsSinceGenesis</strong>(<code>config</code>: IBeaconConfig, <code>genesisTime</code>: Number64): <em>Slot</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/slot.ts#L7">packages/lodestar-beacon-state-transition/src/util/slot.ts:7</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>genesisTime</code></td>
+<td>Number64</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Slot</em></p>
+<hr/>
+<h3 id="gettemporaryblockheader_1">getTemporaryBlockHeader<a class="headerlink" href="#gettemporaryblockheader_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getTemporaryBlockHeader</strong>(<code>config</code>: IBeaconConfig, <code>block</code>: BeaconBlock): <em>BeaconBlockHeader</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/blockRoot.ts#L43">packages/lodestar-beacon-state-transition/src/util/blockRoot.ts:43</a></em></p>
+<p>Return the block header corresponding to a block with <code>state_root</code> set to <code>ZERO_HASH</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>block</code></td>
+<td>BeaconBlock</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>BeaconBlockHeader</em></p>
+<hr/>
+<h3 id="gettotalactivebalance_1">getTotalActiveBalance<a class="headerlink" href="#gettotalactivebalance_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getTotalActiveBalance</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>Gwei</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/balance.ts#L29">packages/lodestar-beacon-state-transition/src/util/balance.ts:29</a></em></p>
+<p>Return the combined effective balance of the active validators.
+Note: <code>getTotalBalance</code> returns <code>EFFECTIVE_BALANCE_INCREMENT</code> Gwei minimum to avoid divisions by zero.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Gwei</em></p>
+<hr/>
+<h3 id="gettotalbalance_1">getTotalBalance<a class="headerlink" href="#gettotalbalance_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getTotalBalance</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>indices</code>: ValidatorIndex[]): <em>Gwei</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/balance.ts#L15">packages/lodestar-beacon-state-transition/src/util/balance.ts:15</a></em></p>
+<p>Return the combined effective balance of the [[indices]].
+<code>EFFECTIVE_BALANCE_INCREMENT</code> Gwei minimum to avoid divisions by zero.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>indices</code></td>
+<td>ValidatorIndex[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Gwei</em></p>
+<hr/>
+<h3 id="getvalidatorchurnlimit_1">getValidatorChurnLimit<a class="headerlink" href="#getvalidatorchurnlimit_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getValidatorChurnLimit</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validator.ts#L66">packages/lodestar-beacon-state-transition/src/util/validator.ts:66</a></em></p>
+<p>Return the validator churn limit for the current epoch.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="increasebalance_1">increaseBalance<a class="headerlink" href="#increasebalance_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>increaseBalance</strong>(<code>state</code>: BeaconState, <code>index</code>: ValidatorIndex, <code>delta</code>: Gwei): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/balance.ts#L36">packages/lodestar-beacon-state-transition/src/util/balance.ts:36</a></em></p>
+<p>Increase the balance for a validator with the given <code>index</code> by <code>delta</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>ValidatorIndex</td>
+</tr>
+<tr>
+<td><code>delta</code></td>
+<td>Gwei</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="initiatevalidatorexit_1">initiateValidatorExit<a class="headerlink" href="#initiatevalidatorexit_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>initiateValidatorExit</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>index</code>: ValidatorIndex): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts#L29">packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts:29</a></em></p>
+<p>Initiate exit for the validator with the given index.</p>
+<p>Note: that this function mutates state.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>ValidatorIndex</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="innershufflelist">innerShuffleList<a class="headerlink" href="#innershufflelist" title="Permanent link">¶</a></h3>
+<p>▸ <strong>innerShuffleList</strong>(<code>config</code>: IBeaconConfig, <code>input</code>: ValidatorIndex[], <code>seed</code>: Bytes32, <code>dir</code>: boolean): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/shuffle.ts#L68">packages/lodestar-beacon-state-transition/src/util/shuffle.ts:68</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>ValidatorIndex[]</td>
+</tr>
+<tr>
+<td><code>seed</code></td>
+<td>Bytes32</td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="isactivevalidator_1">isActiveValidator<a class="headerlink" href="#isactivevalidator_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isActiveValidator</strong>(<code>validator</code>: Validator, <code>epoch</code>: Epoch): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validator.ts#L32">packages/lodestar-beacon-state-transition/src/util/validator.ts:32</a></em></p>
+<p>Check if [[validator]] is active</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>validator</code></td>
+<td>Validator</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isaggregator_1">isAggregator<a class="headerlink" href="#isaggregator_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isAggregator</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slot</code>: Slot, <code>index</code>: CommitteeIndex, <code>slotSignature</code>: BLSSignature): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validator.ts#L70">packages/lodestar-beacon-state-transition/src/util/validator.ts:70</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>CommitteeIndex</td>
+</tr>
+<tr>
+<td><code>slotSignature</code></td>
+<td>BLSSignature</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isaggregatorfromcommitteelength_1">isAggregatorFromCommitteeLength<a class="headerlink" href="#isaggregatorfromcommitteelength_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isAggregatorFromCommitteeLength</strong>(<code>config</code>: IBeaconConfig, <code>committeeLength</code>: number, <code>slotSignature</code>: BLSSignature): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validator.ts#L81">packages/lodestar-beacon-state-transition/src/util/validator.ts:81</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>committeeLength</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>slotSignature</code></td>
+<td>BLSSignature</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="iseligibleforactivation_1">isEligibleForActivation<a class="headerlink" href="#iseligibleforactivation_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isEligibleForActivation</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>validator</code>: Validator): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/activation.ts#L19">packages/lodestar-beacon-state-transition/src/util/activation.ts:19</a></em></p>
+<p>Check if <code>validator</code> is eligible for activation.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>validator</code></td>
+<td>Validator</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="iseligibleforactivationqueue_1">isEligibleForActivationQueue<a class="headerlink" href="#iseligibleforactivationqueue_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isEligibleForActivationQueue</strong>(<code>config</code>: IBeaconConfig, <code>validator</code>: Validator): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/activation.ts#L9">packages/lodestar-beacon-state-transition/src/util/activation.ts:9</a></em></p>
+<p>Check if <code>validator</code> is eligible to be placed into the activation queue.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>validator</code></td>
+<td>Validator</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isproposeratslot_1">isProposerAtSlot<a class="headerlink" href="#isproposeratslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isProposerAtSlot</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slot</code>: Slot, <code>validatorIndex</code>: ValidatorIndex): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/duties.ts#L52">packages/lodestar-beacon-state-transition/src/util/duties.ts:52</a></em></p>
+<p>Checks if a validator is supposed to propose a block</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+<tr>
+<td><code>validatorIndex</code></td>
+<td>ValidatorIndex</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isslashableattestationdata_1">isSlashableAttestationData<a class="headerlink" href="#isslashableattestationdata_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isSlashableAttestationData</strong>(<code>config</code>: IBeaconConfig, <code>data1</code>: AttestationData, <code>data2</code>: AttestationData): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L28">packages/lodestar-beacon-state-transition/src/util/attestation.ts:28</a></em></p>
+<p>Check if [[data1]] and [[data2]] are slashable according to Casper FFG rules.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>data1</code></td>
+<td>AttestationData</td>
+</tr>
+<tr>
+<td><code>data2</code></td>
+<td>AttestationData</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isslashablevalidator_1">isSlashableValidator<a class="headerlink" href="#isslashablevalidator_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isSlashableValidator</strong>(<code>validator</code>: Validator, <code>epoch</code>: Epoch): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validator.ts#L39">packages/lodestar-beacon-state-transition/src/util/validator.ts:39</a></em></p>
+<p>Check if [[validator]] is slashable</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>validator</code></td>
+<td>Validator</td>
+</tr>
+<tr>
+<td><code>epoch</code></td>
+<td>Epoch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isunaggregatedattestation_1">isUnaggregatedAttestation<a class="headerlink" href="#isunaggregatedattestation_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isUnaggregatedAttestation</strong>(<code>attestation</code>: Attestation): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L121">packages/lodestar-beacon-state-transition/src/util/attestation.ts:121</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>attestation</code></td>
+<td>Attestation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isvalidattestationslot_1">isValidAttestationSlot<a class="headerlink" href="#isvalidattestationslot_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isValidAttestationSlot</strong>(<code>config</code>: IBeaconConfig, <code>attestationSlot</code>: Slot, <code>currentSlot</code>: Slot): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L114">packages/lodestar-beacon-state-transition/src/util/attestation.ts:114</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>attestationSlot</code></td>
+<td>Slot</td>
+</tr>
+<tr>
+<td><code>currentSlot</code></td>
+<td>Slot</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isvalidattesterslashing_1">isValidAttesterSlashing<a class="headerlink" href="#isvalidattesterslashing_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isValidAttesterSlashing</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attesterSlashing</code>: AttesterSlashing, <code>verifySignatures</code>: boolean): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts#L92">packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts:92</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>attesterSlashing</code></td>
+<td>AttesterSlashing</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>verifySignatures</code></td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isvalidindexedattestation_1">isValidIndexedAttestation<a class="headerlink" href="#isvalidindexedattestation_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isValidIndexedAttestation</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>indexedAttestation</code>: IndexedAttestation, <code>verifySignature</code>: boolean): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/attestation.ts#L44">packages/lodestar-beacon-state-transition/src/util/attestation.ts:44</a></em></p>
+<p>Check if [[indexedAttestation]] has valid indices and signature.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>indexedAttestation</code></td>
+<td>IndexedAttestation</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>verifySignature</code></td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isvalidproposerslashing_1">isValidProposerSlashing<a class="headerlink" href="#isvalidproposerslashing_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isValidProposerSlashing</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>proposerSlashing</code>: ProposerSlashing, <code>verifySignatures</code>: boolean): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts#L107">packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts:107</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>proposerSlashing</code></td>
+<td>ProposerSlashing</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>verifySignatures</code></td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="isvalidvoluntaryexit_1">isValidVoluntaryExit<a class="headerlink" href="#isvalidvoluntaryexit_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isValidVoluntaryExit</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>signedExit</code>: SignedVoluntaryExit, <code>verifySignature</code>: boolean): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts#L166">packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts:166</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>signedExit</code></td>
+<td>SignedVoluntaryExit</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>verifySignature</code></td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="shufflelist_1">shuffleList<a class="headerlink" href="#shufflelist_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>shuffleList</strong>(<code>config</code>: IBeaconConfig, <code>input</code>: ValidatorIndex[], <code>seed</code>: Bytes32): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/shuffle.ts#L10">packages/lodestar-beacon-state-transition/src/util/shuffle.ts:10</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>ValidatorIndex[]</td>
+</tr>
+<tr>
+<td><code>seed</code></td>
+<td>Bytes32</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="signedblocktosignedheader_1">signedBlockToSignedHeader<a class="headerlink" href="#signedblocktosignedheader_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>signedBlockToSignedHeader</strong>(<code>config</code>: IBeaconConfig, <code>signedBlock</code>: SignedBeaconBlock): <em>SignedBeaconBlockHeader</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/blockRoot.ts#L70">packages/lodestar-beacon-state-transition/src/util/blockRoot.ts:70</a></em></p>
+<p>Receives a SignedBeaconBlock, and produces the corresponding SignedBeaconBlockHeader.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>signedBlock</code></td>
+<td>SignedBeaconBlock</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>SignedBeaconBlockHeader</em></p>
+<hr/>
+<h3 id="slashvalidator_1">slashValidator<a class="headerlink" href="#slashvalidator_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>slashValidator</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slashedIndex</code>: ValidatorIndex, <code>whistleblowerIndex</code>: ValidatorIndex | null): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts#L59">packages/lodestar-beacon-state-transition/src/util/validatorStatus.ts:59</a></em></p>
+<p>Slash the validator with index <code>slashedIndex</code>.</p>
+<p>Note that this function mutates <code>state</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>slashedIndex</code></td>
+<td>ValidatorIndex</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>whistleblowerIndex</code></td>
+<td>ValidatorIndex | null</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="unshufflelist_1">unshuffleList<a class="headerlink" href="#unshufflelist_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>unshuffleList</strong>(<code>config</code>: IBeaconConfig, <code>input</code>: ValidatorIndex[], <code>seed</code>: Bytes32): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/shuffle.ts#L15">packages/lodestar-beacon-state-transition/src/util/shuffle.ts:15</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>ValidatorIndex[]</td>
+</tr>
+<tr>
+<td><code>seed</code></td>
+<td>Bytes32</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="verifyblocksignature_1">verifyBlockSignature<a class="headerlink" href="#verifyblocksignature_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>verifyBlockSignature</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>signedBlock</code>: SignedBeaconBlock): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/mpetrunic/lodestar/blob/1539fa5/packages/lodestar-beacon-state-transition/src/util/block.ts#L8">packages/lodestar-beacon-state-transition/src/util/block.ts:8</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>signedBlock</code></td>
+<td>SignedBeaconBlock</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ChainSafe/lodestar" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 480 512" xmlns="http://www.w3.org/2000/svg"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
+</a>
+<a class="md-footer-social__link" href="https://twitter.com/ChainSafe" rel="noopener" target="_blank" title="twitter.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+<a class="md-footer-social__link" href="https://discord.gg/yjyvFRP" rel="noopener" target="_blank" title="discord.gg">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"></path></svg>
+</a>
+<a class="md-footer-social__link" href="https://medium.com/ChainSafe" rel="noopener" target="_blank" title="medium.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+<script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+</body>
+</html>
